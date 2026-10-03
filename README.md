@@ -12,6 +12,7 @@ Lana conserva su lugar como producto de mediano y largo plazo, independiente de 
 La venta directa de servicios y las implementaciones a medida no son el modelo de esta etapa.
 
 ## Documentos
+- [Comparación de subrubros](research/2026-10-02_COMPARACION-SUBRUBROS-OPERATIVOS.md): reparación de equipo de jardinería frente a preparación de rentas cortas; sin mercado elegido.
 - [Cambio de rumbo](research/2026-10-02_PIVOT-PRODUCTO-OPERATIVO.md): criterio nuevo, sectores y evidencia inicial.
 - [Dictamen de dos finalistas](research/2026-10-02_DICTAMEN-DOS-FINALISTAS.md): comparación completa, selección razonada y condiciones para invertir.
 - [H5: investigación profunda](research/2026-10-02_H5-COSTOS-INVESTIGACION-PROFUNDA.md): competencia gratuita, diferencia por probar y economía de la muestra.
