@@ -2,9 +2,9 @@
 Laboratorio de productos útiles y experimentos comerciales.
 
 ## Estado — 2026-10-03
-Fase: investigación profunda. Dos finalistas: kit de costos madera y STL funcional para organización de herramientas. Demanda propia no validada.
-Card activa: **IDEAS-004 — investigación profunda de dos finalistas**.
-Base y barrido digital terminados. Investigación ampliada a reventa, diseños 3D y una colección creativa musical de figuras y playeras, productos con recortes de laminado y contenido/curso de IA aplicada; shortlist anterior provisional.
+Fase: investigación de producto operativo vertical. Kit de costos y STL suspendidos por decisión del responsable. Investigar Lana y problemas recurrentes de servicios/talleres; sin nicho seleccionado ni demanda propia validada.
+Card activa: **IDEAS-010 — Lana y software operativo vertical**.
+Base y barrido digital terminados. Investigación ampliada a reventa, diseños 3D y una colección creativa musical de figuras y playeras, productos con recortes de laminado y contenido/curso de IA aplicada; shortlist anterior retirada; informes conservados como antecedentes.
 
 ## Rumbo
 Crear productos pequeños, probar su distribución y decidir con evidencia qué merece crecer.
@@ -12,6 +12,7 @@ Lana conserva su lugar como producto de mediano y largo plazo, independiente de 
 La venta directa de servicios y las implementaciones a medida no son el modelo de esta etapa.
 
 ## Documentos
+- [Cambio de rumbo](research/2026-10-02_PIVOT-PRODUCTO-OPERATIVO.md): criterio nuevo, sectores y evidencia inicial.
 - [Dictamen de dos finalistas](research/2026-10-02_DICTAMEN-DOS-FINALISTAS.md): comparación completa, selección razonada y condiciones para invertir.
 - [H5: investigación profunda](research/2026-10-02_H5-COSTOS-INVESTIGACION-PROFUNDA.md): competencia gratuita, diferencia por probar y economía de la muestra.
 - [D1: investigación profunda STL](research/2026-10-02_D1-STL-INVESTIGACION-PROFUNDA.md): diez referencias, diferencia pendiente y ruta de verificación física.
