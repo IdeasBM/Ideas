@@ -2,8 +2,8 @@
 Laboratorio de productos útiles y experimentos comerciales.
 
 ## Estado — 2026-10-03
-Fase: investigación. No hay producto seleccionado ni demanda validada.
-Card activa: **IDEAS-009 — reventa e impresión 3D**.
+Fase: investigación profunda. Dos finalistas: kit de costos madera y STL funcional para organización de herramientas. Demanda propia no validada.
+Card activa: **IDEAS-004 — investigación profunda de dos finalistas**.
 Base y barrido digital terminados. Investigación ampliada a reventa, diseños 3D y una colección creativa musical de figuras y playeras, productos con recortes de laminado y contenido/curso de IA aplicada; shortlist anterior provisional.
 
 ## Rumbo
@@ -12,6 +12,7 @@ Lana conserva su lugar como producto de mediano y largo plazo, independiente de 
 La venta directa de servicios y las implementaciones a medida no son el modelo de esta etapa.
 
 ## Documentos
+- [Dictamen de dos finalistas](research/2026-10-02_DICTAMEN-DOS-FINALISTAS.md): comparación completa, selección razonada y condiciones para invertir.
 - [Documento rector](docs/META.md): objetivo, límites y decisiones.
 - [Plan y mapa](research/PLAN-Y-MAPA.md): método y familias de negocio.
 - [Roadmap](docs/ROADMAP.md): entregables y dependencias.
