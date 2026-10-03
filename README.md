@@ -3,16 +3,17 @@ Laboratorio de productos útiles y experimentos comerciales.
 
 ## Estado — 2026-10-03
 Fase: búsqueda de una oportunidad diferenciada. Se suspende Lana como propuesta genérica de agenda + asistente: el núcleo ya se ofrece en el mercado. La capacidad de aprender el criterio del dueño no quedó demostrada ni como desempeño de competidores ni como ventaja propia. Se conserva el trabajo y se busca un problema residual concreto antes de construir.
-Card activa: **IDEAS-010 — Competencia de Lana y búsqueda de oportunidad diferenciada**.
+Card activa: **IDEAS-010 — Búsqueda abierta y Task Fixer**.
 Base y barrido digital terminados. Investigación ampliada a reventa, diseños 3D y una colección creativa musical de figuras y playeras, productos con recortes de laminado y contenido/curso de IA aplicada; shortlist anterior retirada; informes conservados como antecedentes.
 
 ## Rumbo
 Crear productos pequeños, probar su distribución y decidir con evidencia qué merece crecer.
 Lana se conserva como antecedente y posible base técnica, independiente de Athena; su propuesta comercial genérica está suspendida.
-La venta directa de servicios y las implementaciones a medida no son el modelo de esta etapa.
+Se comparan productos y Task Fixer como servicio de automatización a medida con captación por internet. La búsqueda ya no se limita a la experiencia profesional del responsable. No hay autorización de lanzamiento ni publicidad.
 
 ## Documentos
-- [Competencia del asistente de Lana](research/2026-10-03_LANA-COMPETENCIA-ASISTENTES.md): dictamen vigente, evidencia y suspensión de la ventaja genérica.
+- [Búsqueda abierta y Task Fixer](research/2026-10-03_BUSQUEDA-ABIERTA-Y-TASK-FIXER.md): rumbo vigente, señales de demanda, servicios y economía de captación.
+- [Competencia del asistente de Lana](research/2026-10-03_LANA-COMPETENCIA-ASISTENTES.md): evidencia y suspensión de la ventaja genérica; no demuestra saturación económica.
 - [Lana: recepción y rubros](research/2026-10-03_LANA-RECEPCION-Y-RUBROS.md): antecedente de definición, asistente operativo y comparación inicial de sectores.
 - [Dictamen global de mediano y largo plazo](research/2026-10-02_DICTAMEN-GLOBAL-MEDIANO-LARGO-PLAZO.md): comparación completa; recomendación de software específico, slabs como alternativa y contenido como reserva.
 - [Slabs: competencia y fallos](research/2026-10-02_SLABS-COMPETENCIA-Y-FALLOS.md): sugerencias automáticas ya anunciadas; hipótesis acotada pendiente de comprobar.
