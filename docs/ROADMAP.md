@@ -1,16 +1,10 @@
 # Roadmap
-Actualizado: 2026-10-02 (fecha local)
+Actualizado: 2026-10-03 (fecha local)
 
-IDEAS-001/002: base y barrido conservados.
-IDEAS-009/003: comparación histórica terminada; shortlist H5/D1 retirada.
-IDEAS-004: suspendida por decisión del responsable.
-IDEAS-010: activa. Demanda expresada en foros/Upwork/Workana y señales de mercado IA. Primera muestra de 13 casos entregada. Sin producto seleccionado.
-IDEAS-005–008: en espera de selección.
+IDEAS-010 activa: Lana como mini software de recepción por agenda y asistente conectado al proceso, por decisión del responsable. Sin nicho comercial ni demanda propia validados.
 
-Hipótesis incorporadas: dashboard de actividad entre herramientas, acotado a un proceso; layouts de slabs fotografiados con celular y sugerencias de continuidad de vetas. Competencia directa encontrada; no hueco validado. Comparación de fabricación pausada como tarea automática.
+[Definición y rubros](../research/2026-10-03_LANA-RECEPCION-Y-RUBROS.md).
 
-[Demanda publicada](../research/2026-10-02_DEMANDA-FOROS-Y-MARKETPLACES.md).
-[Tendencias y slabs](../research/2026-10-02_TENDENCIAS-IA-Y-LAYOUT-SLABS.md).
-[Card activa](https://github.com/IdeasBM/Ideas/issues/10).
+Siguiente: comparar tareas reales de recepción/excepciones en estética canina en local y belleza no clínica, con detailing como contraste. Buscar trabajo residual frente a Square/Mangomint/MoeGo/Urable antes de elegir sector. Definir comprador, jornada, entradas y criterio de listo. No una comparación nueva de documentos vs slabs.
 
-Siguiente: contrastar competidores y quejas de usuarios del flujo de slabs, distinguiendo planificación visual, sugerencias de vetas y transferencia a producción. Mantener ampliación de demanda como contraste. Una prueba de precisión será posterior y usará material permitido; no se construye ni exporta para corte todavía. Sin gasto ni contacto.
+Slabs, documentos como producto independiente, contenido, creatividad y físicos quedan en reserva. IDEAS-004 suspendida; IDEAS-005–008 esperan definición de una sola prueba. Estudios históricos conservados. No modificar código canónico, contactar personas, gastar ni lanzar comercialmente.
