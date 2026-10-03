@@ -2,7 +2,7 @@
 Laboratorio de productos útiles y experimentos comerciales.
 
 ## Estado — 2026-10-03
-Fase: investigación profunda de dos finalistas por decisión del responsable: Lana, plataforma de recepción por agenda con asistente de IA, y Task Fixer, agencia de diseño, creación, reparación y mantenimiento de automatizaciones. Lana vuelve a comparación; se sustituye la suspensión anterior. No abrir más familias mientras se decide.
+Fase: investigación documental profunda y dictamen de mercado completados para dos finalistas: Lana y Task Fixer. Recomendación del asistente: priorizar una prueba acotada de Task Fixer; Lana permanece como segundo finalista. Demanda, adquisición y rentabilidad propias pendientes. No se registra decisión del responsable de invertir ni lanzamiento.
 Card rectora: **IDEAS-010 — Comparación Lana vs Task Fixer**. Expedientes: [Lana #11](https://github.com/IdeasBM/Ideas/issues/11) y [Task Fixer #12](https://github.com/IdeasBM/Ideas/issues/12).
 Base y barrido digital terminados. Investigación ampliada a reventa, diseños 3D y una colección creativa musical de figuras y playeras, productos con recortes de laminado y contenido/curso de IA aplicada; shortlist anterior retirada; informes conservados como antecedentes.
 
@@ -12,6 +12,9 @@ Lana vuelve como finalista de producto, independiente de Athena. Su proceso orig
 Task Fixer es el segundo finalista, con captación por internet y servicios de proceso, herramientas, implementación, reparación y mantenimiento. Investigar ambos; concentrar la siguiente construcción comercial en el que presente mejor evidencia.
 
 ## Documentos
+- [Dictamen Lana vs Task Fixer](research/2026-10-03_DICTAMEN-LANA-TASK-FIXER.md): recomendación, comparación y prueba concreta propuesta.
+- [Lana: mercado, producto y economía](research/2026-10-03_LANA-MERCADO-PRODUCTO-ECONOMIA.md): suites, precios, jornada, brechas del ZIP y sensibilidad de soporte.
+- [Task Fixer: mercado, oferta y economía](research/2026-10-03_TASK-FIXER-MERCADO-OFERTA-ECONOMIA.md): competidores, contrataciones observables, catálogo, captación y costos de todas las horas.
 - [Dos finalistas: Lana y Task Fixer](research/2026-10-03_DOS-FINALISTAS-LANA-TASK-FIXER.md): acuerdo vigente, revisión del ZIP, comparación inicial y criterios de decisión.
 - [Búsqueda abierta y Task Fixer](research/2026-10-03_BUSQUEDA-ABIERTA-Y-TASK-FIXER.md): antecedente, señales de demanda, servicios y economía de captación.
 - [Competencia del asistente de Lana](research/2026-10-03_LANA-COMPETENCIA-ASISTENTES.md): evidencia competitiva; su suspensión queda sustituida por el acuerdo de dos finalistas.
