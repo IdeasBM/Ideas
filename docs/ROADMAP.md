@@ -12,9 +12,11 @@ Investigación especializada del mercado latino en EE. UU. y mexicano comenzando
 ## Completado
 Carpeta exclusiva, decisión registrada, estudio regional, doce agencias comparables y registro de fuentes. Segundo barrido de siete ofertas próximas, principios de comunicación y propuesta de público/oferta/sitio preparados.
 
+Demo local de solicitudes/cotizaciones preparada con datos ficticios y cinco pruebas de lógica aprobadas. [Recorrido](../projects/task-fixer/demo/README.md) · [Diseño/costos](../projects/task-fixer/DISENO-Y-COSTOS-DEL-PILOTO.md). Integraciones, consumo real, prueba visual y compradores pendientes.
+
 ## Próximos entregables
-1. Concretar el caso demostrable recomendado: seguimiento de solicitudes y cotizaciones de contratistas pequeños. [Oferta y sitio propuestos](../projects/task-fixer/OFERTA-INICIAL-Y-SITIO.md).
-2. Comprobar herramientas, acceso y costos; definir aceptación y horas de entrega.
+1. Verificar apariencia y probar el caso demostrable contra herramientas reales cuando haya cuentas y alcance acordados. [Oferta y sitio propuestos](../projects/task-fixer/OFERTA-INICIAL-Y-SITIO.md).
+2. Comprobar acceso, consumo y horas reales. Tarifas oficiales, aceptación y estimación de 22–32 horas con contingencia ya documentadas; no son una medición ni cotización.
 3. Preparar modelo de atención/formación/horarios/escalamiento.
 4. Validar comprensión, problema, precio y demanda del comprador mediante prueba concreta acordada.
 5. Cerrar textos y construir sitio cuando oferta/capacidad estén suficientemente definidas.
