@@ -52,3 +52,6 @@ Registrar tiempo invertido por separado; una venta no demuestra rentabilidad sos
 | 2026-10-03 | Suspender Lana como agenda + asistente genérico y buscar otra oportunidad | Condición del responsable: ofertas cercanas ya existen; aprendizaje del criterio del dueño no es una ventaja comprobada |
 | 2026-10-03 | Abrir sectores y admitir Task Fixer con captación por internet | Nueva instrucción del responsable; comparar producto con servicios, sin inferir saturación solo por competencia |
 | 2026-10-03 | Fijar Lana y Task Fixer como únicos finalistas; reactivar Lana y ampliar agencia | Instrucción del responsable: investigar ambos a fondo y concentrarse en el más prometedor; sustituye suspensión y búsqueda abierta |
+
+## Recomendación documental — 2026-10-03
+La comparación profunda recomienda Task Fixer para la primera prueba: una entrega acotada de recepción/registro/asignación/seguimiento de solicitudes. Lana permanece como segundo finalista. [Dictamen y condiciones](../research/2026-10-03_DICTAMEN-LANA-TASK-FIXER.md). Es recomendación del asistente, no decisión del responsable ni aprobación de gasto. No existe validación comercial propia; el siguiente avance es una oferta/demostración concreta, no ampliar otra vez familias de búsqueda.
