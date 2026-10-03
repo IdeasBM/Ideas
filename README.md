@@ -18,6 +18,7 @@ La venta directa de servicios y las implementaciones a medida no son el modelo d
 - [Comparación inicial](research/COMPARACION-INICIAL.md): seis hipótesis y primeras señales.
 - [Barrido de mercado](research/2026-10-02_BARRIDO-DE-MERCADO.md): 30 referencias y prioridad provisional.
 - [Reventa e impresión 3D](research/2026-10-02_REVENTA-E-IMPRESION-3D.md): modelos comerciales, señales y próximos pasos.
+- [Venta de diseños 3D](research/2026-10-02_VENTA-DE-DISENOS-3D.md): archivos pagados, nichos y validación sin impresora propia.
 - [Registro de fuentes](research/FUENTES.md): evidencia y limitaciones.
 - [Antecedentes](antecedentes/README.md): continuidad.
 - [Cards](https://github.com/IdeasBM/Ideas/issues): ejecución.
