@@ -1,20 +1,22 @@
 # Roadmap
-Actualizado: 2026-10-03 (America/Chicago)
+Actualizado: 2026-10-03
 
 ## Foco vigente
-Únicamente Lana y Task Fixer, por instrucción del responsable.
-[Acuerdo, revisión del ZIP y comparación inicial](../research/2026-10-03_DOS-FINALISTAS-LANA-TASK-FIXER.md).
+Únicamente Lana y Task Fixer. [Dictamen de mercado](../research/2026-10-03_DICTAMEN-LANA-TASK-FIXER.md): se recomienda probar Task Fixer primero y conservar Lana como segundo finalista. La recomendación no equivale a decisión de inversión del responsable.
 
-Lana vuelve a comparación como plataforma por agenda y asistente. Task Fixer incluye diseño de procesos, herramientas, creación, reparación y mantenimiento. Esta decisión sustituye suspensión y búsqueda abierta anteriores.
+## Investigación completada
+- [Lana #11](https://github.com/IdeasBM/Ideas/issues/11): [expediente de mercado/producto/economía](../research/2026-10-03_LANA-MERCADO-PRODUCTO-ECONOMIA.md).
+- [Task Fixer #12](https://github.com/IdeasBM/Ideas/issues/12): [expediente de mercado/oferta/economía](../research/2026-10-03_TASK-FIXER-MERCADO-OFERTA-ECONOMIA.md).
+- [Comparación #10](https://github.com/IdeasBM/Ideas/issues/10): dictamen entregado; pendiente elegir/concretar una prueba propia. Se mantiene abierta para esa decisión.
 
-## Expedientes
-1. [Lana #11](https://github.com/IdeasBM/Ideas/issues/11): proceso original, comprador inicial, jornada contra alternativas, brechas de producto, IA, soporte y economía.
-2. [Task Fixer #12](https://github.com/IdeasBM/Ideas/issues/12): demanda/contrataciones, catálogo, primera oferta, competencia, captación digital y costos de venta/entrega/mantenimiento.
-3. [Comparación #10](https://github.com/IdeasBM/Ideas/issues/10): dictamen conjunto y una sola prueba comercial recomendada.
+## Siguiente entrega propuesta
+Paquete de oferta de Task Fixer y especificación de demo: solicitud → registro único → responsable → aviso → seguimiento → pendientes.
+Definir diagnóstico contratado, alcance, cotización por fases, pruebas de fallo/duplicados, documentación y mantenimiento limitado. Preparar resultado reviewable antes de lanzamiento. Dominio, país, herramientas y disponibilidad deben comprobarse al concretar la prueba.
 
-## Criterio de avance
-Comprador, razón de compra, evidencia, canal, costos completos y capacidad de entrega. Precios anunciados no son ingresos propios; código existente no prueba producto listo. No declarar ganador mientras adquisición y demanda propia sigan desconocidas.
+## Evidencia que falta
+Demanda propia, capacidad de entrega, horas reales, aceptación de precio, costo de adquisición y contribución. Precios anunciados no prueban ingresos; contratación visible en terceros no prueba nuestro negocio. Una primera entrega pagada y positiva permite repetir; no basta para escalar.
 
-No abrir nuevas familias ni construir dos negocios a la vez. Investigar puede incluir definición y demostraciones acotadas cuando resuelvan una incertidumbre concreta. Gastos/lanzamiento requieren concreción y autorización. Código privado no se traslada al repo público.
+Lana: antes de construcción completa, verificar razón de cambio de suite, migración, confiabilidad y economía del soporte. Revisión estática del ZIP no acredita preparación para producción.
 
-Estudios anteriores conservados como antecedentes. Otras familias en reserva; IDEAS-004 suspendida e IDEAS-005–008 fuera del foco actual.
+## Límites
+No abrir nuevas familias ni construir dos negocios simultáneamente. Investigación/definición autorizadas. No trasladar código privado al repositorio público. No contactar empresas, gastar o lanzar comercialmente sin concretar la acción y su autorización. Estudios anteriores conservados como antecedentes; suspensiones anteriores de Lana sustituidas por acuerdo de dos finalistas.
