@@ -10,6 +10,10 @@ Agencia de diseño de procesos, selección de herramientas, creación, reparaci�
 - [Principios de negocio y comunicación](PRINCIPIOS-Y-COMUNICACION.md): dirección indicada por el responsable y reglas para explicar/entregar el trabajo.
 - [Público, primera oferta y dirección del sitio](OFERTA-INICIAL-Y-SITIO.md): propuesta concreta y textos provisionales.
 
+## Demostración y entrega
+- [Ejemplo interactivo y recorrido](demo/README.md): simulación local con datos ficticios; cinco pruebas de lógica aprobadas. Revisión visual pendiente.
+- [Diseño y costos del piloto](DISENO-Y-COSTOS-DEL-PILOTO.md): herramientas, tarifas oficiales, horas estimadas y criterios para una integración real.
+
 ## Investigación especializada
 - [Segundo barrido de posicionamiento](research/2026-10-03_SEGUNDO-BARRIDO-POSICIONAMIENTO.md): ofertas cercanas y público inicial recomendado.
 - [Mercado latino de EE. UU. y Veracruz](research/2026-10-03_MERCADO-LATINO-EEUU-VERACRUZ.md): datos oficiales, diferencias territoriales, precios y entradas por sector.
@@ -20,7 +24,7 @@ Agencia de diseño de procesos, selección de herramientas, creación, reparaci�
 ## Estado
 Investigación regional y segundo barrido de posicionamiento documentados. Dirección de comunicación fijada por el responsable. Recomendación actual: primera oferta de seguimiento de solicitudes/cotizaciones para contratistas pequeños; restaurantes con eventos/catering siguen como alternativa dentro de Task Fixer. Segmento/ciudad/precio/lanzamiento aún no aprobados por el responsable. Demanda y adquisición propias sin validar.
 
-La siguiente investigación debe servir para elegir una primera oferta y sostenerla con costos y capacidad reales. La posible atención desde Veracruz debe definirse y entrenarse; no es un equipo confirmado.
+La demostración y estimación de entrega están preparadas. Siguiente paso: definir atención y propuesta de validación con compradores. Costos reales de ejecución, conexiones y demanda siguen sin comprobarse. La posible atención desde Veracruz debe definirse y entrenarse; no es un equipo confirmado.
 
 ## Historia
 [Archivo de investigaciones anteriores](../../research/ARCHIVO.md). Lana y otras opciones ya no son finalistas activos. Se conservan archivos y enlaces para trazabilidad.
