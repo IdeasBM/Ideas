@@ -4,17 +4,19 @@ Versión 0.1 · 2026-10-02
 ## Objetivo
 Construir una cartera sucesiva de productos útiles que puedan descubrirse, comprarse y usarse por internet. Investigar antes de elegir; completar ciclos de crear, publicar, vender y aprender.
 
-Prioridad vigente: investigar a fondo únicamente Lana y Task Fixer. Lana se reactiva como plataforma de recepción por agenda con asistente; Task Fixer incluye diseño de procesos, selección de herramientas, creación, reparación y mantenimiento. Elegir después una sola prueba comercial según evidencia. Se acepta desarrollo y recuperación más largos; facilidad y bajo costo no bastan para elegir. El éxito inicial es identificar una oportunidad defendible y completar una prueba acotada. No se impone una meta inmediata de ingresos.
+Prioridad vigente: Task Fixer es el único proyecto activo a desarrollar, por decisión del responsable del 3 de octubre de 2026. Agencia de diseño de procesos, selección de herramientas, creación, reparación y mantenimiento de automatizaciones. Mercados: negocios latinos en Estados Unidos y México, empezando por Veracruz. Restaurantes y construcción/contratistas son sectores prioritarios de investigación. Lana y todas las demás opciones pasan a antecedentes. [Proyecto rector](../projects/task-fixer/PROYECTO.md).
 
 ## Decisiones acordadas
-1. Ideas es el centro de este trabajo.
-2. Lana es independiente de Athena y vuelve como finalista de producto; la competencia no implica descarte automático.
-3. Athena aporta aprendizaje y componentes reutilizables; no es requisito para lanzar.
-4. Task Fixer es finalista de agencia: diagnóstico/diseño de procesos, herramientas, creación, reparación y mantenimiento; captación por internet.
-5. En esta etapa comparar exclusivamente Lana y Task Fixer; otras familias quedan en reserva. No elegir por entusiasmo ni por código existente.
-6. Construir una sola prueba comercial a la vez.
-7. Reutilizar herramientas existentes cuando reduzcan trabajo.
-8. Mostrar avances concretos en cada sesión.
+1. Ideas es el centro del trabajo; projects/task-fixer/ es el apartado activo.
+2. Task Fixer es el único proyecto a desarrollar; ya terminó la selección entre proyectos.
+3. Atender negocios latinos de Estados Unidos y México comenzando por Veracruz; investigar por separado sus canales, monedas y condiciones.
+4. Mantener catálogo de procesos, herramientas, creación, reparación y mantenimiento.
+5. Restaurantes y contratistas/construcción son prioridades de investigación, no una oferta final elegida.
+6. Investigar buenas prácticas de agencias y adaptarlas a nuestra capacidad, sin copiar marcas, testimonios ni resultados.
+7. La posible atención desde Veracruz requiere diseño, costos y formación; no se asume equipo confirmado.
+8. Reutilizar herramientas existentes y preparar una primera oferta delimitada.
+9. Mostrar avances concretos y medir trabajo comercial/técnico/soporte.
+10. No reabrir otras familias salvo nueva instrucción.
 
 ## Principios de selección
 - Comprador y problema identificables.
@@ -52,6 +54,10 @@ Registrar tiempo invertido por separado; una venta no demuestra rentabilidad sos
 | 2026-10-03 | Suspender Lana como agenda + asistente genérico y buscar otra oportunidad | Condición del responsable: ofertas cercanas ya existen; aprendizaje del criterio del dueño no es una ventaja comprobada |
 | 2026-10-03 | Abrir sectores y admitir Task Fixer con captación por internet | Nueva instrucción del responsable; comparar producto con servicios, sin inferir saturación solo por competencia |
 | 2026-10-03 | Fijar Lana y Task Fixer como únicos finalistas; reactivar Lana y ampliar agencia | Instrucción del responsable: investigar ambos a fondo y concentrarse en el más prometedor; sustituye suspensión y búsqueda abierta |
+| 2026-10-03 | Elegir Task Fixer como único proyecto; archivar alternativas y abrir apartado especializado | Decisión del responsable; negocios latinos en EE. UU. y México comenzando por Veracruz, con restaurantes y construcción como prioridades de estudio |
 
-## Recomendación documental — 2026-10-03
+## Recomendación documental anterior — sustituida por elección del responsable
 La comparación profunda recomienda Task Fixer para la primera prueba: una entrega acotada de recepción/registro/asignación/seguimiento de solicitudes. Lana permanece como segundo finalista. [Dictamen y condiciones](../research/2026-10-03_DICTAMEN-LANA-TASK-FIXER.md). Es recomendación del asistente, no decisión del responsable ni aprobación de gasto. No existe validación comercial propia; el siguiente avance es una oferta/demostración concreta, no ampliar otra vez familias de búsqueda.
+
+## Decisión final de proyecto — 2026-10-03
+El responsable eligió Task Fixer y foco del 100%. Mercados latino de EE. UU. y mexicano iniciando por Veracruz; restaurantes y construcción como sectores iniciales de estudio. Sustituye tanto la comparación de finalistas como la recomendación anterior de conservar Lana en comparación. [Nueva investigación y estructura](../projects/task-fixer/README.md). Selección de proyecto no equivale a autorizar gasto/lanzamiento.
