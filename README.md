@@ -12,6 +12,7 @@ Lana conserva su lugar como producto de mediano y largo plazo, independiente de 
 La venta directa de servicios y las implementaciones a medida no son el modelo de esta etapa.
 
 ## Documentos
+- [Dictamen global de mediano y largo plazo](research/2026-10-02_DICTAMEN-GLOBAL-MEDIANO-LARGO-PLAZO.md): comparación completa; recomendación de software específico, slabs como alternativa y contenido como reserva.
 - [Slabs: competencia y fallos](research/2026-10-02_SLABS-COMPETENCIA-Y-FALLOS.md): sugerencias automáticas ya anunciadas; hipótesis acotada pendiente de comprobar.
 - [Tendencias IA y layouts de slabs](research/2026-10-02_TENDENCIAS-IA-Y-LAYOUT-SLABS.md): captura con celular, competencia directa y viabilidad pendiente de prueba.
 - [Demanda en foros y marketplaces](research/2026-10-02_DEMANDA-FOROS-Y-MARKETPLACES.md): primera muestra de 13 casos; no ranking de mercado.
