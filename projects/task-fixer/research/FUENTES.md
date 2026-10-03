@@ -35,3 +35,16 @@ Consulta 2026-10-03. Las páginas de agencias son fuentes primarias de su oferta
 
 ## Formato para ampliaciones
 Fecha · URL · tipo de evidencia · cobertura anunciada · tarea · implementación · mensualidad · moneda/impuestos · consumos · pruebas/documentación · soporte/salida · evidencia de compra · incertidumbre · decisión que informa.
+
+## Segundo barrido de posicionamiento — 2026-10-03
+| ID | Fuente | Evidencia / límite |
+|---|---|---|
+| P01 | [SistemIA](https://sistemia.com.mx/) | Diagnóstico antes de ejecución y documentación. Oferta pública, no calidad verificada. |
+| P02 | [FluxIA](https://fluxiamx.com/) | Operación, tareas cotidianas y etapas. Credenciales anunciadas no auditadas. |
+| P03 | [TrabajIA](https://trabajia.com/) | Pequeñas empresas, explicación por problemas, acompañamiento en español desde California. |
+| P04 | [DataQuimbaya contratistas](https://www.dataquimbaya.com/es/soluciones/contratistas) | Relectura de oferta por oficio; mismo proveedor que A02, no nueva empresa. |
+| P05 | [PR4DO LABS](https://labs.pr4do.cloud/servicios/soluciones) | Relectura del método; mismo proveedor que V01. |
+| P06 | [Latin Prime Systems](https://latinprimesystems.com/es) | Diagnóstico/estrategia junto a catálogo técnico bilingüe. Garantías no verificadas. |
+| P07 | [Neil.IA](https://www.neil-ia.com/) | Página leída orientada a cotizaciones/demostración/diagnóstico. Índice y aperturas mostraron versiones distintas: no trasladar métricas antiguas. |
+
+Muestra dirigida por vocabulario de cercanía/operación; no mide prevalencia en todo el mercado ni escasez de competidores. Latam Leap apareció en índice pero lectura sin cuerpo suficiente; excluida del análisis sustantivo. No se enviaron formularios ni se descargaron guías a cambio de datos.
