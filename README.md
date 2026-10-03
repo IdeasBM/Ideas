@@ -2,18 +2,19 @@
 Laboratorio de productos útiles y experimentos comerciales.
 
 ## Estado — 2026-10-03
-Fase: búsqueda de una oportunidad diferenciada. Se suspende Lana como propuesta genérica de agenda + asistente: el núcleo ya se ofrece en el mercado. La capacidad de aprender el criterio del dueño no quedó demostrada ni como desempeño de competidores ni como ventaja propia. Se conserva el trabajo y se busca un problema residual concreto antes de construir.
-Card activa: **IDEAS-010 — Búsqueda abierta y Task Fixer**.
+Fase: investigación profunda de dos finalistas por decisión del responsable: Lana, plataforma de recepción por agenda con asistente de IA, y Task Fixer, agencia de diseño, creación, reparación y mantenimiento de automatizaciones. Lana vuelve a comparación; se sustituye la suspensión anterior. No abrir más familias mientras se decide.
+Card rectora: **IDEAS-010 — Comparación Lana vs Task Fixer**. Expedientes: [Lana #11](https://github.com/IdeasBM/Ideas/issues/11) y [Task Fixer #12](https://github.com/IdeasBM/Ideas/issues/12).
 Base y barrido digital terminados. Investigación ampliada a reventa, diseños 3D y una colección creativa musical de figuras y playeras, productos con recortes de laminado y contenido/curso de IA aplicada; shortlist anterior retirada; informes conservados como antecedentes.
 
 ## Rumbo
 Crear productos pequeños, probar su distribución y decidir con evidencia qué merece crecer.
-Lana se conserva como antecedente y posible base técnica, independiente de Athena; su propuesta comercial genérica está suspendida.
-Se comparan productos y Task Fixer como servicio de automatización a medida con captación por internet. La búsqueda ya no se limita a la experiencia profesional del responsable. No hay autorización de lanzamiento ni publicidad.
+Lana vuelve como finalista de producto, independiente de Athena. Su proceso original recuperado guía la definición; la revisión del ZIP no acredita preparación para producción.
+Task Fixer es el segundo finalista, con captación por internet y servicios de proceso, herramientas, implementación, reparación y mantenimiento. Investigar ambos; concentrar la siguiente construcción comercial en el que presente mejor evidencia.
 
 ## Documentos
-- [Búsqueda abierta y Task Fixer](research/2026-10-03_BUSQUEDA-ABIERTA-Y-TASK-FIXER.md): rumbo vigente, señales de demanda, servicios y economía de captación.
-- [Competencia del asistente de Lana](research/2026-10-03_LANA-COMPETENCIA-ASISTENTES.md): evidencia y suspensión de la ventaja genérica; no demuestra saturación económica.
+- [Dos finalistas: Lana y Task Fixer](research/2026-10-03_DOS-FINALISTAS-LANA-TASK-FIXER.md): acuerdo vigente, revisión del ZIP, comparación inicial y criterios de decisión.
+- [Búsqueda abierta y Task Fixer](research/2026-10-03_BUSQUEDA-ABIERTA-Y-TASK-FIXER.md): antecedente, señales de demanda, servicios y economía de captación.
+- [Competencia del asistente de Lana](research/2026-10-03_LANA-COMPETENCIA-ASISTENTES.md): evidencia competitiva; su suspensión queda sustituida por el acuerdo de dos finalistas.
 - [Lana: recepción y rubros](research/2026-10-03_LANA-RECEPCION-Y-RUBROS.md): antecedente de definición, asistente operativo y comparación inicial de sectores.
 - [Dictamen global de mediano y largo plazo](research/2026-10-02_DICTAMEN-GLOBAL-MEDIANO-LARGO-PLAZO.md): comparación completa; recomendación de software específico, slabs como alternativa y contenido como reserva.
 - [Slabs: competencia y fallos](research/2026-10-02_SLABS-COMPETENCIA-Y-FALLOS.md): sugerencias automáticas ya anunciadas; hipótesis acotada pendiente de comprobar.
