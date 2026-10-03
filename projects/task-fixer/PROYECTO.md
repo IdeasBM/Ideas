@@ -14,9 +14,14 @@ Agencia que ayuda a entender y documentar un proceso, seleccionar herramientas, 
 
 No se limita a vender chatbots. El resultado comercial debe explicarse con la tarea del cliente y medirse: solicitudes atendidas, cotizaciones seguidas, reportes entregados, tiempo ahorrado, incidencias resueltas y contribución del negocio.
 
-## Propuesta inicial de posicionamiento
-Procesos claros, herramientas conectadas y automatizaciones que se pueden supervisar y mantener, con atención en español.
-Es una hipótesis de oferta; idioma e IA no constituyen exclusividad. El comprador en español puede atender clientes en inglés, así que los canales del negocio deben respetar ambos idiomas cuando lo necesiten.
+## Principios de negocio y comunicación
+Por instrucción del responsable: comunicación natural, cercana y coloquial; explicar qué hacemos y cómo con situaciones del trabajo diario. Entender fallas y oportunidades, plantear cambios sistemáticos y explicar las automatizaciones/conexiones que convengan. Evitar superlativos y promesas de resolver toda la vida del negocio.
+[Principios y voz de marca](PRINCIPIOS-Y-COMUNICACION.md).
+
+## Posicionamiento y primera entrada
+El segundo barrido encontró ofertas próximas; cercanía, español y diagnóstico no son exclusivos. Se propone diferenciar la entrega con comprador/tarea específicos y resultados comprobables.
+[Oferta y dirección del sitio](OFERTA-INICIAL-Y-SITIO.md): público inicial recomendado por el asistente, contratistas pequeños de pintura/drywall/remodelación residencial, con seguimiento de solicitudes y cotizaciones. No se registra todavía aprobación del responsable de segmento, ciudad, precio o lanzamiento.
+El comprador en español puede atender clientes en inglés; los canales del negocio deben respetar el idioma necesario.
 
 ## Dos mercados, operación común
 Compartir metodología y componentes técnicos; separar segmento, mensaje, moneda, precio, canales y condiciones de soporte para Estados Unidos y Veracruz. No trasladar un precio en dólares a México con una simple conversión.
