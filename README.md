@@ -2,7 +2,7 @@
 Laboratorio de productos útiles y experimentos comerciales.
 
 ## Estado — 2026-10-03
-Fase: investigación de producto operativo vertical. Kit de costos y STL suspendidos por decisión del responsable. Investigar Lana y problemas recurrentes de servicios/talleres; sin nicho seleccionado ni demanda propia validada.
+Fase: investigación de producto operativo vertical. Kit de costos y STL suspendidos por decisión del responsable. Investigar demanda expresada en foros empresariales y proyectos públicos de Upwork/Workana, con sectores abiertos; sin nicho seleccionado ni demanda propia validada.
 Card activa: **IDEAS-010 — Lana y software operativo vertical**.
 Base y barrido digital terminados. Investigación ampliada a reventa, diseños 3D y una colección creativa musical de figuras y playeras, productos con recortes de laminado y contenido/curso de IA aplicada; shortlist anterior retirada; informes conservados como antecedentes.
 
@@ -12,6 +12,8 @@ Lana conserva su lugar como producto de mediano y largo plazo, independiente de 
 La venta directa de servicios y las implementaciones a medida no son el modelo de esta etapa.
 
 ## Documentos
+- [Demanda en foros y marketplaces](research/2026-10-02_DEMANDA-FOROS-Y-MARKETPLACES.md): primera muestra de 13 casos; no ranking de mercado.
+- [Autorizaciones y bloqueos](research/2026-10-03_AUTORIZACIONES-Y-BLOQUEOS-REPARACION.md): propuesta independiente suspendida por cobertura existente.
 - [Comparación de subrubros](research/2026-10-02_COMPARACION-SUBRUBROS-OPERATIVOS.md): reparación de equipo de jardinería frente a preparación de rentas cortas; sin mercado elegido.
 - [Cambio de rumbo](research/2026-10-02_PIVOT-PRODUCTO-OPERATIVO.md): criterio nuevo, sectores y evidencia inicial.
 - [Dictamen de dos finalistas](research/2026-10-02_DICTAMEN-DOS-FINALISTAS.md): comparación completa, selección razonada y condiciones para invertir.
