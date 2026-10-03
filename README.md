@@ -3,8 +3,8 @@ Laboratorio de productos útiles y experimentos comerciales.
 
 ## Estado — 2026-10-02
 Fase: investigación. No hay producto seleccionado ni demanda validada.
-Card activa: **IDEAS-003 — contrastar tres finalistas**.
-Base y barrido exploratorio terminados. Shortlist provisional: costos de trabajos, comunicación editable y cancelaciones; selección formal pendiente.
+Card activa: **IDEAS-009 — reventa e impresión 3D**.
+Base y barrido digital terminados. Investigación ampliada a reventa e impresión 3D; shortlist anterior provisional.
 
 ## Rumbo
 Crear productos pequeños, probar su distribución y decidir con evidencia qué merece crecer.
@@ -17,6 +17,7 @@ La venta directa de servicios y las implementaciones a medida no son el modelo d
 - [Roadmap](docs/ROADMAP.md): entregables y dependencias.
 - [Comparación inicial](research/COMPARACION-INICIAL.md): seis hipótesis y primeras señales.
 - [Barrido de mercado](research/2026-10-02_BARRIDO-DE-MERCADO.md): 30 referencias y prioridad provisional.
+- [Reventa e impresión 3D](research/2026-10-02_REVENTA-E-IMPRESION-3D.md): modelos comerciales, señales y próximos pasos.
 - [Registro de fuentes](research/FUENTES.md): evidencia y limitaciones.
 - [Antecedentes](antecedentes/README.md): continuidad.
 - [Cards](https://github.com/IdeasBM/Ideas/issues): ejecución.
