@@ -6,14 +6,19 @@ Agencia de diseño de procesos, selección de herramientas, creación, reparaci�
 ## Dirección
 [Proyecto rector](PROYECTO.md) · [Card activa #13](https://github.com/IdeasBM/Ideas/issues/13).
 
+## Principios y oferta
+- [Principios de negocio y comunicación](PRINCIPIOS-Y-COMUNICACION.md): dirección indicada por el responsable y reglas para explicar/entregar el trabajo.
+- [Público, primera oferta y dirección del sitio](OFERTA-INICIAL-Y-SITIO.md): propuesta concreta y textos provisionales.
+
 ## Investigación especializada
+- [Segundo barrido de posicionamiento](research/2026-10-03_SEGUNDO-BARRIDO-POSICIONAMIENTO.md): ofertas cercanas y público inicial recomendado.
 - [Mercado latino de EE. UU. y Veracruz](research/2026-10-03_MERCADO-LATINO-EEUU-VERACRUZ.md): datos oficiales, diferencias territoriales, precios y entradas por sector.
 - [Agencias y prácticas](research/COMPETIDORES-Y-PRACTICAS.md): doce comparables, formas de vender y prácticas adaptables.
 - [Fuentes](research/FUENTES.md): evidencia, fechas y límites.
 - [Ruta de profundización](research/PLAN-DE-PROFUNDIZACION.md): muestras de compradores, alcances, costos y operación de atención.
 
 ## Estado
-Primera investigación regional documentada. Proyecto elegido; demanda, precio y adquisición propios sin validar. Dos entradas propuestas para comparar: seguimiento de cotizaciones de contratistas y solicitudes de eventos/catering para restaurantes.
+Investigación regional y segundo barrido de posicionamiento documentados. Dirección de comunicación fijada por el responsable. Recomendación actual: primera oferta de seguimiento de solicitudes/cotizaciones para contratistas pequeños; restaurantes con eventos/catering siguen como alternativa dentro de Task Fixer. Segmento/ciudad/precio/lanzamiento aún no aprobados por el responsable. Demanda y adquisición propias sin validar.
 
 La siguiente investigación debe servir para elegir una primera oferta y sostenerla con costos y capacidad reales. La posible atención desde Veracruz debe definirse y entrenarse; no es un equipo confirmado.
 
