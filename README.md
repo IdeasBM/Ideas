@@ -12,6 +12,7 @@ Lana conserva su lugar como producto de mediano y largo plazo, independiente de 
 La venta directa de servicios y las implementaciones a medida no son el modelo de esta etapa.
 
 ## Documentos
+- [Tendencias IA y layouts de slabs](research/2026-10-02_TENDENCIAS-IA-Y-LAYOUT-SLABS.md): captura con celular, competencia directa y viabilidad pendiente de prueba.
 - [Demanda en foros y marketplaces](research/2026-10-02_DEMANDA-FOROS-Y-MARKETPLACES.md): primera muestra de 13 casos; no ranking de mercado.
 - [Autorizaciones y bloqueos](research/2026-10-03_AUTORIZACIONES-Y-BLOQUEOS-REPARACION.md): propuesta independiente suspendida por cobertura existente.
 - [Comparación de subrubros](research/2026-10-02_COMPARACION-SUBRUBROS-OPERATIVOS.md): reparación de equipo de jardinería frente a preparación de rentas cortas; sin mercado elegido.
