@@ -4,7 +4,7 @@ Versión 0.1 · 2026-10-02
 ## Objetivo
 Construir una cartera sucesiva de productos útiles que puedan descubrirse, comprarse y usarse por internet. Investigar antes de elegir; completar ciclos de crear, publicar, vender y aprender.
 
-El éxito inicial es identificar una oportunidad defendible y completar una prueba acotada. No se impone una meta inmediata de ingresos.
+Prioridad vigente: identificar un producto operativo con potencial defendible, alrededor de Lana o un rubro concreto. Se acepta desarrollo y recuperación más largos; facilidad y bajo costo no bastan para elegir. El éxito inicial es identificar una oportunidad defendible y completar una prueba acotada. No se impone una meta inmediata de ingresos.
 
 ## Decisiones acordadas
 1. Ideas es el centro de este trabajo.
@@ -47,3 +47,5 @@ Registrar tiempo invertido por separado; una venta no demuestra rentabilidad sos
 | 2026-10-02 | Reiniciar Ideas con investigación y cards | Reducir distancia entre idea, producto y evidencia |
 | 2026-10-02 | Separar Lana de Athena | Evitar una dependencia que amplía el alcance |
 | 2026-10-02 | Mantener seis hipótesis en comparación | Evitar selección prematura |
+
+| 2026-10-02 | Retirar H5/D1 y priorizar producto operativo vertical/Lana | Potencial y motivación insuficientes en finalistas anteriores |
