@@ -4,14 +4,14 @@ Versión 0.1 · 2026-10-02
 ## Objetivo
 Construir una cartera sucesiva de productos útiles que puedan descubrirse, comprarse y usarse por internet. Investigar antes de elegir; completar ciclos de crear, publicar, vender y aprender.
 
-Prioridad vigente: comparar búsqueda abierta de oportunidades con Task Fixer como servicio acotado. No limitar sectores por experiencia previa. Lana como agenda con asistente genérico queda suspendida tras comprobar ofertas cercanas; conservar antecedentes y exigir un problema residual concreto antes de construir. Se acepta desarrollo y recuperación más largos; facilidad y bajo costo no bastan para elegir. El éxito inicial es identificar una oportunidad defendible y completar una prueba acotada. No se impone una meta inmediata de ingresos.
+Prioridad vigente: investigar a fondo únicamente Lana y Task Fixer. Lana se reactiva como plataforma de recepción por agenda con asistente; Task Fixer incluye diseño de procesos, selección de herramientas, creación, reparación y mantenimiento. Elegir después una sola prueba comercial según evidencia. Se acepta desarrollo y recuperación más largos; facilidad y bajo costo no bastan para elegir. El éxito inicial es identificar una oportunidad defendible y completar una prueba acotada. No se impone una meta inmediata de ingresos.
 
 ## Decisiones acordadas
 1. Ideas es el centro de este trabajo.
-2. Lana es independiente de Athena; se conserva como antecedente técnico, con propuesta comercial genérica suspendida.
+2. Lana es independiente de Athena y vuelve como finalista de producto; la competencia no implica descarte automático.
 3. Athena aporta aprendizaje y componentes reutilizables; no es requisito para lanzar.
-4. Se admite comparar Task Fixer como servicio de automatizaciones a medida captando clientes por internet. Esta decisión sustituye la exclusión anterior de servicios personalizados; la prospección presencial no es el canal propuesto.
-5. Comparar productos digitales, creativos y físicos; no elegir por entusiasmo ni por código ya existente.
+4. Task Fixer es finalista de agencia: diagnóstico/diseño de procesos, herramientas, creación, reparación y mantenimiento; captación por internet.
+5. En esta etapa comparar exclusivamente Lana y Task Fixer; otras familias quedan en reserva. No elegir por entusiasmo ni por código existente.
 6. Construir una sola prueba comercial a la vez.
 7. Reutilizar herramientas existentes cuando reduzcan trabajo.
 8. Mostrar avances concretos en cada sesión.
@@ -51,3 +51,4 @@ Registrar tiempo invertido por separado; una venta no demuestra rentabilidad sos
 | 2026-10-03 | Priorizar Lana: recepción y asistente operativo; comparar rubros | Decisión del responsable tras barrido completo; otras rutas quedan en reserva |
 | 2026-10-03 | Suspender Lana como agenda + asistente genérico y buscar otra oportunidad | Condición del responsable: ofertas cercanas ya existen; aprendizaje del criterio del dueño no es una ventaja comprobada |
 | 2026-10-03 | Abrir sectores y admitir Task Fixer con captación por internet | Nueva instrucción del responsable; comparar producto con servicios, sin inferir saturación solo por competencia |
+| 2026-10-03 | Fijar Lana y Task Fixer como únicos finalistas; reactivar Lana y ampliar agencia | Instrucción del responsable: investigar ambos a fondo y concentrarse en el más prometedor; sustituye suspensión y búsqueda abierta |
