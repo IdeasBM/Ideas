@@ -14,6 +14,7 @@ La venta directa de servicios y las implementaciones a medida no son el modelo d
 ## Documentos
 - [Dictamen de dos finalistas](research/2026-10-02_DICTAMEN-DOS-FINALISTAS.md): comparación completa, selección razonada y condiciones para invertir.
 - [H5: investigación profunda](research/2026-10-02_H5-COSTOS-INVESTIGACION-PROFUNDA.md): competencia gratuita, diferencia por probar y economía de la muestra.
+- [D1: investigación profunda STL](research/2026-10-02_D1-STL-INVESTIGACION-PROFUNDA.md): diez referencias, diferencia pendiente y ruta de verificación física.
 - [Documento rector](docs/META.md): objetivo, límites y decisiones.
 - [Plan y mapa](research/PLAN-Y-MAPA.md): método y familias de negocio.
 - [Roadmap](docs/ROADMAP.md): entregables y dependencias.
