@@ -4,13 +4,13 @@ Versión 0.1 · 2026-10-02
 ## Objetivo
 Construir una cartera sucesiva de productos útiles que puedan descubrirse, comprarse y usarse por internet. Investigar antes de elegir; completar ciclos de crear, publicar, vender y aprender.
 
-Prioridad vigente: buscar una oportunidad diferenciada. Lana como agenda con asistente genérico queda suspendida tras comprobar ofertas cercanas; conservar antecedentes y exigir un problema residual concreto antes de construir. Se acepta desarrollo y recuperación más largos; facilidad y bajo costo no bastan para elegir. El éxito inicial es identificar una oportunidad defendible y completar una prueba acotada. No se impone una meta inmediata de ingresos.
+Prioridad vigente: comparar búsqueda abierta de oportunidades con Task Fixer como servicio acotado. No limitar sectores por experiencia previa. Lana como agenda con asistente genérico queda suspendida tras comprobar ofertas cercanas; conservar antecedentes y exigir un problema residual concreto antes de construir. Se acepta desarrollo y recuperación más largos; facilidad y bajo costo no bastan para elegir. El éxito inicial es identificar una oportunidad defendible y completar una prueba acotada. No se impone una meta inmediata de ingresos.
 
 ## Decisiones acordadas
 1. Ideas es el centro de este trabajo.
 2. Lana es independiente de Athena; se conserva como antecedente técnico, con propuesta comercial genérica suspendida.
 3. Athena aporta aprendizaje y componentes reutilizables; no es requisito para lanzar.
-4. No basar esta etapa en prospección, negociación ni implementaciones a medida.
+4. Se admite comparar Task Fixer como servicio de automatizaciones a medida captando clientes por internet. Esta decisión sustituye la exclusión anterior de servicios personalizados; la prospección presencial no es el canal propuesto.
 5. Comparar productos digitales, creativos y físicos; no elegir por entusiasmo ni por código ya existente.
 6. Construir una sola prueba comercial a la vez.
 7. Reutilizar herramientas existentes cuando reduzcan trabajo.
@@ -18,7 +18,7 @@ Prioridad vigente: buscar una oportunidad diferenciada. Lana como agenda con asi
 
 ## Principios de selección
 - Comprador y problema identificables.
-- Canal de descubrimiento plausible sin venta individual.
+- Canal de descubrimiento plausible por internet; si es servicio, contar diagnóstico, cotización y cierre en sus costos.
 - Alcance que pueda terminarse con disponibilidad limitada.
 - Diferenciación observable frente a alternativas gratuitas y pagadas.
 - Costos completos y carga de soporte compatibles con un proyecto paralelo.
@@ -47,9 +47,7 @@ Registrar tiempo invertido por separado; una venta no demuestra rentabilidad sos
 | 2026-10-02 | Reiniciar Ideas con investigación y cards | Reducir distancia entre idea, producto y evidencia |
 | 2026-10-02 | Separar Lana de Athena | Evitar una dependencia que amplía el alcance |
 | 2026-10-02 | Mantener seis hipótesis en comparación | Evitar selección prematura |
-
 | 2026-10-02 | Retirar H5/D1 y priorizar producto operativo vertical/Lana | Potencial y motivación insuficientes en finalistas anteriores |
-
 | 2026-10-03 | Priorizar Lana: recepción y asistente operativo; comparar rubros | Decisión del responsable tras barrido completo; otras rutas quedan en reserva |
-
 | 2026-10-03 | Suspender Lana como agenda + asistente genérico y buscar otra oportunidad | Condición del responsable: ofertas cercanas ya existen; aprendizaje del criterio del dueño no es una ventaja comprobada |
+| 2026-10-03 | Abrir sectores y admitir Task Fixer con captación por internet | Nueva instrucción del responsable; comparar producto con servicios, sin inferir saturación solo por competencia |
