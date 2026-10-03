@@ -4,11 +4,11 @@ Versión 0.1 · 2026-10-02
 ## Objetivo
 Construir una cartera sucesiva de productos útiles que puedan descubrirse, comprarse y usarse por internet. Investigar antes de elegir; completar ciclos de crear, publicar, vender y aprender.
 
-Prioridad vigente: Lana, mini software de recepción de negocios por agenda con asistente conectado al proceso. Elegir rubro y ventaja comercial antes de construir. Se acepta desarrollo y recuperación más largos; facilidad y bajo costo no bastan para elegir. El éxito inicial es identificar una oportunidad defendible y completar una prueba acotada. No se impone una meta inmediata de ingresos.
+Prioridad vigente: buscar una oportunidad diferenciada. Lana como agenda con asistente genérico queda suspendida tras comprobar ofertas cercanas; conservar antecedentes y exigir un problema residual concreto antes de construir. Se acepta desarrollo y recuperación más largos; facilidad y bajo costo no bastan para elegir. El éxito inicial es identificar una oportunidad defendible y completar una prueba acotada. No se impone una meta inmediata de ingresos.
 
 ## Decisiones acordadas
 1. Ideas es el centro de este trabajo.
-2. Lana continúa a mediano y largo plazo como herramienta independiente de Athena.
+2. Lana es independiente de Athena; se conserva como antecedente técnico, con propuesta comercial genérica suspendida.
 3. Athena aporta aprendizaje y componentes reutilizables; no es requisito para lanzar.
 4. No basar esta etapa en prospección, negociación ni implementaciones a medida.
 5. Comparar productos digitales, creativos y físicos; no elegir por entusiasmo ni por código ya existente.
@@ -51,3 +51,5 @@ Registrar tiempo invertido por separado; una venta no demuestra rentabilidad sos
 | 2026-10-02 | Retirar H5/D1 y priorizar producto operativo vertical/Lana | Potencial y motivación insuficientes en finalistas anteriores |
 
 | 2026-10-03 | Priorizar Lana: recepción y asistente operativo; comparar rubros | Decisión del responsable tras barrido completo; otras rutas quedan en reserva |
+
+| 2026-10-03 | Suspender Lana como agenda + asistente genérico y buscar otra oportunidad | Condición del responsable: ofertas cercanas ya existen; aprendizaje del criterio del dueño no es una ventaja comprobada |
