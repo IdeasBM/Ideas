@@ -3,8 +3,8 @@ Laboratorio de productos útiles y experimentos comerciales.
 
 ## Estado — 2026-10-02
 Fase: investigación. No hay producto seleccionado ni demanda validada.
-Card activa: **IDEAS-002 — comparación de seis oportunidades**.
-La estructura inicial está terminada; el barrido de mercado está iniciado.
+Card activa: **IDEAS-003 — contrastar tres finalistas**.
+Base y barrido exploratorio terminados. Shortlist provisional: costos de trabajos, comunicación editable y cancelaciones; selección formal pendiente.
 
 ## Rumbo
 Crear productos pequeños, probar su distribución y decidir con evidencia qué merece crecer.
@@ -16,6 +16,7 @@ La venta directa de servicios y las implementaciones a medida no son el modelo d
 - [Plan y mapa](research/PLAN-Y-MAPA.md): método y familias de negocio.
 - [Roadmap](docs/ROADMAP.md): entregables y dependencias.
 - [Comparación inicial](research/COMPARACION-INICIAL.md): seis hipótesis y primeras señales.
+- [Barrido de mercado](research/2026-10-02_BARRIDO-DE-MERCADO.md): 30 referencias y prioridad provisional.
 - [Registro de fuentes](research/FUENTES.md): evidencia y limitaciones.
 - [Antecedentes](antecedentes/README.md): continuidad.
 - [Cards](https://github.com/IdeasBM/Ideas/issues): ejecución.
