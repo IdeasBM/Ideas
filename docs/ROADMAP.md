@@ -1,10 +1,15 @@
 # Roadmap
-Actualizado: 2026-10-03 (fecha local)
+Actualizado: 2026-10-03 (America/Chicago)
 
-IDEAS-010 activa: competencia de Lana y búsqueda de una oportunidad diferenciada. La investigación competitiva está terminada; agenda + asistente genérico queda suspendido siguiendo la condición del responsable.
+IDEAS-010 activa: búsqueda abierta y Task Fixer. No limitar sectores por experiencia previa. Lana como agenda + asistente genérico permanece suspendida; competencia no demuestra saturación económica.
 
-[Dictamen y matriz de asistentes](../research/2026-10-03_LANA-COMPETENCIA-ASISTENTES.md). [Definición anterior y rubros](../research/2026-10-03_LANA-RECEPCION-Y-RUBROS.md), conservada como antecedente.
+[Comparación inicial de producto y servicio](../research/2026-10-03_BUSQUEDA-ABIERTA-Y-TASK-FIXER.md).
+[Dictamen de asistentes](../research/2026-10-03_LANA-COMPETENCIA-ASISTENTES.md).
 
-Siguiente: buscar problemas operativos residuales frecuentes y costosos, contrastados con herramientas existentes. No elegir otro rubro solo porque utiliza agenda ni construir sobre la promesa genérica de aprendizaje. Exigir comprador, insuficiencia de alternativas y canal de adquisición antes de seleccionar una prueba. Ninguna nueva oportunidad queda validada por este descarte.
+Siguiente entregable: comparar reparación/estabilización de automatizaciones, un flujo documental hacia sistemas existentes y una oportunidad documental concreta. Task Fixer entra como servicio de alcance fijo y captación por internet; no es un mercado vacío ni está validada su rentabilidad.
 
-Slabs, documentos como producto independiente, contenido, creatividad y físicos quedan en reserva. IDEAS-004 suspendida; IDEAS-005–008 esperan definición de una sola prueba. Estudios históricos conservados. No modificar código canónico, contactar personas, gastar ni lanzar comercialmente.
+Para elegir una prueba: compradores con evidencia, alternativas, alcance y aceptación, costos de entrega/soporte/venta y adquisición. Separar contrataciones de presupuestos publicados. No declarar sectores desatendidos a partir de pocos anuncios. Terminar con una oferta para probar, un hueco para investigar o descarte razonado.
+
+Definir oferta antes de construir página/chatbot. El dominio y sus accesos no se verificaron. No lanzar anuncios, contactar personas, comprar servicios ni modificar código canónico en esta etapa.
+
+Otras familias quedan en reserva. IDEAS-004 suspendida; IDEAS-005–008 esperan definición de una sola prueba. Estudios históricos conservados.
