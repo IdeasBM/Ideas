@@ -1,0 +1,7 @@
+const {test}=require('node:test'),a=require('node:assert/strict'),D=require('./engine.js');
+const item=(price,qty=1)=>[{name:'Ejemplo',price,qty}];
+test('contado no cambia deuda anterior; venta y cobro coinciden',()=>{let s=D.seed();D.post(s,{id:'1',kind:'cash',student:'a',items:item(4000)});a.equal(D.balance(s,'a'),4500);a.deepEqual(D.summary(s),{sales:4000,receipts:4000});});
+test('anticipo se consume sin registrar un cobro ficticio',()=>{let s=D.seed();D.post(s,{id:'1',kind:'sale',student:'p',items:item(6500)});a.equal(D.balance(s,'p'),-3500);D.post(s,{id:'2',kind:'sale',student:'p',items:item(5000)});a.equal(D.balance(s,'p'),1500);a.equal(D.summary(s).receipts,0);});
+test('abono, sobrepago y cuentas de hermanos separadas',()=>{let s=D.seed();D.post(s,{id:'1',kind:'payment',student:'a',total:6000});a.equal(D.balance(s,'a'),-1500);a.equal(D.balance(s,'p'),-10000);a.equal(D.summary(s).sales,0);});
+test('confirmación repetida no duplica; datos inválidos no mutan registro',()=>{let s=D.seed(),e={id:'1',kind:'payment',student:'a',total:1000};D.post(s,e);D.post(s,e);a.equal(s.events.length,1);a.throws(()=>D.post(s,{id:'2',kind:'sale',student:'missing',items:item(100)}));a.throws(()=>D.post(s,{id:'3',kind:'payment',student:'a',total:-2}));a.equal(s.events.length,1);});
+test('precio de venta queda congelado y no se comparte objeto editable',()=>{let s=D.seed(),items=item(2500);D.post(s,{id:'1',kind:'sale',student:'l',items});items[0].price=999;a.equal(s.events[0].items[0].price,2500);a.equal(D.balance(s,'l'),2500);});
