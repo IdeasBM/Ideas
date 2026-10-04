@@ -44,3 +44,16 @@ Se acredita el guardado local tras recarga informado por el responsable en su te
 ## Revisión del responsable aplicada — beta 0.4.0, 2026-10-04
 Se revisó el PDF de observaciones y sus cuatro páginas. Se implementaron escuela/ubicación, categorías propias/descripción/precio de venta, grado 1–6/grupo A–F, filtros por periodo/alumno/grado/grupo/tipo e indicador Crédito pendiente. Cuentas se integra en Reportes conforme a la captura del documento; Alumnos conserva altas. [Resoluciones y criterios](REVISION-PANTALLAS-v0.4.md), [entrega y actualización sin reinicio](app/README.md).
 Migración schema 1→2 preserva registros y guarda copia interna anterior de forma atómica. 13 pruebas con simuladores pasan; migración física/revisión visual de 0.4.0 pendientes. La aprobación móvil/persistencia anterior corresponde a 0.3.0. No se publica ni despliega esta nueva entrega desde herramientas del agente; requiere carga del responsable.
+
+## Cierre de ajustes de interfaz — beta 0.4.3, 2026-10-04
+El responsable aprobó el recorrido de 0.4.2 y aportó capturas de cuenta y documento; señaló el editor duplicado en Reportes. 0.4.3 lo retira: la cuenta permite consultar, cobrar y ver/imprimir documento; edición exclusiva en Alumnos. Versiones 0.4.1/0.4.2 agregaron nivel, apellidos separados, agrupación por nivel/grado/grupo, edición de menú y retiro/restauración con historial. 21 pruebas Node con simuladores pasan en 0.4.3. No confundir con las 20 condiciones A01–A20: no están todas aprobadas. La impresión/guardar PDF fue aprobada por el responsable; todavía no constituye emisión inmutable por periodo/folio.
+
+## Siguiente bloque autorizado: completar operación antes del piloto
+1. Motor de cuenta: asignaciones deterministas de pagos a cargos antiguos, saldo inicial documentado, método de pago guardado y grupo/ciclo congelados al vender. Cambiar grupo actualmente reclasifica consultas por grupo actual; no hay todavía snapshot histórico de grupo en ventas antiguas. No inventar su valor al migrar.
+2. Correcciones: reversos vinculados, motivos, devoluciones y límites; comprobar saldos y cobros frente a casos de referencia. Edición de catálogos nunca corrige una venta ya confirmada.
+3. Resguardo: exportación/restauración validada y luego acceso privado, desbloqueo local protegido, API PHP y base dedicada IONOS. No reutilizar la base WordPress; no incluir credenciales en HTML/repo.
+4. Apertura sin conexión: recursos preparados en teléfono, cierre y reapertura en modo avión. IndexedDB ya es base de datos local; publicar HTML en IONOS no crea un respaldo remoto ni garantiza apertura offline.
+5. Documentos: periodo/corte/folio y emisión conservada, descarga/compartir probado en teléfono. Mantener impresión actual mientras se completa este bloque.
+6. Piloto: recuperar copia en dispositivo sustituto y contrastar operaciones con libreta de referencia. Solo entonces habilitar datos reales.
+
+No hace falta comprar hosting ni volver a publicar el sitio comercial para este ajuste. Entrega de desarrollo: HTML nuevo en la carpeta de prueba habitual, mismo origen/navegador y cierre de versiones anteriores. La conexión MySQL es parte del bloque de resguardo, no sustituto del guardado local.
