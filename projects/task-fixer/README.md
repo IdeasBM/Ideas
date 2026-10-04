@@ -10,6 +10,9 @@ Agencia de diseño de procesos, selección de herramientas, creación, reparaci�
 - [Principios de negocio y comunicación](PRINCIPIOS-Y-COMUNICACION.md): dirección indicada por el responsable y reglas para explicar/entregar el trabajo.
 - [Público, primera oferta y dirección del sitio](OFERTA-INICIAL-Y-SITIO.md): propuesta concreta y textos provisionales.
 
+## Tres microapps propuestas — 2026-10-04
+El responsable propone cafetería escolar, reportes en campo y cotizador por materiales/mano de obra, como ejemplos para el sitio y posibles bases de venta/adaptación. [Alcance, módulos y validación](MICROAPPS-ALCANCE-Y-VALIDACION.md). Recomendación: primer prototipo de cafetería, luego ampliación del cotizador y reporte en campo. Solo la demo previa de seguimiento existe; estas tres versiones todavía no están construidas.
+
 ## Demostración y entrega
 - [Ejemplo interactivo y recorrido](demo/README.md): simulación local con datos ficticios; cinco pruebas de lógica aprobadas. Revisión visual pendiente.
 - [Diseño y costos del piloto](DISENO-Y-COSTOS-DEL-PILOTO.md): herramientas, tarifas oficiales, horas estimadas y criterios para una integración real.
@@ -24,7 +27,7 @@ Agencia de diseño de procesos, selección de herramientas, creación, reparaci�
 ## Estado
 Investigación regional y segundo barrido de posicionamiento documentados. Dirección de comunicación fijada por el responsable. Recomendación actual: primera oferta de seguimiento de solicitudes/cotizaciones para contratistas pequeños; restaurantes con eventos/catering siguen como alternativa dentro de Task Fixer. Segmento/ciudad/precio/lanzamiento aún no aprobados por el responsable. Demanda y adquisición propias sin validar.
 
-La demostración y estimación de entrega están preparadas. Siguiente paso: definir atención y propuesta de validación con compradores. Costos reales de ejecución, conexiones y demanda siguen sin comprobarse. La posible atención desde Veracruz debe definirse y entrenarse; no es un equipo confirmado.
+La demostración y estimación de entrega están preparadas. La dirección actual incorpora las tres microapps propuestas por el responsable: preparar primero el prototipo de cafetería y validar uso, conservando la definición de atención y oferta comercial. Costos reales de ejecución, conexiones y demanda siguen sin comprobarse. La posible atención desde Veracruz debe definirse y entrenarse; no es un equipo confirmado.
 
 ## Historia
 [Archivo de investigaciones anteriores](../../research/ARCHIVO.md). Lana y otras opciones ya no son finalistas activos. Se conservan archivos y enlaces para trazabilidad.
