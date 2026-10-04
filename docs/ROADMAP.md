@@ -17,6 +17,9 @@ Demo local de solicitudes/cotizaciones preparada con datos ficticios y cinco pru
 ## Dirección actual — tres ejemplos concretos
 [Microapps: alcance y validación](../projects/task-fixer/MICROAPPS-ALCANCE-Y-VALIDACION.md). El responsable propone cafetería escolar, reporte en campo y cotizador por partidas para explicar Task Fixer en el sitio. No son tres negocios nuevos. Primer entregable recomendado: prototipo móvil de cafetería con datos ficticios y cuenta semanal; después cotizador y reporte. Asistente/sitio y venta directa permanecen por construir y comprobar. Las estimaciones anteriores corresponden al piloto de seguimiento, no a las tres aplicaciones.
 
+## Cafetería: alcance cerrado — 2026-10-04
+[Especificación de desarrollo v1.0](../projects/task-fixer/cafeteria/ESPECIFICACION-DESARROLLO-v1.0.md) preparada tras revisión del PDF del responsable y decisiones explícitas. Un usuario/un teléfono, operación sin internet, respaldo central, pagos/anticipos, cuenta/PDF por alumno e inventario posterior. Siguiente paso específico: bocetos y arquitectura técnica; no reabrir decisiones funcionales ya cerradas. Tecnología, equipo/configuración reales, implementación y pruebas aún pendientes.
+
 ## Próximos entregables
 1. Verificar apariencia y probar el caso demostrable contra herramientas reales cuando haya cuentas y alcance acordados. [Oferta y sitio propuestos](../projects/task-fixer/OFERTA-INICIAL-Y-SITIO.md).
 2. Comprobar acceso, consumo y horas reales. Tarifas oficiales, aceptación y estimación de 22–32 horas con contingencia ya documentadas; no son una medición ni cotización.
