@@ -15,6 +15,8 @@ El responsable propone cafetería escolar, reportes en campo y cotizador por mat
 
 - [Cafetería: especificación final de desarrollo v1.0](cafeteria/ESPECIFICACION-DESARROLLO-v1.0.md): alcance confirmado y reglas técnicas para iniciar; un usuario/teléfono, pagos/anticipos, PDF individual y respaldo. Borradores previos conservados.
 
+- [Cafetería: pantallas navegables](cafeteria/prototipo/README.md) y [arquitectura inicial](cafeteria/ARQUITECTURA-Y-PANTALLAS.md): HTML/CSS/JS, PWA propuesta y copia central PHP/MySQL en IONOS por comprobar. Siete pruebas del prototipo pasan; visual/navegador real pendiente.
+
 ## Demostración y entrega
 - [Ejemplo interactivo y recorrido](demo/README.md): simulación local con datos ficticios; cinco pruebas de lógica aprobadas. Revisión visual pendiente.
 - [Diseño y costos del piloto](DISENO-Y-COSTOS-DEL-PILOTO.md): herramientas, tarifas oficiales, horas estimadas y criterios para una integración real.
