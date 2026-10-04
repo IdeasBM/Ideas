@@ -1,41 +1,34 @@
-# Cafetería · beta 0.4.3
-Task Fixer · 2026-10-04. Ajustes solicitados en la revisión del responsable. Sigue siendo una beta sin acceso privado ni respaldo central.
+# Cafetería · beta 0.5.0
+Task Fixer · 2026-10-04. Entrega local de desarrollo. Sigue sin acceso privado, cifrado de base local ni respaldo central IONOS; usar datos ficticios.
 
-Entrega: **cafeteria-beta-0.4.3.html**. Archivo autosuficiente sin dependencias de red. Los archivos 0.3.0, 0.4.0, 0.4.1 y 0.4.2 se conservan como entregas históricas, pero los fuentes y el constructor corresponden a 0.4.3.
+## Entrega
+`cafeteria-beta-0.5.0.html` contiene todo el código de interfaz/motor/guardado/respaldo manual. Para preparar apertura offline subir también `sw.js`, `manifest.webmanifest` e `icon.svg` a la misma carpeta HTTPS. `python build.py` produce el HTML y `cafeteria-beta-0.5.0-paquete.zip` con estos cuatro archivos e instrucciones. No pegar dentro de WordPress ni sustituir sus archivos.
 
-## Cambios
-- La cuenta abierta desde Reportes muestra saldo, movimientos, registro de pagos y documento. No contiene campos de edición ni botones para guardar datos o retirar alumnos. Edición exclusiva en Alumnos → Editar; guardado bloqueado desde otra pantalla.
-- Edición de producto: nombre, descripción, categoría y precio. Ventas guardadas mantienen su snapshot; producto pendiente en carrito se retira al editar para reintroducirlo con el precio nuevo.
-- Edición de alumnos desde su lista: nombres, apellidos, nivel, grado y grupo, conservando ID y cuenta.
-- Lista de alumnos: nivel → grado/grupo → alumnos, bloques plegados inicialmente y contadores.
-- Eliminar solicita confirmación y retira el registro de la operación (`archived:true`). Nunca borra movimientos ni cuentas. Alumnos retirados permanecen en Reportes para cobrar; productos retirados no se venden. Restauración en Ajustes. No hay borrado definitivo en esta beta.
-- Nivel educativo: Kínder, Primaria, Secundaria y Preparatoria. Nombre(s) y apellidos se guardan separados; `name` conserva el nombre completo para compatibilidad. Búsqueda por nombre o apellidos. El nivel distingue grados/grupos repetidos y aparece en cuentas, ventas y documentos.
-- Alumnos anteriores conservan su nombre íntegro y quedan con nivel Sin definir. Alumnos → Editar permite separar apellidos y asignar nivel sin cambiar ID, saldo ni movimientos. No se adivinan datos. Campos adicionales compatibles con formato 2; desde 0.4.0 no requiere migración destructiva.
-- Configuración: escuela y ubicación opcionales, además de cafetería/moneda/zona/ciclo.
-- Menú: categorías Alimentos, Bebidas, Botanas, Postres y Sin categoría; creación de categorías propias; productos con categoría, descripción opcional y **precio de venta**. “Costo” en las observaciones se interpreta como precio al cliente, no costo de adquisición o cálculo de utilidad.
-- Venta: filtro de productos por categoría. Contado puede asociarse opcionalmente a un alumno para reportes sin cambiar su deuda.
-- Alumnos: grado 1–6 y grupo A–F separados; nombre propio e identificador independiente.
-- Reportes: vendido, cobrado y **crédito pendiente**, filtros por día/rango, grado, grupo, nombre parcial/alumno y tipo de movimiento.
-- Cuentas se integra en Reportes: deuda/todos/saldo a favor, acceso a cuenta, pago y documento. Alumnos permanece para gestión de altas. La captura bajo la sugerencia de retirar “usuarios” corresponde a Cuentas; se aplicó a esa pantalla.
+## Implementado
+- Menú por categoría activa, pestañas horizontales y altas a demanda con aviso al descartar. Precio/descripción/categoría editables; retiro/restauración conservando ventas.
+- Existencia inicial opcional en piezas con fecha; vacío desconocido, cero explícito. No se descuenta al vender ni se presenta como stock actual. Corrección trazable de conteos y movimientos de inventario aún pendientes.
+- Venta a cuenta exige selección; nivel/grado/grupo filtran alumnos activos, orden por nombre, búsqueda sin acentos. Cambio de filtros limpia alumno. Contado anónimo permitido. Ventas nuevas congelan alumno/grupo/ciclo y precio de partidas.
+- Caja: fondo inicial (cero válido), una sesión activa, entradas/retiros con motivo, efectivo esperado, conteo y diferencia al cerrar. No confunde venta a crédito, anticipo consumido o transferencia con efectivo. Corte cerrado conserva snapshot. Corrección de pago de otra caja no modifica el corte ni inventa retiro físico actual.
+- Pago con método/nota y borrador conservado al corregir. Asignaciones FIFO recalculables por fecha/orden/ID; saldo inicial documentado antes de otras operaciones. Saldo a favor y devolución con entrega manual confirmada.
+- Anulación completa vinculada al original, una sola vez, con motivo. Registra reemplazo como operación nueva después. No hay editor de importes confirmados. Anular contado deja devolución pendiente hasta registrar entrega; devolver saldo a favor y corregir un pago capturado mal son acciones distintas. No hay reversos parciales de venta ni corrección/reemplazo combinado atómico en esta beta.
+- Documentos por periodo/corte: saldo previo, movimientos, saldo completo, folio/version, negocio y alumno congelados. Emisión guardada localmente; imprimir/guardar PDF solo después de emitir. Otra emisión recalcula y genera versión nueva; emisión previa permanece. Descarga directa/compartir archivo en un clic pendiente.
+- Respaldo manual AES-GCM con contraseña (mínimo 12 caracteres), PBKDF2-SHA256/600000. Descarga y apertura/validación antes de reemplazo; restore atómico, no suma operaciones y conserva copia interna anterior. No es respaldo automático ni cifrado de base local. Sin contraseña no hay recuperación de este archivo.
+- Escritura con comparación de revisión bloquea pestaña desactualizada; fallo conserva borrador. Resource cache limita service worker a archivos propios de 0.5.0; no cachea API ni WordPress. No fuerza actualización mientras una pestaña está abierta.
 
-## Significado de los indicadores
-Vendido: contado y cargos a cuenta dentro de los filtros. Cobrado: contado y pagos/anticipos dentro de los filtros. Cada movimiento cuenta por su propia fecha en la zona del negocio.
-Crédito pendiente: suma de saldos positivos de los alumnos seleccionados **hasta la fecha final**, incluyendo sus cargos anteriores. No es vendido menos cobrado. Un anticipo de un alumno no compensa deuda de otro. La fecha inicial y el filtro por tipo de movimiento no alteran el crédito pendiente; la pantalla lo explica.
-La lista de cuentas usa el mismo corte final, pero abrir una cuenta lleva a su **saldo actual** para registrar pagos. Fechas abiertas significan desde inicio/hasta actualidad. Ventas anónimas quedan fuera cuando se filtra por grado, grupo o alumno. La búsqueda parcial por nombre sí filtra el resultado al aplicar filtros.
-Este reporte es una consulta en pantalla; exportación de reporte y PDF directo siguen pendientes.
-
-## Actualizar desde 0.3.0 sin reiniciar
-1. Subir el archivo nuevo a la misma carpeta de prueba de IONOS; conservar su nombre.
-2. Cerrar pestañas anteriores y abrir 0.4.3 desde la misma dirección base/origen y navegador habitual.
-3. La base local existente se actualiza automáticamente: se preservan IDs, catálogos, movimientos y precios. Productos anteriores quedan en Sin categoría. Grupos reconocibles como 1° B se separan; grupos libres anteriores se conservan sin inventar grado.
-4. Comprobar escuela/categorías/filtros y los saldos previos. No borrar datos del navegador ni reiniciar instalación.
-5. Continuar únicamente en 0.4.3 y cerrar pestañas anteriores: 0.4.0/0.4.1 no interpretan registros retirados. Tras actualizar, 0.3.0 rechaza el nuevo formato en lugar de sobrescribirlo. La actualización guarda internamente una copia del estado anterior en la misma transacción; no es un respaldo fuera del teléfono.
-
-Formato de datos 2; versión física IndexedDB 1. Migración atómica con copia anterior y revisión creciente, sin borrar base. No trasladar los datos entre PC/teléfono: son instalaciones independientes.
+## Actualización sin borrar datos
+1. Descomprimir paquete en PC y subir sus cuatro recursos a `demo-cafeteria`, donde están las betas anteriores.
+2. Cerrar pestañas anteriores. Abrir **https://taskfixer.net/demo-cafeteria/cafeteria-beta-0.5.0.html** en el navegador habitual. URL aún no comprobada por el agente tras esta entrega.
+3. Mantener mismo origen y navegador para encontrar la base local. No borrar datos ni usar incógnito. PC/teléfono siguen teniendo copias independientes.
+4. Migración automática a formato 3 conserva catálogos/IDs/ventas/pagos y crea listas de sesiones/documentos vacías. Copias internas `before-schema-2` y `before-schema-3` se guardan según versión de partida, en transacción; no son copias fuera del equipo.
+5. Movimientos anteriores no se asignan a caja ni a método inventado; productos anteriores quedan sin conteo inicial; no se inventan grupos históricos. Clientes 0.4 o anteriores rechazan formato 3. Continuar únicamente en 0.5.0.
+6. En **Caja**, abrir con fondo de prueba antes de vender/cobrar. Configuración existente debe permanecer; si apareciera vacía, detenerse y revisar URL/origen/navegador.
+7. En Ajustes, generar respaldo cifrado y conservarlo fuera del teléfono. Para probar restauración en sustituto, detener captura en el anterior; aún no hay autorización remota de dispositivo escritor.
+8. En Ajustes, Preparar apertura sin internet. Después de preparar, recargar con conexión, cerrar y volver a abrir la URL de 0.5.0 en modo avión. Si falla, no considerar offline verificado.
 
 ## Verificación
-`python build.py` genera 0.4.3. `node --test test.cjs test-reportes.cjs`: **21 pruebas pasan**.
-Incluyen edición con precios históricos, retiro/restauración, deuda de alumno retirado, jerarquía de alumnos, recuperación, fallos/reintentos, filtros combinados/fechas de negocio, crédito con anticipos, contado asociado, categorías/escuela y migración sin pérdida/aborto sin cambios. DOM e IndexedDB simulados en Node; 0.4.3 todavía no verificada visualmente ni en teléfono real. La prueba real de persistencia anterior pertenece a 0.3.0.
+`node --test test.cjs test-reportes.cjs test-operacion.cjs test-offline.cjs`: **36 pruebas pasan**. Node simula DOM/IndexedDB/cache; cifrado se prueba con Web Crypto de Node. Incluye migración, fallo/aborto, restauración y rechazo de archivo corrupto, filtro seguro, existencia cero, FIFO/anticipos, anulaciones/devoluciones, caja/cortes, documento inmutable y aislamiento de recursos cacheados.
+Esto no valida layout real, impresión/paginación móvil, Safari Web Crypto/descarga, service worker físico ni la carga real del negocio. No equivale a todas las condiciones A01–A20. Pruebas físicas: [PRUEBAS-REALES-0.5.0.md](PRUEBAS-REALES-0.5.0.md).
 
-## Pendiente de la especificación v1.0
-Acceso privado/cifrado local, respaldo/recuperación IONOS, apertura PWA sin red, tutor/contacto, saldos de apertura, FIFO detallado, reversos/devoluciones, documentos versionados y PDF directo/compartir. No usar con datos reales todavía. [Especificación](../ESPECIFICACION-DESARROLLO-v1.0.md), [ruta del producto](../DESARROLLO-PRODUCTO.md).
+## Pendientes que impiden un piloto con datos reales
+Acceso privado y cifrado/desbloqueo local, API PHP/base privada IONOS, respaldo automático/recuperación remota, verificación de dispositivo único, tutor opcional, fechas efectivas retroactivas revisadas, validación completa de importación y rendimientos/archivos grandes. La validación incorporada revisa referencias/partidas/sumas pero no es una auditoría de seguridad ni reemplaza validación de servidor.
+Solo piloto ficticio hasta completar protección/recuperación y pruebas reales. IA, compras e inventario calculado no forman parte de esta entrega. [Especificación](../ESPECIFICACION-DESARROLLO-v1.0.md), [apuntes](../APUNTES-FINALES-PREPILOTO.md).
