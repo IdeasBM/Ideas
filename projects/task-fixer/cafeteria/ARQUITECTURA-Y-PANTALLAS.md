@@ -38,8 +38,20 @@ Cachear recursos de la app; no cachear respuestas privadas de autenticación/res
 No habilitar segundo escritor. Migración de equipo se realiza detenida y con restauración comprobada.
 
 ## Evidencia del contrato aportada — 2026-10-04
-Capturas revisadas: nombre del servicio IONOS Web Hosting Business; accesos de administración de Hosting y Domains & SSL; complementos SSL Starter, uno asignado a un dominio existente. No muestran panel técnico de PHP/base de datos, capacidad disponible ni certificado asignado al futuro subdominio de la app. No trasladar números de contrato, imágenes de cuenta ni dominios ajenos al proyecto al repositorio público.
-Decisión: mantener HTML/CSS/JS y opción PHP/MySQL, usar este hosting como candidato sin contratar otro. Siguiente evidencia: Hosting manage (versión PHP, bases disponibles y espacio) y configuración HTTPS del subdominio elegido. No alterar PHP global, bases o rutas de sitios existentes para comprobar compatibilidad.
+Capturas revisadas: nombre del servicio IONOS Web Hosting Business; accesos de administración de Hosting y Domains & SSL; complementos SSL Starter, uno asignado a un dominio existente. Las primeras capturas no mostraban panel técnico de PHP/base de datos. Las capturas posteriores muestran administración de PHP, bases de datos, archivos y acceso de despliegue; versión PHP, capacidad por base y certificado para el futuro subdominio siguen por comprobar. No trasladar números de contrato, imágenes de cuenta ni dominios ajenos al proyecto al repositorio público.
+Decisión: mantener HTML/CSS/JS y opción PHP/MySQL, usar este hosting como candidato sin contratar otro. La evidencia de Hosting manage ya recibida confirma esos recursos administrables. Antes de desplegar: versión PHP por dominio, nueva base dedicada con sus límites y HTTPS del subdominio elegido. No alterar PHP global, bases o rutas de sitios existentes para comprobar compatibilidad.
+
+## Comprobación adicional de Hosting manage — 2026-10-04
+Capturas revisadas directamente, sin publicar imágenes ni identificadores de acceso:
+- Webspace administrable y SFTP/SSH presentes.
+- Administración de bases estándar disponible; panel muestra cantidad usada sin límite de número. No equivale a tamaño ilimitado por base.
+- PHP administrable por dominio; versión concreta todavía no visible.
+- Cron disponible; CDN aparece como opción para contratar, no como servicio activo ni necesario para el piloto.
+- Cantidad de archivos: 239,870 de 262,144 (91.5%); margen visible 22,274. La app debe desplegarse como paquete pequeño, sin node_modules ni archivos de desarrollo; no borrar cachés/backups ajenos sin diagnosticar y respaldar.
+- PHP Extended Support activo y aviso de Site Scan sobre sitios vulnerables. No prueba intrusión ni identifica sitio/plugin afectado. Revisar resultados específicos antes de alojar datos reales; subdominio separa origen web, pero no equivale a aislamiento de servidor dentro del mismo contrato.
+Decisión: el hosting cuenta con recursos del tipo requerido para continuar desarrollo HTML/CSS/JS + PHP/base dedicada. No contratar otro plan ni aumentar performance a partir de estas capturas. Compatibilidad completa queda sujeta a prueba de ejecución, base, HTTPS y estado de sitios en el entorno compartido.
+No cambiar versiones de PHP de sitios existentes. Seleccionar versión soportada para el nuevo dominio tras comprobar disponibilidad. No pedir credenciales por chat.
+Fuentes oficiales de apoyo: [límite de archivos](https://www.ionos.co.uk/help/hosting/managing-disk-space/maximum-number-of-files-in-ionos-hosting/), [PHP Extended Support](https://www.ionos.com/hosting/php-extended-support).
 
 ## Qué verificar del contrato IONOS
 Nombre exacto del producto: hosting web Linux, WordPress gestionado o constructor de sitios no deben asumirse equivalentes.
