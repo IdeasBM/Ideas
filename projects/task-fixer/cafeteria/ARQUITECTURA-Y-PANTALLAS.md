@@ -19,7 +19,7 @@ Opción inicial de servidor: PHP y MySQL/MariaDB en IONOS. Las capturas aportada
 | Publicación | Subdominio HTTPS dedicado, por ejemplo cafeteria.dominio, nombre aún no elegido | Separar origen de app de WordPress, plugins y caché comercial |
 
 Service worker exige HTTPS en publicación; IndexedDB ofrece transacciones para datos estructurados. El almacenamiento del navegador no es una garantía absoluta de permanencia: comprobar cuotas/persistencia, espacio insuficiente y respaldos en el equipo real. No depender de modo privado ni de localStorage como base de cuentas.
-La apertura offline completa pertenece a la versión operativa; el HTML de maqueta no registra service worker ni guarda en IndexedDB.
+La apertura offline completa pertenece a la versión operativa; el prototipo 0.2 guarda en IndexedDB, pero todavía no registra service worker.
 
 ## Flujo de respaldo de un dispositivo
 1. Movimiento validado y escrito localmente en una transacción; incrementar revisión.
@@ -64,13 +64,13 @@ Documentación general IONOS ofrece PHP y MySQL/MariaDB en hosting; no prueba la
 Venta → revisión de contado/cuenta; Cuentas → saldo/historial → pago/anticipo → vista de documento; Alumnos; Menú; Reportes; Ajustes.
 Diseño adaptable con controles táctiles y datos ficticios. Importe, fecha, negocio y moneda son del ejemplo.
 Funciones de maqueta: agregar artículos, simular ventas/pagos, observar deuda/saldo a favor, agregar alumnos/productos ficticios, revisar totales y vista imprimible individual.
-El prototipo solo conserva memoria de la página. Sin acceso, base local durable, FIFO detallado por cargo, correcciones/devoluciones, filtros reales por fecha, generación directa de archivo PDF, compartir archivo, copia central o restricción real de dispositivo. Esas funciones siguen exigidas por v1.0, no se consideran implementadas por mostrar una pantalla.
+El prototipo 0.2 conserva alumnos, productos y movimientos en IndexedDB y confirma después del commit local. Recupera datos al reabrir desde el mismo origen/navegador, bloquea escritura pendiente y permite reintentos sin duplicación. Inicialización rechaza datos incompatibles sin reemplazarlos. La persistencia física todavía debe probarse en el equipo real. Sin acceso privado, FIFO detallado por cargo, correcciones/devoluciones, filtros reales por fecha, generación directa de archivo PDF, compartir archivo, copia central o restricción real de dispositivo. Esas funciones siguen exigidas por v1.0, no se consideran implementadas por mostrar una pantalla.
 Vista imprimible utiliza diálogo de impresión del navegador; no sustituye el PDF directo operable desde teléfono.
 
 ## Validación realizada y pendiente
-Siete pruebas pasan: contado independiente de deuda, consumo de anticipo, sobrepago/hermanos, duplicación/datos inválidos, precio congelado, generación de pantallas/recorrido y escape de entradas en HTML. Revisión sintáctica JS aprobada.
+Catorce pruebas pasan: cinco del motor, tres de interfaz y seis de almacenamiento. Incluyen recuperación en nueva conexión, fallo de transacción sin cambios, reintento sin duplicación, escrituras concurrentes sin pérdida, esquema/estructura incompatibles y ausencia de IndexedDB. Revisión sintáctica JS aprobada. El almacenamiento se comprueba con simulador de contrato, sin navegador real; no acredita persistencia física.
 Pruebas de interfaz hechas mediante ejecución JS con DOM mínimo simulado: no son automatización de navegador ni revisión visual.
-Navegador ejecutable no disponible en este entorno; no se afirma verificación de apariencia móvil, impresión real o interacción táctil. Próxima comprobación: abrir prototipo en navegador/teléfono del responsable y validar recorrido antes de desarrollar persistencia/PDF/API.
+Navegador ejecutable no disponible en este entorno; no se afirma verificación de apariencia móvil, impresión real o interacción táctil. Próxima comprobación: abrir prototipo en navegador/teléfono del responsable y validar recorrido y persistencia local. PDF/API y apertura PWA sin red siguen pendientes.
 
 ## Orden de implementación
 1. Revisar pantallas de despacho/cuenta/pago/PDF y ajuste de diseño.
@@ -87,3 +87,4 @@ Consultadas 2026-10-04:
 - [MDN: IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API).
 - [MDN: cuotas y eliminación de almacenamiento](https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 - [WordPress: requisitos de alojamiento](https://wordpress.org/about/requirements/).
+\n## Incremento 0.2 — guardado local\nSe implementó primero la capa de almacenamiento del prototipo para comprobar la ruta de guardado antes de completar el motor v1.0. Es una copia de estado versionada en una única transacción IndexedDB, con lectura del último registro. El respaldo central y la copia local operativa protegida siguen pendientes. Esta demo usa una base separada de pruebas y solo datos ficticios. No acredita FIFO, fechas reales, reversos, recuperación de servidor ni los veinte escenarios finales.\n
