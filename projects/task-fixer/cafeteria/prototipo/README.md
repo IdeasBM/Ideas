@@ -1,7 +1,7 @@
-# Cafetería · prototipo 0.2 con guardado local
+# Cafetería · prototipo 0.2.1 con guardado local
 Task Fixer · 2026-10-04. Datos ficticios; todavía no apto para operación real.
 
-Descarga **pantallas.html** y ábrelo en un navegador compatible. Archivo autosuficiente sin dependencias ni llamadas de red. GitHub muestra código, no ejecuta la interfaz. Para una prueba estable se recomienda servirlo desde localhost o HTTPS: el almacenamiento de archivos locales puede variar por navegador. Usa siempre el mismo origen y navegador; cambiar dirección no traslada datos.
+En PC puedes descargar **pantallas.html** y abrirlo en un navegador compatible. En iPhone, usa una dirección HTTPS de la demo abierta en Safari; el visor del adjunto no es una prueba funcional. Archivo autosuficiente sin dependencias ni llamadas de red. GitHub muestra código, no ejecuta la interfaz. Para una prueba estable se recomienda servirlo desde localhost o HTTPS: el almacenamiento de archivos locales puede variar por navegador. Usa siempre el mismo origen y navegador; cambiar dirección no traslada datos.
 
 ## Qué cambió
 - IndexedDB conserva alumnos, productos, ventas y pagos en este navegador.
@@ -36,3 +36,17 @@ IndexedDB se verifica con un **simulador de contrato**, y la interfaz con DOM m�
 La [especificación v1.0](../ESPECIFICACION-DESARROLLO-v1.0.md) sigue rigiendo. Este es un incremento de desarrollo, no su implementación completa. [Arquitectura](../ARQUITECTURA-Y-PANTALLAS.md).
 
 Referencias: [transacción completa IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/complete_event) y [protección de almacenamiento](https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist).
+
+## Incidencia detectada en iPhone — 2026-10-04
+Las capturas del responsable muestran la versión 0.1 en un visor de adjuntos: HTML/CSS visible, pero sin menú dinámico. La PC sí presenta la interfaz. Es compatible con scripts no ejecutados por el visor; no se verificó su configuración interna. No atribuirlo a IndexedDB: las capturas son de la versión anterior sin esa capa.
+
+0.2.1 incorpora contenido HTML inicial que indica cómo abrir la demo, en lugar de dejar el panel vacío si no se ejecutan scripts. El botón Reiniciar permanece desactivado hasta inicializar. Este cambio no activa JavaScript en un visor que lo restrinja ni acredita compatibilidad móvil.
+
+### Próxima prueba mediante IONOS
+1. Elegir dominio/subdominio HTTPS de prueba y verificar su directorio web. No sobrescribir el index de un sitio existente.
+2. Crear una carpeta nueva, por ejemplo `demo-cafeteria`, dentro del directorio web de esa dirección.
+3. Subir solo la versión actual de `pantallas.html` a esa carpeta, mediante administración de archivos o SFTP. No pegarla dentro de una página de WordPress/Divi.
+4. Abrir en Safari la URL HTTPS del archivo, no su adjunto ni la vista de código en GitHub. El enlace concreto depende del dominio elegido y aún no se ha publicado.
+5. Comprobar distintivo DEMO 0.2.1, menú, venta/pago y recuperación tras cierre/reapertura. Solo datos ficticios. El guardado en PC y teléfono son copias independientes.
+
+La prueba mediante URL necesita conexión para cargar la página: no hay service worker todavía. No se hicieron cambios en IONOS.
