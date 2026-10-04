@@ -9,6 +9,7 @@ function validate(r){
  ids(state.students);ids(state.products);ids(state.events);
  if(state.students.some(x=>typeof x.name!=='string'||typeof x.group!=='string'||!Number.isSafeInteger(x.opening)))bad();
  if(state.students.some(a=>(a.level!==undefined&&!['','kinder','primaria','secundaria','preparatoria'].includes(a.level))||(a.firstName!==undefined&&typeof a.firstName!=='string')||(a.surnames!==undefined&&typeof a.surnames!=='string')||(a.firstName!==undefined&&a.surnames!==undefined&&a.name!==[a.firstName,a.surnames].filter(Boolean).join(' '))))bad();
+ if([...state.students,...state.products].some(a=>a.archived!==undefined&&typeof a.archived!=='boolean'))bad();
  if(state.products.some(x=>typeof x.name!=='string'||!Number.isSafeInteger(x.price)||x.price<=0))bad();
  if(state.events.some(e=>!['cash','sale','payment'].includes(e.kind)||!Number.isSafeInteger(e.total)||e.total<=0||e.kind!=='cash'&&!state.students.some(a=>a.id===e.student)))bad();
  if(state.seen.length!==state.events.length||new Set(state.seen).size!==state.seen.length||state.events.some(e=>!state.seen.includes(e.id)))bad();
