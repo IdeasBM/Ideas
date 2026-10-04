@@ -12,7 +12,7 @@ La oferta de contratistas deja de ser la única demostración propuesta. Task Fi
 Mostrar tres ejemplos puede ayudar a entender la oferta. Construir primero una experiencia pequeña; no desarrollar tres servicios completos simultáneamente ni crear desde el inicio un constructor universal de módulos.
 
 ## 1. Cafetería: del consumo diario a la cuenta semanal
-Revisión del documento aportado por el responsable: [especificación funcional v0.3](cafeteria/ESPECIFICACION-FUNCIONAL-v0.3.md), borrador para cerrar decisiones antes de desarrollo. Incorpora ventas pagadas al momento, operación sin internet con sincronización posterior, hasta dos operadores y anticipos/saldo a favor. Inventario confirmado para segunda etapa. Las preguntas previas de esta sección son antecedentes; los estados vigentes se concentran en la especificación v0.3. La especificación detallada concentra las decisiones de esta microapp; no es aprobación final.
+Revisión del documento aportado por el responsable: [especificación funcional v0.4](cafeteria/ESPECIFICACION-FUNCIONAL-v0.4.md), borrador para cerrar decisiones antes de desarrollo. Incorpora ventas pagadas al momento, operación sin internet con sincronización posterior, un usuario y un teléfono de captura, con actualización central y anticipos/saldo a favor. Inventario confirmado para segunda etapa. Las preguntas previas de esta sección son antecedentes; los estados vigentes se concentran en la especificación v0.4. La especificación detallada concentra las decisiones de esta microapp; no es aprobación final.
 Problema aportado por el responsable: operador sin computadora transcribe consumos y manda resúmenes a padres por WhatsApp durante el fin de semana. No se han medido minutos ni número de cuentas.
 
 ### Primera versión
