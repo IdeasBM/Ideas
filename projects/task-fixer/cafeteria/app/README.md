@@ -1,44 +1,34 @@
-# Cafetería · base de producto 0.3.0
-Task Fixer · 2026-10-04. Primer incremento del producto; todavía no apto para datos reales ni piloto operativo.
+# Cafetería · beta 0.4.0
+Task Fixer · 2026-10-04. Ajustes solicitados en la revisión del responsable. Sigue siendo una beta sin acceso privado ni respaldo central.
 
-Archivo de entrega: **cafeteria-beta-0.3.0.html**. Nombre nuevo para distinguirlo de pantallas.html. Autosuficiente y sin llamadas externas.
+Entrega: **cafeteria-beta-0.4.0.html**. Archivo autosuficiente sin dependencias de red. El archivo 0.3.0 se conserva como entrega histórica, pero los fuentes y el constructor corresponden a 0.4.0.
 
-## Funciones implementadas
-- Primera apertura vacía: sin alumnos, productos, saldos ni ventas de ejemplo.
-- Configuración requerida: nombre de cafetería, moneda MXN/USD, zona horaria y ciclo escolar. Valores iniciales seleccionables, no datos del negocio confirmados. Moneda/zona horaria se fijan al primer movimiento.
-- Alta de alumno con nombre y grupo libre, identificador propio y cuenta individual.
-- Alta de producto y precio en centavos.
-- Venta de contado sin alumno o cargo a cuenta; uso de crédito existente sin duplicar cobro.
-- Pago parcial/total o anticipo; remanente como saldo a favor.
-- Fecha calculada según zona horaria configurada y fecha/hora ISO del registro.
-- Totales acumulados separados de ventas y cobros. Sin filtros de periodo todavía.
-- IndexedDB en base separada de la demo: lectura del último estado, escritura atómica y revisión creciente; confirmación tras commit. Error conserva carrito e identificador de reintento.
-- Cuenta acumulada con vista imprimible individual; no PDF emitido definitivo.
+## Cambios
+- Configuración: escuela y ubicación opcionales, además de cafetería/moneda/zona/ciclo.
+- Menú: categorías Alimentos, Bebidas, Botanas, Postres y Sin categoría; creación de categorías propias; productos con categoría, descripción opcional y **precio de venta**. “Costo” en las observaciones se interpreta como precio al cliente, no costo de adquisición o cálculo de utilidad.
+- Venta: filtro de productos por categoría. Contado puede asociarse opcionalmente a un alumno para reportes sin cambiar su deuda.
+- Alumnos: grado 1–6 y grupo A–F separados; nombre propio e identificador independiente.
+- Reportes: vendido, cobrado y **crédito pendiente**, filtros por día/rango, grado, grupo, nombre parcial/alumno y tipo de movimiento.
+- Cuentas se integra en Reportes: deuda/todos/saldo a favor, acceso a cuenta, pago y documento. Alumnos permanece para gestión de altas. La captura bajo la sugerencia de retirar “usuarios” corresponde a Cuentas; se aplicó a esa pantalla.
 
-No hay botón de reinicio destructivo en esta entrega. La instalación guarda en el mismo navegador y origen; PC y teléfono son copias independientes. No importa datos de la demo automáticamente.
+## Significado de los indicadores
+Vendido: contado y cargos a cuenta dentro de los filtros. Cobrado: contado y pagos/anticipos dentro de los filtros. Cada movimiento cuenta por su propia fecha en la zona del negocio.
+Crédito pendiente: suma de saldos positivos de los alumnos seleccionados **hasta la fecha final**, incluyendo sus cargos anteriores. No es vendido menos cobrado. Un anticipo de un alumno no compensa deuda de otro. La fecha inicial y el filtro por tipo de movimiento no alteran el crédito pendiente; la pantalla lo explica.
+La lista de cuentas usa el mismo corte final, pero abrir una cuenta lleva a su **saldo actual** para registrar pagos. Fechas abiertas significan desde inicio/hasta actualidad. Ventas anónimas quedan fuera cuando se filtra por grado, grupo o alumno. La búsqueda parcial por nombre sí filtra el resultado al aplicar filtros.
+Este reporte es una consulta en pantalla; exportación de reporte y PDF directo siguen pendientes.
 
-## Publicación de prueba
-1. En IONOS, entrar a la carpeta ya usada `demo-cafeteria` del sitio Task Fixer.
-2. Subir **cafeteria-beta-0.3.0.html** como archivo nuevo. No reemplazar pantallas.html.
-3. Abrir la dirección HTTPS de ese archivo en el navegador habitual del teléfono.
-4. Confirmar título/distintivo **BETA 0.3.0**, primera pantalla Configuración y catálogos vacíos.
-5. Introducir solo datos ficticios, guardar configuración y dos productos; agregar un alumno.
-6. Registrar contado/cuenta/abono. Cerrar, abrir de nuevo la misma dirección y navegador; comprobar movimientos y saldos.
-7. Si no conserva datos, registrar texto exacto de estado/error, versión y navegador; no afirmar que quedó resuelto sin esta prueba.
+## Actualizar desde 0.3.0 sin reiniciar
+1. Subir el archivo nuevo a la misma carpeta de prueba de IONOS; conservar su nombre.
+2. Cerrar pestañas anteriores y abrir 0.4.0 desde la misma dirección base/origen y navegador habitual.
+3. La base local existente se actualiza automáticamente: se preservan IDs, catálogos, movimientos y precios. Productos anteriores quedan en Sin categoría. Grupos reconocibles como 1° B se separan; grupos libres anteriores se conservan sin inventar grado.
+4. Comprobar escuela/categorías/filtros y los saldos previos. No borrar datos del navegador ni reiniciar instalación.
+5. Continuar únicamente en 0.4.0. Tras actualizar, 0.3.0 rechaza el nuevo formato en lugar de sobrescribirlo. La actualización guarda internamente una copia del estado anterior en la misma transacción; no es un respaldo fuera del teléfono.
 
-El HTML de esta entrega opera localmente una vez cargado, pero abrir desde URL sin red todavía requiere el futuro service worker. Compartir un enlace no comparte los datos locales.
+Formato de datos 2; versión física IndexedDB 1. Migración atómica con copia anterior y revisión creciente, sin borrar base. No trasladar los datos entre PC/teléfono: son instalaciones independientes.
 
-## Límites y siguiente entrega
-- Sin acceso privado ni cifrado local; no introducir datos personales de alumnos reales.
-- Sin respaldo central, restauración ni autenticación de dispositivo en IONOS.
-- Sin configuración de tutor/contacto, edición/archivo de alumnos/productos, carga de saldos de apertura ni búsquedas rápidas.
-- El motor calcula deuda y crédito, pero todavía no distribuye abonos entre cargos individuales por FIFO.
-- Sin reversos/correcciones/devoluciones, periodos reales, comprobantes versionados ni PDF directo/compartir archivo.
-- No se ha instalado en IONOS esta entrega mediante herramientas del agente. El responsable realizará la carga.
+## Verificación
+`python build.py` genera 0.4.0. `node --test test.cjs test-reportes.cjs`: **13 pruebas pasan**.
+Incluyen recuperación, fallos/reintentos, filtros combinados/fechas de negocio, crédito con anticipos, contado asociado, categorías/escuela y migración sin pérdida/aborto sin cambios. DOM e IndexedDB simulados en Node; 0.4.0 todavía no verificada visualmente ni en teléfono real. La prueba real de persistencia anterior pertenece a 0.3.0.
 
-La [especificación v1.0](../ESPECIFICACION-DESARROLLO-v1.0.md) sigue siendo la fuente de requisitos; esta entrega no los cumple todos. [Ruta del producto](../DESARROLLO-PRODUCTO.md).
-
-## Construcción y validación
-`python build.py` genera el HTML de entrega. `node --test test.cjs`: cinco pruebas pasan.
-Comprueban inicio vacío/configuración obligatoria, recuperación de catálogos/ventas/pagos, contado sin alumno, fallo y reintento sin duplicación, fechas actuales, moneda/zona bloqueadas y grupos libres/texto escapado.
-Pruebas con DOM mínimo y simulador de IndexedDB en Node: no acreditan persistencia física ni apariencia en Safari. Prueba móvil de esta versión pendiente de carga y ejecución por el responsable.
+## Pendiente de la especificación v1.0
+Acceso privado/cifrado local, respaldo/recuperación IONOS, apertura PWA sin red, tutor/contacto, edición/archivo de catálogos, saldos de apertura, FIFO detallado, reversos/devoluciones, documentos versionados y PDF directo/compartir. No usar con datos reales todavía. [Especificación](../ESPECIFICACION-DESARROLLO-v1.0.md), [ruta del producto](../DESARROLLO-PRODUCTO.md).
