@@ -96,3 +96,21 @@ Ejemplo: fondo 200, ventas cobradas en efectivo 500, ventas nuevas a cuenta 150,
 Guardar sesión de caja, método y vínculo por operación; sesiones y movimientos nuevos forman parte de la misma transacción local que la venta/pago. Idempotencia para apertura y cierre; bloqueo de doble cierre y operaciones en sesión cerrada. Todo funciona localmente y se incluye en respaldo.
 Movimientos anteriores sin sesión o método permanecen como históricos no asignados; no suponer que todo fue efectivo ni incorporarlos a la nueva apertura. Permitir solo corrección explícita revisada, sin inventar cierres antiguos.
 Pruebas: fondo no cuenta como venta; crédito y transferencia no inflan efectivo; cobrar deuda/recibir anticipo sí suma efectivo; consumir anticipo no duplica entrada; cambio correcto; retiros/devoluciones; cierre con faltante/sobrante; doble toque/reintento; recuperación tras cierre/reapertura del navegador; ninguna pérdida del corte anterior.
+
+## Ampliación acordada: existencia inicial de productos
+Solicitud del responsable, 2026-10-04. Se incorpora al diseño de alta de producto y al modelo antes de los demás bloques; reemplaza la exclusión total de datos de inventario solo en este alcance mínimo. Inventario completo y compras automáticas siguen para otra etapa.
+
+### Formulario y significado
+- Campo opcional **Existencia inicial (piezas)** al agregar producto; entero mayor o igual a cero. Cero significa que se contaron cero piezas; vacío significa existencia no registrada. No admitir negativos, fracciones ni valores fuera del rango entero seguro.
+- Guardar conteo, unidad piezas y fecha/hora del registro. Mostrar **Conteo inicial: X piezas · fecha**; no llamarlo Existencia actual mientras no esté implementado el registro de movimientos.
+- Los productos anteriores quedan sin existencia registrada, no en cero. El conteo no cambia ventas, saldos, caja ni precio. El guardado debe incluirlo en la misma transacción del alta y en exportaciones/respaldos.
+- Editar precio, descripción o categoría conserva el conteo. Corregir conteo requiere una acción identificada con motivo y fecha, conservando el valor anterior; evitar que un formulario genérico sobrescriba existencias accidentalmente.
+- No bloquear venta ni retirar producto automáticamente por cero o por ausencia de conteo en este alcance mínimo. Informar el dato sin afirmar que se está controlando stock.
+- Aplica a unidades vendidas (burritos preparados, refrescos, galletas), no ingredientes, recetas, kilos ni inventario de cocina.
+
+### Base para la siguiente etapa
+Preparar un registro independiente de conteos y movimientos por producto con ID, cantidad, tipo, fecha, motivo y vínculo a venta cuando aplique. Existencia inicial + reposiciones − unidades despachadas − mermas + devoluciones físicamente recuperadas produce la existencia calculada. Venta a crédito y pagada consumen piezas por igual; pagos de deuda no consumen inventario. Un reverso financiero no garantiza que el producto regresó, por lo que devolución de dinero y devolución física deben diferenciarse.
+Una futura reposición requiere compras/recepciones o ajustes explícitos; el dato inicial por sí solo no permite automatizar compras. Antes de esa automatización se necesitarán mínimos deseados, proveedores, presentaciones y confirmación humana. No generar órdenes ni gasto automáticamente en esta primera versión.
+
+### Criterios de aceptación
+Alta con cero y con número positivo; campo vacío como desconocido; rechazo de negativos/fracciones; conservación tras recarga, edición de precio y respaldo; productos anteriores sin valor inventado; fecha de conteo visible; ninguna modificación de caja o deuda; corrección trazable sin reiniciar conteo al editar catálogo. En piloto explicar si el dato representa conteo inicial o stock calculado: nunca presentarlos como equivalentes.
