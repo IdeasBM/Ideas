@@ -77,7 +77,7 @@ Datos mínimos:
 | Registro | Campos esenciales |
 |---|---|
 | Negocio | ID, nombre, moneda, zona horaria, responsable |
-| Operador | ID, acceso y permiso; hasta dos operadores en el piloto, cada uno identificable |
+| Operador | Un usuario propietario; un teléfono autorizado para captura en el piloto |
 | Grupo | ID, grado, identificador, ciclo, activo |
 | Alumno | ID, nombre, grupo actual, tutor/contacto, activo |
 | Producto | ID, nombre, precio actual, disponible/activo |
