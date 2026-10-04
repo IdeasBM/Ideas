@@ -5,7 +5,7 @@ Base: [especificación v1.0](ESPECIFICACION-DESARROLLO-v1.0.md), revisada y acep
 ## Decisión técnica
 App web propia en HTML, CSS y JavaScript, preparada como PWA para el piloto. WordPress/Divi queda como opción para el sitio comercial de Task Fixer y sus enlaces a las demos. No construir ventas/cuentas como formularios de Divi.
 WordPress puede integrarse con una app, pero no elimina el trabajo necesario de datos locales, transacciones, PDF y respaldo. Evitar ese acoplamiento para esta versión. Esta es decisión de diseño del proyecto, no afirmación de imposibilidad de WordPress.
-Opción inicial de servidor: PHP y MySQL/MariaDB en IONOS. Compatibilidad del contrato particular todavía no comprobada; no comprar ni migrar hosting hasta revisar el plan.
+Opción inicial de servidor: PHP y MySQL/MariaDB en IONOS. Las capturas aportadas el 2026-10-04 identifican el contrato como IONOS Web Hosting Business y muestran administración de Hosting y Domains & SSL. Es candidato para el piloto; versión/capacidad de PHP, base de datos disponible y HTTPS de la app todavía pendientes. No comprar ni migrar hosting a partir de estas capturas.
 
 ## Capas propuestas para la versión operativa
 | Parte | Tecnología/diseño | Propósito |
@@ -36,6 +36,10 @@ Una cuenta propietaria, credenciales verificadas en servidor y sesión segura pa
 El desbloqueo local y la protección de los datos se diseñarán antes del piloto; no afirmar que un PIN por sí solo cifra la base. Acceso offline no debe depender de una llamada al servidor en cada venta.
 Cachear recursos de la app; no cachear respuestas privadas de autenticación/respaldo como si fueran imágenes públicas. Demos con datos ficticios separadas de aplicación real.
 No habilitar segundo escritor. Migración de equipo se realiza detenida y con restauración comprobada.
+
+## Evidencia del contrato aportada — 2026-10-04
+Capturas revisadas: nombre del servicio IONOS Web Hosting Business; accesos de administración de Hosting y Domains & SSL; complementos SSL Starter, uno asignado a un dominio existente. No muestran panel técnico de PHP/base de datos, capacidad disponible ni certificado asignado al futuro subdominio de la app. No trasladar números de contrato, imágenes de cuenta ni dominios ajenos al proyecto al repositorio público.
+Decisión: mantener HTML/CSS/JS y opción PHP/MySQL, usar este hosting como candidato sin contratar otro. Siguiente evidencia: Hosting manage (versión PHP, bases disponibles y espacio) y configuración HTTPS del subdominio elegido. No alterar PHP global, bases o rutas de sitios existentes para comprobar compatibilidad.
 
 ## Qué verificar del contrato IONOS
 Nombre exacto del producto: hosting web Linux, WordPress gestionado o constructor de sitios no deben asumirse equivalentes.
