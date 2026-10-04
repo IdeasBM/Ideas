@@ -12,15 +12,16 @@ La oferta de contratistas deja de ser la única demostración propuesta. Task Fi
 Mostrar tres ejemplos puede ayudar a entender la oferta. Construir primero una experiencia pequeña; no desarrollar tres servicios completos simultáneamente ni crear desde el inicio un constructor universal de módulos.
 
 ## 1. Cafetería: del consumo diario a la cuenta semanal
+Revisión del documento aportado por el responsable: [especificación funcional v0.2](cafeteria/ESPECIFICACION-FUNCIONAL-v0.2.md), borrador para cerrar decisiones antes de desarrollo. Incorpora ventas pagadas al momento y separa inventario terminado de ingredientes. La especificación detallada concentra las decisiones de esta microapp; no es aprobación final.
 Problema aportado por el responsable: operador sin computadora transcribe consumos y manda resúmenes a padres por WhatsApp durante el fin de semana. No se han medido minutos ni número de cuentas.
 
 ### Primera versión
 - Uso desde teléfono. Alta de familia/cuenta pagadora, uno o varios alumnos, grado/grupo y contacto del adulto.
 - Menú editable: nombre, precio y disponible/no disponible. Desactivar artículos en lugar de borrar su historial.
 - Captura: buscar alumno por nombre/grupo, tocar artículos, modificar cantidad, revisar y guardar. Guardado visible; impedir duplicados por doble toque.
-- Venta: fecha, alumno, cantidades y precio vigente congelado en esa venta. Cambiar el menú no altera cuentas anteriores.
+- Venta: pagada al momento o crédito; alumno obligatorio solo para crédito. Guardar fecha, cantidades y precio vigente congelado en esa venta. Cobros se registran separados de ventas. Cambiar el menú no altera cuentas anteriores.
 - Correcciones mediante anulación/ajuste con motivo; mantener rastro.
-- Registrar abonos parciales, fecha y cuenta familiar. El botón no comprueba depósitos: el operador confirma el pago.
+- Registrar abonos parciales, fecha y asignación a la cuenta individual del alumno. El botón no comprueba depósitos: el operador confirma el pago.
 - Cierre por periodo seleccionado. Mostrar consumos por alumno y día, subtotal semanal, saldo previo, abonos y saldo actual. No mezclar gasto de la semana con deuda acumulada.
 - Elegir grado/grupo (por ejemplo, primero B) y fecha de corte; mostrar alumnos con saldo pendiente y el importe de cada uno. Poder consultar también cuentas sin saldo cuando se necesite.
 - Seleccionar alumno → revisar su cuenta → generar PDF individual → compartir el archivo desde el teléfono por la aplicación que el operador elija, incluido WhatsApp. Alternativa: descargar el PDF y adjuntarlo manualmente. Comprobar el recorrido en el teléfono real.
