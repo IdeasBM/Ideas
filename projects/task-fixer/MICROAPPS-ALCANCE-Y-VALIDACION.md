@@ -22,20 +22,22 @@ Problema aportado por el responsable: operador sin computadora transcribe consum
 - Correcciones mediante anulación/ajuste con motivo; mantener rastro.
 - Registrar abonos parciales, fecha y cuenta familiar. El botón no comprueba depósitos: el operador confirma el pago.
 - Cierre por periodo seleccionado. Mostrar consumos por alumno y día, subtotal semanal, saldo previo, abonos y saldo actual. No mezclar gasto de la semana con deuda acumulada.
-- Resumen por familia, con hijos separados. Revisar importe y destinatario antes de compartir.
-- Copiar texto y abrir WhatsApp con mensaje preparado; operador confirma envío y marca manualmente que lo compartió. Abrir el chat no significa mensaje enviado ni entregado.
+- Elegir grado/grupo (por ejemplo, primero B) y fecha de corte; mostrar alumnos con saldo pendiente y el importe de cada uno. Poder consultar también cuentas sin saldo cuando se necesite.
+- Seleccionar alumno → revisar su cuenta → generar PDF individual → compartir el archivo desde el teléfono por la aplicación que el operador elija, incluido WhatsApp. Alternativa: descargar el PDF y adjuntarlo manualmente. Comprobar el recorrido en el teléfono real.
+- PDF: nombre del alumno, grado/grupo, periodo, consumos desglosados, saldo previo, abonos y saldo a la fecha de corte. Identificar fecha de generación. Generarlo o compartirlo no modifica el saldo ni prueba envío/recepción/pago.
+- La vista por alumno debe mantener saldo individual. Una familia puede tener varios alumnos; registrar a qué cuenta se aplica cada abono. Un resumen familiar consolidado queda como módulo opcional, sin duplicar saldos.
 - Exportar registro/cuentas y conservar respaldos para el piloto real.
 
 ### Ejemplo sintético
 Pepito: lunes burrito MXN 25 + jugo MXN 15; miércoles leche MXN 12. Consumo del periodo MXN 52. Saldo previo MXN 20, abono MXN 30, saldo actual MXN 42. Otro hijo figura separado en la misma cuenta familiar. Los precios son ficticios.
 
-### WhatsApp: dos alcances distintos
-Click-to-chat prepara el mensaje para revisión/envío por la persona. El envío automático a muchos destinatarios requiere integración con WhatsApp Business Platform, permisos de destinatarios, plantillas aplicables y presupuesto propio; fuera de la ventana de 24 horas se utilizan plantillas aprobadas. No prometer un botón que envíe todas las cuentas sin comprobar estas condiciones.
-La política también restringe negocios de cobranza de deudas. Antes de automatizar, verificar que el caso de resúmenes de compras de la cafetería encaja en el uso permitido y categoría adecuada; no equipararlo por defecto a un servicio financiero o de cobranza. Costos y aprobación no comprobados.
-Primera propuesta: automatizar captura, cálculo y preparación; envío supervisado. Conserva la meta final del responsable como segunda etapa, no la descarta.
+### Decisión del responsable: PDF y envío manual
+Aclaración del 2026-10-04: el alcance base genera el PDF y permite compartirlo; el operador elige al padre/madre en WhatsApp y confirma el envío. No requiere integrar WhatsApp Business Platform ni usar click-to-chat como mecanismo principal. No hay envío masivo automático en la versión base.
+El botón de grupo muestra cuentas pendientes; no manda archivos. Solo se comparte el documento individual revisado. La lista completa del grupo es para uso del operador.
+Automatización de envíos es posible complemento futuro, con costo separado por estudiar. Las fuentes de WhatsApp al final quedan como referencia para ese complemento, no como requisito del PDF manual.
 
 ### Aceptación y medida
-Probar dos alumnos con mismo nombre, dos hijos de una familia, menú con precio modificado, abono parcial, corrección, doble toque y cierre repetido. El cierre no debe volver a cargar consumos al saldo. Trabajar importes en centavos.
+Probar dos alumnos con mismo nombre, dos hijos de una familia, menú con precio modificado, abono parcial, corrección, doble toque y cierre repetido. El cierre no debe volver a cargar consumos al saldo. Trabajar importes en centavos. Probar filtro por grado/grupo, fecha de corte, PDF por alumno, abonos correctamente asignados y que generar el mismo PDF dos veces no altera saldos. El documento no debe incluir cuentas de otros alumnos.
 Medir tiempo de captura durante despacho, correcciones, tiempo de preparar/circular cuentas y saldo concordante con libreta. Si la captura retrasa el servicio, rediseñar antes de ampliar.
 Datos reales de alumnos/padres no van a demos públicas ni al repositorio. La versión operativa necesita acceso privado y respaldos; el destinatario es el adulto autorizado.
 
@@ -102,13 +104,17 @@ El asistente:
 No calcula cotizaciones de servicio, asegura compatibilidad ni aprueba proyectos por su cuenta. No pedir datos reales de niños ni documentos de clientes para probar una demo.
 
 ## Forma de vender por comprobar
+Dirección comercial propuesta por el responsable: una base útil que el cliente opere personalmente y automatizaciones como complementos de pago. La base ya calcula y genera documentos; lo manual es registrar, revisar y compartir.
+- Base: instalación/configuración y funciones delimitadas; alojamiento, respaldo y soporte pueden tener costo recurrente propio si lo requieren. No afirmar pago único antes de definir estos costos.
+- Complemento de automatización: configuración inicial cuando haga falta + mensualidad que detalle operación, mantenimiento y consumos incluidos. Establecer límites y excedentes tras medir; tarifa aún por definir.
+- Cobrar mensualidad por trabajo/costo recurrente identificable, no solo por habilitar un botón. Ejemplos futuros: envío programado, confirmaciones y recordatorios con integración aprobada.
 - Servicio de instalación/adaptación delimitado + mantenimiento acordado.
 - Venta directa de versión estándar solo cuando alcance, acceso, soporte, costos y entrega estén probados.
 - Suscripción compartida con varias empresas solo si repetición y economía la justifican; no derivarla del término microapp.
 Una prueba familiar puede acreditar funcionamiento y ahorro de tiempo; compradores independientes sirven para comprobar disposición a pagar. No fijar tarifas a partir de un prototipo.
 
 ## Próximo entregable
-Prototipo móvil de cafetería con datos ficticios: alumno/familia → menú → consumo → abono → cuenta semanal → texto para compartir. Después comprobar el recorrido con el operador, si acepta participar. No contactar ni conectar cuentas sin instrucción.
+Prototipo móvil de cafetería con datos ficticios: alumno/familia → menú → consumo → abono → grupo → alumnos con saldo pendiente → cuenta individual → PDF → compartir manualmente. Después comprobar el recorrido con el operador, si acepta participar. No contactar ni conectar cuentas sin instrucción.
 Atención y mantenimiento se definen como parte de cada piloto; no olvidar ese trabajo al avanzar a demos.
 
 ## Fuentes técnicas
