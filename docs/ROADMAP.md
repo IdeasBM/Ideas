@@ -1,5 +1,5 @@
 # Roadmap
-Actualizado: 2026-10-03.
+Actualizado: 2026-10-04.
 
 ## Único proyecto activo
 [Task Fixer](../projects/task-fixer/README.md), elegido por el responsable. [Proyecto rector](../projects/task-fixer/PROYECTO.md).
@@ -13,6 +13,9 @@ Investigación especializada del mercado latino en EE. UU. y mexicano comenzando
 Carpeta exclusiva, decisión registrada, estudio regional, doce agencias comparables y registro de fuentes. Segundo barrido de siete ofertas próximas, principios de comunicación y propuesta de público/oferta/sitio preparados.
 
 Demo local de solicitudes/cotizaciones preparada con datos ficticios y cinco pruebas de lógica aprobadas. [Recorrido](../projects/task-fixer/demo/README.md) · [Diseño/costos](../projects/task-fixer/DISENO-Y-COSTOS-DEL-PILOTO.md). Integraciones, consumo real, prueba visual y compradores pendientes.
+
+## Dirección actual — tres ejemplos concretos
+[Microapps: alcance y validación](../projects/task-fixer/MICROAPPS-ALCANCE-Y-VALIDACION.md). El responsable propone cafetería escolar, reporte en campo y cotizador por partidas para explicar Task Fixer en el sitio. No son tres negocios nuevos. Primer entregable recomendado: prototipo móvil de cafetería con datos ficticios y cuenta semanal; después cotizador y reporte. Asistente/sitio y venta directa permanecen por construir y comprobar. Las estimaciones anteriores corresponden al piloto de seguimiento, no a las tres aplicaciones.
 
 ## Próximos entregables
 1. Verificar apariencia y probar el caso demostrable contra herramientas reales cuando haya cuentas y alcance acordados. [Oferta y sitio propuestos](../projects/task-fixer/OFERTA-INICIAL-Y-SITIO.md).
