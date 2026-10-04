@@ -57,7 +57,7 @@ Medir antes/después: tiempo de despacho, preparación semanal de cuentas, error
 
 ## Secuencia y salida hacia piloto
 1. Menú compacto y selección segura de alumnos, conservación de borradores.
-2. Motor de pagos, saldo de apertura, correcciones y datos históricos.
+2. Motor de pagos, saldo de apertura, correcciones, datos históricos e inicio/corte de caja.
 3. Documentos por periodo/corte y revisión contra el mismo cálculo de pantalla.
 4. Acceso, respaldo/exportación/restauración y apertura offline preparada.
 5. Pruebas físicas: cargar volumen real, cerrar/reabrir en modo avión, errores de guardado, recuperar copia en reemplazo y contrastar escenarios A01–A20 aplicables.
@@ -71,3 +71,28 @@ Consultadas 2026-10-04. Fuentes técnicas no acreditan demanda comercial.
 - OpenAI, resultados estructurados: https://developers.openai.com/api/docs/guides/structured-outputs
 - OpenAI, transcripción de audio: https://developers.openai.com/api/docs/guides/speech-to-text
 - UNICEF, protección de datos infantiles en sistemas de IA: https://www.unicef.org/innocenti/reports/policy-guidance-ai-children
+
+## Ampliación acordada: inicio y corte de caja
+Solicitud del responsable, 2026-10-04. Caja sencilla para un usuario y un teléfono; se incorpora al bloque de motor operativo. No es contabilidad fiscal ni cálculo de utilidad.
+
+### Recorrido
+- En Venta, mostrar estado de caja y botón Abrir caja cuando no exista sesión abierta. Importe de fondo inicial (cero permitido), fecha/hora y confirmación. Una sola sesión activa; abrir de nuevo no duplica el fondo.
+- Mantener venta normal, con método de cobro Efectivo o Transferencia confirmada. A la cuenta del alumno registra crédito, sin entrada de efectivo.
+- Registrar entradas adicionales de fondo y retiros/devoluciones de efectivo con importe positivo, motivo y confirmación. No crear una venta por agregar cambio. No categorizar estos movimientos como gastos contables en esta etapa.
+- Acción Corte de caja: mostrar esperado, pedir efectivo contado, calcular diferencia y confirmar cierre. Sin captura de denominaciones ni arqueo complejo en primera versión.
+- Corte conservado con ID, periodo de sesión, movimientos incluidos, contado y diferencia. No recalcular silenciosamente cierres anteriores; correcciones posteriores vinculadas con rastro.
+- Para registrar ventas/cobros o entradas/salidas de efectivo, requerir caja abierta. Permitir consultas/documentos sin abrir. Avisar al día siguiente si quedó abierta; nunca cerrar por reloj ni generar fondo automático. El operador cierra o continúa expresamente.
+
+### Separar ventas, cobros y efectivo
+Efectivo esperado = fondo inicial + ventas cobradas en efectivo + pagos/anticipos recibidos en efectivo + entradas adicionales de fondo − retiros − devoluciones realmente entregadas en efectivo.
+
+La venta a crédito se informa por separado; no aumenta efectivo esperado. Puede consumir anticipo o generar deuda nueva: mostrar ambas situaciones sin duplicar un cobro previo. El pago posterior sí entra en la sesión donde se recibe, cuando su método es efectivo. Transferencias son cobros del periodo, pero no billetes en caja. Corrección de dato y devolución real no son equivalentes.
+
+Dinero entregado para dar cambio es una ayuda de cálculo: una compra de 40 pagada con 100 y cambio 60 aporta 40 a caja. Consumo de anticipo recibido en otra sesión no aporta dinero nuevo. Fondo inicial, retiros y dinero contado no cambian saldo del alumno. Las ventas del turno, los cobros y la deuda total acumulada son indicadores distintos.
+
+Ejemplo: fondo 200, ventas cobradas en efectivo 500, ventas nuevas a cuenta 150, cobro de deuda antigua en efectivo 100 y retiro 50. Esperado: 750. Si cuenta 740, diferencia: −10 (faltante). Ventas: 650; cobro recibido: 600. No llamar ganancia a esos 650 o 750.
+
+### Datos, migración y aceptación
+Guardar sesión de caja, método y vínculo por operación; sesiones y movimientos nuevos forman parte de la misma transacción local que la venta/pago. Idempotencia para apertura y cierre; bloqueo de doble cierre y operaciones en sesión cerrada. Todo funciona localmente y se incluye en respaldo.
+Movimientos anteriores sin sesión o método permanecen como históricos no asignados; no suponer que todo fue efectivo ni incorporarlos a la nueva apertura. Permitir solo corrección explícita revisada, sin inventar cierres antiguos.
+Pruebas: fondo no cuenta como venta; crédito y transferencia no inflan efectivo; cobrar deuda/recibir anticipo sí suma efectivo; consumir anticipo no duplica entrada; cambio correcto; retiros/devoluciones; cierre con faltante/sobrante; doble toque/reintento; recuperación tras cierre/reapertura del navegador; ninguna pérdida del corte anterior.
