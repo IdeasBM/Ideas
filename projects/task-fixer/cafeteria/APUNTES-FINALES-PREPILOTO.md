@@ -1,0 +1,73 @@
+# Cafetería — revisión final antes del piloto
+Task Fixer · 2026-10-04 · Base revisada: beta 0.4.3.
+
+## Decisión y evidencia
+El responsable confirma que la distribución, uso en teléfono y persistencia tras recarga funcionan. Quiere sencillez, menos desplazamiento y selección segura de alumnos. Se revisaron fuentes de interfaz, motor y almacenamiento, y la especificación v1.0. Esta es revisión estática y de recorridos con evidencia aportada por el responsable; no es una nueva prueba de navegador ni aprobación completa A01–A20. No se modificó la app en esta entrega: el responsable pidió revisar antes de ejecutar cambios.
+
+## Cambios de interfaz acordados
+| Área | Comportamiento a construir | Criterio de aceptación |
+|---|---|---|
+| Menú | Categorías como pestañas; solo muestra productos de la categoría elegida. En móvil las pestañas pueden desplazarse horizontalmente, con indicador visible de categoría activa. Si hay muchas, ofrecer selector compacto equivalente. | Llegar a Sin categoría sin recorrer productos de las otras categorías; una categoría nueva aparece inmediatamente. |
+| Altas de menú | Dos botones: Agregar producto y Agregar categoría. Abren un formulario compacto; solo uno abierto a la vez, con Cancelar. Producto inicia en categoría actual y permite cambiarla. | Los formularios no ocupan espacio mientras no se usan; cancelar no crea registros. Avisar antes de perder un formulario con cambios. |
+| Venta | Conservar selector de categoría y cajas visuales de productos. | No alterar el recorrido aprobado de carrito y cantidades. |
+| Elegir alumno | Nivel → grado → grupo → alumno. Solo opciones existentes, alumnos activos ordenados alfabéticamente por nombre completo en español. Búsqueda opcional por nombres/apellidos dentro del grupo. | Primaria 1° A no se mezcla con Secundaria 1° A. Mostrar cuántos alumnos hay; distinguir homónimos con identificador corto. |
+| Confirmación | Venta a cuenta exige elegir explícitamente al alumno; ningún primer alumno se da por elegido. Si cambia nivel/grado/grupo, limpiar selección dependiente. Mostrar nombre completo, nivel/grupo y saldo antes/después. | No se puede confirmar crédito sin alumno elegido. Un grupo vacío bloquea el cargo. Sin definir sigue accesible para registros anteriores. |
+| Contado asociado | Sin alumno sigue permitido. Si se desea asociar, usar el mismo filtro progresivo; mantener selección al cambiar elementos de la pantalla. | Una venta anónima no obliga a seleccionar salón; una pagada asociada no modifica deuda anterior. |
+
+La búsqueda por nombre puede ignorar mayúsculas/acentos sin cambiar el nombre almacenado. No añadir IA para filtrar listas. Recordar filtros dentro de la sesión puede ahorrar toques; no recordar como seleccionado al alumno anterior para la siguiente venta.
+
+## Hallazgos desde el uso y el desarrollo
+| Prioridad | Situación observada en fuentes | Resolución prevista |
+|---|---|---|
+| Antes del piloto | Confirmación de crédito hereda alumno previo o primero de la lista. | Selección explícita y dependencias de filtros como arriba. |
+| Antes del piloto | Método de pago se muestra en revisión, pero finishPayment no lo guarda. Corregir importe vuelve a un formulario vacío. | Guardar método/nota y conservar borrador al volver o fallar; mantener ID para reintento, nuevo ID para nuevo pago. |
+| Antes del piloto | No hay reversos de ventas/pagos ni devolución registrada. El saldo neto no incluye asignaciones antiguas primero. | Motor FIFO estable, corrección vinculada con motivo, límites y rastro; nunca editar silenciosamente movimientos confirmados. |
+| Antes del piloto | opening existe, pero no hay alta documentada del saldo de la libreta. | Registrar deuda o anticipo inicial una sola vez, sin contarlo como venta/cobro nuevo. |
+| Antes del piloto | Ventas no congelan nivel/grupo/ciclo; documentos se recalculan con alumno actual. | Snapshot para operaciones nuevas. No inventar grupo histórico de datos antiguos. Cobranza por grupo actual, historia por grupo de operación claramente diferenciados. |
+| Antes del piloto | PDF actual incluye todo el historial, sin periodo, folio ni emisión persistente. | Periodo/corte, saldo anterior, detalle semanal, pagos y saldo completo; guardar emisión inmutable. Conservar imprimir/guardar PDF aprobado. |
+| Antes del piloto | Persistencia local funciona, pero no hay apertura offline preparada, acceso privado ni copia remota. | Protección, exportación/restauración validada, respaldo privado versionado, PWA y prueba en modo avión tras cierre. Separar Guardado local de Respaldado. |
+| Antes del piloto | Validación local es parcial: no comprueba integralmente partidas, fechas y referencias de ventas de contado; acumulados no comprueban todos los límites monetarios. | Validación completa para importación/API/migraciones, enteros seguros en acumulados, rechazo sin sobrescribir una copia válida. |
+| Antes del piloto | Cada guardado clona todo el estado y cada reporte recorre movimientos repetidamente. Pestañas abiertas conservan una vista vieja aunque escritura serializa. | Un teléfono escritor, detectar/restringir pestaña vieja; medir carga real de catálogo/historial y optimizar si las pruebas lo exigen. Sin segundo teléfono escritor. |
+| Mejora pequeña | No existe renombrar categoría; listas extensas de movimientos crecen sin límite visual. | Renombrar conservando ID. Mostrar movimientos recientes con Ver más; no ocultar importe pendiente ni totales. |
+| Después | Grados 1–6 y grupos A–F fijos; más escuelas pueden tener formatos diferentes. | Configuración escolar ampliable tras validar escuelas objetivo. No restringir grados por nivel sin conocer su operación. |
+
+Nombre de tutor/contacto sigue opcional para facilitar la entrega manual; hermanos mantienen cuentas separadas. No incorporar inventario, dietas, portal para padres ni envíos automáticos en este piloto.
+
+## Inteligencia artificial: propuesta de producto
+La promesa comercial propuesta es «Registra lo que consumen, lleva las cuentas y prepara el cobro sin reconstruir la semana a mano». La IA es un complemento opcional; su valor comercial todavía es hipótesis, no demanda ni ventas comprobadas.
+
+### Primera incorporación recomendada: consultas y explicación de resultados
+Una acción discreta «Preguntar sobre mis cuentas» permite: «¿Cuánto me deben de primaria?», «Muéstrame pendientes de 2° B» o «Resume cómo estuvo esta semana». La IA interpreta petición y periodo; funciones de la app calculan resultados exactos y abren reporte correspondiente. Respuesta con fechas, alcance y acceso al detalle. Si pregunta es ambigua, pedir aclaración. Para consultas simples ya presentes en pantalla, el botón/filtro directo debe seguir siendo más rápido.
+
+Un resumen semanal puede señalar qué productos se vendieron más y qué saldo está pendiente. No llamar ganancia a ventas, ni inferir utilidad sin costos, inventario o merma. Sugerencias de producción requieren historial suficiente y conocer días sin clases; presentar estimación, nunca garantía.
+
+### Segunda incorporación, solo si prueba valor: captura por voz
+Ejemplo: «Dos burritos y un jugo para Juan Pérez de primero A de primaria». Transcripción e interpretación producen borrador. La app identifica productos y alumno por IDs, usa precios del catálogo, muestra propuesta y exige confirmación. Si hay dos Juan, producto ambiguo o audio malo, no guardar y ofrecer selector/manual. No guardar audios por defecto. La captura manual completa sigue operativa cuando falta red o falla IA. Medir ruido, nombres, tiempo total con correcciones y tasa de alumno/producto incorrecto antes de ofrecerla.
+
+### Opciones posteriores
+Importar menú/lista desde foto o tabla puede acelerar instalación con vista previa y revisión de cada fila. Un borrador de mensaje de cobro se puede producir primero con plantilla, sin IA ni envío automático; no presentarlo como inteligencia innecesariamente. No automatizar cargos, pagos, castigos de crédito ni decisiones basadas en supuestas características de niños.
+
+### Contrato técnico de IA
+Llamadas desde servidor autenticado; clave nunca en HTML. Esquemas estructurados y validación de IDs/importes/acciones; salida bien formada no garantiza selección correcta. Cálculos y permisos pertenecen al programa. Primer módulo solo lectura. Acciones de voz solo borrador con confirmación. Contexto mínimo, preferentemente IDs y agregados calculados; no enviar padrón completo ni información del tutor si no se necesita. IA externa requiere conectividad y gasto por uso; fijar límites y medir costo por cafetería antes de determinar precio. No se cotizó modelo ni se prometió soporte IA offline.
+
+## Replicar en otras cafeterías
+Piloto inicial: una cafetería, un usuario, un teléfono escritor. Para vender a otras, separar por negocio datos, configuración, acceso y respaldos; comprobar que una cuenta nunca consulta ni restaura otra. Eliminar ejemplos precargados de instalaciones reales. Migración desde libreta revisada y acompañamiento de inicio forman parte del servicio. No convertir la misma base compartida sin aislamiento en un producto multiempresa.
+
+Medir antes/después: tiempo de despacho, preparación semanal de cuentas, errores corregidos, cuentas contrastadas, restauraciones logradas y disposición real a pagar de propietarios. Propuesta de entrevistas y pilotos externos tras estabilizar el del tío; ninguna muestra ni plazo se declara validado ahora.
+
+## Secuencia y salida hacia piloto
+1. Menú compacto y selección segura de alumnos, conservación de borradores.
+2. Motor de pagos, saldo de apertura, correcciones y datos históricos.
+3. Documentos por periodo/corte y revisión contra el mismo cálculo de pantalla.
+4. Acceso, respaldo/exportación/restauración y apertura offline preparada.
+5. Pruebas físicas: cargar volumen real, cerrar/reabrir en modo avión, errores de guardado, recuperar copia en reemplazo y contrastar escenarios A01–A20 aplicables.
+6. Piloto controlado y medir valor; IA de consultas opcional después del núcleo. Captura por voz solo si mejora la operación.
+
+No se requiere otro contrato de hosting por esta revisión. Preparar base dedicada y API privada en IONOS dentro del bloque 4, verificando capacidades del panel antes del despliegue. No pedir credenciales por chat. La aprobación de interfaz no sustituye la comprobación contable y de recuperación.
+
+## Fuentes para viabilidad técnica de IA
+Consultadas 2026-10-04. Fuentes técnicas no acreditan demanda comercial.
+- OpenAI, conexión de modelos con funciones de la aplicación: https://developers.openai.com/api/docs/guides/function-calling
+- OpenAI, resultados estructurados: https://developers.openai.com/api/docs/guides/structured-outputs
+- OpenAI, transcripción de audio: https://developers.openai.com/api/docs/guides/speech-to-text
+- UNICEF, protección de datos infantiles en sistemas de IA: https://www.unicef.org/innocenti/reports/policy-guidance-ai-children
