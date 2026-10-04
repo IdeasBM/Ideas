@@ -31,3 +31,8 @@ El esquema/API se prepararán como una entrega posterior con sesiones, dispositi
 
 ## Estado real
 0.3.0 está guardada en el repositorio; no desplegada por el agente. El archivo publicado que pudo inspeccionarse sigue siendo 0.1. La aprobación visual del responsable se conserva; pruebas de guardado real, PWA, PDF y servidor no están aprobadas.
+
+## Verificación directa en navegador — 2026-10-04, 16:32–16:34 America/Chicago
+El responsable reportó cargar 0.3.0 y perder ventas al recargar. Se abrió la URL publicada de cafeteria-beta-0.3.0.html en Chrome remoto y se comprobó distintivo 0.3.0 e IndexedDB disponible. Se guardó configuración ficticia, producto Burrito de prueba MXN 25 y una venta de contado. Tras recarga completa, Reportes mostró MXN 25 vendidos, MXN 25 cobrados y el movimiento; también se recuperó el catálogo. Esta es prueba de navegador real de esta ruta en Chrome, no validación Safari/iPhone ni todos los escenarios de aceptación.
+Los datos de esta prueba residen en el navegador remoto, no en el teléfono del responsable. El problema informado no se reprodujo ahí y sigue sin causa confirmada. Revisar URL exacta, versión visible y Reportes después de recargar en el teléfono. El carrito de Nueva venta vuelve a cero por diseño y no es el historial. La presencia del archivo anterior en la carpeta no cambia el recurso seleccionado por la URL.
+La beta 0.3.0 ahora está publicada por el responsable; la afirmación histórica de no despliegue corresponde al momento de la entrega anterior.
