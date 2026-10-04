@@ -8,7 +8,7 @@ function day(e,timezone){if(!e.occurredAt||Number.isNaN(Date.parse(e.occurredAt)
 function report(s,f={}){
  if(f.from&&f.to&&f.from>f.to)throw Error('La fecha inicial debe ser anterior o igual a la final.');
  const search=(f.search||'').trim().toLocaleLowerCase('es');
- const students=s.students.filter(a=>(!search||a.name.toLocaleLowerCase('es').includes(search))&&(!f.grade||String(a.grade)===f.grade)&&(!f.group||a.groupLetter===f.group)&&(!f.student||a.id===f.student));const ids=new Set(students.map(a=>a.id)),restricted=!!(f.grade||f.group||f.student||search);
+ const students=s.students.filter(a=>(!search||a.name.toLocaleLowerCase('es').includes(search))&&(!f.level||(f.level==='undefined'?!a.level:a.level===f.level))&&(!f.grade||String(a.grade)===f.grade)&&(!f.group||a.groupLetter===f.group)&&(!f.student||a.id===f.student));const ids=new Set(students.map(a=>a.id)),restricted=!!(f.level||f.grade||f.group||f.student||search);
  const events=s.events.filter(e=>{const d=day(e,s.config.timezone);return (!restricted||ids.has(e.student))&&(!f.kind||e.kind===f.kind)&&(!f.from||d&&d>=f.from)&&(!f.to||d&&d<=f.to);});
  const atCutoff=s.events.filter(e=>!f.to||(day(e,s.config.timezone)&&day(e,s.config.timezone)<=f.to));
  const accounts=students.map(a=>({student:a,balance:balance({...s,events:atCutoff},a.id)}));
