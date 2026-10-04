@@ -2,7 +2,7 @@
 'use strict';
 const clone=x=>JSON.parse(JSON.stringify(x));
 function validate(r){
- if(!r||r.schema!==1||!Number.isSafeInteger(r.revision)||r.revision<1||!r.state||!['students','products','events','seen'].every(k=>Array.isArray(r.state[k])))throw Error('Los datos guardados no son compatibles. No se han reemplazado.');
+ if(!r||![1,2].includes(r.schema)||!Number.isSafeInteger(r.revision)||r.revision<1||!r.state||!['students','products','events','seen'].every(k=>Array.isArray(r.state[k])))throw Error('Los datos guardados no son compatibles. No se han reemplazado.');
  if(!r.state.config||typeof r.state.config.name!=='string'||!['MXN','USD'].includes(r.state.config.currency)||typeof r.state.config.timezone!=='string'||typeof r.state.config.cycle!=='string'||typeof r.state.config.initialized!=='boolean')throw Error('Configuración local inválida.');
  const state=r.state,bad=()=>{throw Error('El registro local contiene datos inválidos. No se ha reemplazado.');};
  const ids=list=>{if(new Set(list.map(x=>x?.id)).size!==list.length||list.some(x=>!x||typeof x.id!=='string'||! /^[a-zA-Z0-9_-]+$/.test(x.id)))bad();};
@@ -11,6 +11,12 @@ function validate(r){
  if(state.products.some(x=>typeof x.name!=='string'||!Number.isSafeInteger(x.price)||x.price<=0))bad();
  if(state.events.some(e=>!['cash','sale','payment'].includes(e.kind)||!Number.isSafeInteger(e.total)||e.total<=0||e.kind!=='cash'&&!state.students.some(a=>a.id===e.student)))bad();
  if(state.seen.length!==state.events.length||new Set(state.seen).size!==state.seen.length||state.events.some(e=>!state.seen.includes(e.id)))bad();
+ if(r.schema===2){
+  if(typeof state.config.school!=='string'||typeof state.config.location!=='string'||!Array.isArray(state.categories))bad();ids(state.categories);
+  if(state.categories.some(c=>typeof c.name!=='string'||!c.name.trim()))bad();
+  if(state.products.some(p=>typeof p.description!=='string'||!state.categories.some(c=>c.id===p.categoryId)))bad();
+  if(state.students.some(a=>!(a.grade===null||Number.isInteger(a.grade)&&a.grade>=1&&a.grade<=6)||!(a.groupLetter===null||/^[A-F]$/.test(a.groupLetter))))bad();
+ }
  return r;
 }
 function create(indexedDB,name='task-fixer-cafeteria-beta'){
@@ -32,10 +38,18 @@ function create(indexedDB,name='task-fixer-cafeteria-beta'){
    tx.onerror=()=>{};
    req.onsuccess=()=>{try{
     let record=req.result;
-    if(record===undefined){record={schema:1,revision:1,state:clone(seed())};store.put(record,'current');}
+    if(record===undefined){record={schema:2,revision:1,state:clone(seed())};store.put(record,'current');}
     validate(record);
+    if(record.schema===1){
+     if(record.revision===Number.MAX_SAFE_INTEGER)throw Error('No se puede migrar la versión de datos.');
+     store.put(clone(record),'before-schema-2');
+     const upgraded=clone(record.state);upgraded.config.school??='';upgraded.config.location??='';upgraded.categories=seed().categories;
+     for(const p of upgraded.products){p.categoryId='uncategorized';p.description='';}
+     for(const a of upgraded.students){const match=a.group.match(/^([1-6])\s*[°º]?\s*([A-F])$/i);a.grade=match?Number(match[1]):null;a.groupLetter=match?match[2].toUpperCase():null;}
+     record={schema:2,revision:record.revision+1,state:upgraded};validate(record);store.put(record,'current');
+    }
     const draft=clone(record.state),changed=change?change(draft)!==false:false;
-    if(changed){if(record.revision===Number.MAX_SAFE_INTEGER)throw Error('No se puede avanzar la versión de datos.');record={schema:1,revision:record.revision+1,state:draft};validate(record);store.put(record,'current');}
+    if(changed){if(record.revision===Number.MAX_SAFE_INTEGER)throw Error('No se puede avanzar la versión de datos.');record={schema:2,revision:record.revision+1,state:draft};validate(record);store.put(record,'current');}
     result={...record,changed};
    }catch(e){problem=e;tx.abort();}};
   });
