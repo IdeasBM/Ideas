@@ -1,0 +1,9 @@
+CAFETERIA 0.5.0 · PRUEBA DE DESARROLLO
+1. Extraer los archivos de este ZIP en la PC.
+2. Subir cafeteria-beta-0.5.0.html, sw.js, manifest.webmanifest e icon.svg a la misma carpeta demo-cafeteria de IONOS. No subir el ZIP como sustituto de los archivos.
+3. Cerrar pestañas de versiones anteriores.
+4. Abrir https://taskfixer.net/demo-cafeteria/cafeteria-beta-0.5.0.html en el navegador habitual. No borrar sus datos.
+5. Comprobar registros anteriores. Caja empieza sin sesión: abrir fondo antes de vender/cobrar. No se inventan cajas históricas.
+6. En Ajustes se puede descargar respaldo manual cifrado y preparar los recursos offline.
+7. Para comprobar offline: preparar con conexión, recargar, cerrar, activar modo avión y reabrir la URL de esta beta.
+Aún sin acceso privado ni respaldo IONOS. Usar datos ficticios. La contraseña del respaldo protege el archivo, no bloquea la aplicación.
