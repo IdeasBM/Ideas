@@ -1,0 +1,10 @@
+(function(root){
+'use strict';
+const encode=v=>new TextEncoder().encode(v),decode=v=>new TextDecoder().decode(v);
+function base64(bytes){let s='';for(const x of bytes)s+=String.fromCharCode(x);return btoa(s);}
+function bytes(v){if(typeof v!=='string'||v.length>45000000)throw Error('Archivo de respaldo inválido.');return Uint8Array.from(atob(v),c=>c.charCodeAt(0));}
+async function key(password,salt){if(typeof password!=='string'||password.length<12)throw Error('Usa una contraseña de al menos 12 caracteres para el respaldo.');if(!root.crypto?.subtle)throw Error('Este navegador necesita HTTPS y cifrado disponible.');const material=await root.crypto.subtle.importKey('raw',encode(password),'PBKDF2',false,['deriveKey']);return root.crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:600000,hash:'SHA-256'},material,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);}
+async function pack(record,password){const salt=root.crypto.getRandomValues(new Uint8Array(16)),iv=root.crypto.getRandomValues(new Uint8Array(12)),k=await key(password,salt),cipher=await root.crypto.subtle.encrypt({name:'AES-GCM',iv,additionalData:encode('task-fixer-backup-v1')},k,encode(JSON.stringify(record)));return {format:'task-fixer-backup',version:1,kdf:'PBKDF2-SHA256',iterations:600000,salt:base64(salt),iv:base64(iv),cipher:base64(new Uint8Array(cipher))};}
+async function unpack(file,password){if(!file||file.format!=='task-fixer-backup'||file.version!==1||file.kdf!=='PBKDF2-SHA256'||file.iterations!==600000)throw Error('Formato de respaldo no admitido.');const salt=bytes(file.salt),iv=bytes(file.iv);if(salt.length!==16||iv.length!==12)throw Error('Archivo de respaldo inválido.');try{const k=await key(password,salt),plain=await root.crypto.subtle.decrypt({name:'AES-GCM',iv,additionalData:encode('task-fixer-backup-v1')},k,bytes(file.cipher));return JSON.parse(decode(plain));}catch(e){throw Error('No se pudo abrir: revisa la contraseña o la integridad del archivo.');}}
+const api={pack,unpack};if(typeof module!=='undefined')module.exports=api;else root.CafeBackup=api;
+})(globalThis);
