@@ -13,6 +13,8 @@ Agencia de diseño de procesos, selección de herramientas, creación, reparaci�
 ## Tres microapps propuestas — 2026-10-04
 El responsable propone cafetería escolar, reportes en campo y cotizador por materiales/mano de obra, como ejemplos para el sitio y posibles bases de venta/adaptación. [Alcance, módulos y validación](MICROAPPS-ALCANCE-Y-VALIDACION.md). Recomendación: primer prototipo de cafetería, luego ampliación del cotizador y reporte en campo. Solo la demo previa de seguimiento existe; estas tres versiones todavía no están construidas.
 
+- [Cafetería: revisión y especificación funcional v0.2](cafeteria/ESPECIFICACION-FUNCIONAL-v0.2.md): documento del responsable revisado, ventas/cobros, PDF, inventario y decisiones pendientes. Borrador para llegar a v1.0 antes de desarrollar.
+
 ## Demostración y entrega
 - [Ejemplo interactivo y recorrido](demo/README.md): simulación local con datos ficticios; cinco pruebas de lógica aprobadas. Revisión visual pendiente.
 - [Diseño y costos del piloto](DISENO-Y-COSTOS-DEL-PILOTO.md): herramientas, tarifas oficiales, horas estimadas y criterios para una integración real.
