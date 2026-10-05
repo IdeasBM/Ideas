@@ -1,7 +1,7 @@
 {
   "name": "Cafetería · Task Fixer",
   "short_name": "Cafetería",
-  "start_url": "./index.php",
+  "start_url": "./app.php",
   "scope": "./",
   "display": "standalone",
   "lang": "es",
