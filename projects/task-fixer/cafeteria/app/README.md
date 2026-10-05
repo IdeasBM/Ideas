@@ -1,11 +1,14 @@
-# Cafetería · beta 0.7.2
-Task Fixer · 2026-10-05 (America/Chicago). 0.6.0 instalada y acceso/respaldo/recuperación teléfono–Mac–teléfono confirmados por el responsable. 0.7.1 tiene captura de dos ventas offline, persistencia tras refresh, respaldo tras reconectar y recuperación en Mac confirmados por el responsable. Bloqueo del equipo anterior y jornada física siguen pendientes. 0.7.2 agrega bloqueo de dos horas por inactividad y conserva jornada de nueve horas y está preparada y probada localmente; falta instalación y comprobación física de la jornada. El tío no prueba ni carga listas todavía; su cuenta no se ha creado.
+# Cafetería · Edición Edgar Flores · 0.7.3
+Task Fixer · 2026-10-05 (America/Chicago). 0.6.0 instalada y acceso/respaldo/recuperación teléfono–Mac–teléfono confirmados por el responsable. 0.7.1 tiene captura de dos ventas offline, persistencia tras refresh, respaldo tras reconectar y recuperación en Mac confirmados por el responsable. Bloqueo del equipo anterior y jornada física siguen pendientes. 0.7.3 conserva el bloqueo de dos horas y jornada de nueve horas, y presenta Edición Edgar Flores con mejora visual y está preparada y probada localmente; falta instalación y comprobación física de la jornada. El tío no prueba ni carga listas todavía; su cuenta no se ha creado.
 
 ## Entrega
 `python build.py` ensambla la app en `server/private/app.html` y produce dos paquetes:
-- **cafeteria-0.7.2-actualizacion.zip:** actualiza `demo-cafeteria` sin instalador, código nuevo ni configuración secreta del servidor. Preserva la cuenta y carpeta privada actual.
-- **cafeteria-0.7.2-instalacion-limpia.zip:** plantilla para una carpeta independiente en el futuro, con código de instalación privado generado localmente. No activar hasta terminar las pruebas. La cuenta se crea solo mediante el instalador; no existe aún una cuenta del tío.
-[Instalación](INSTALAR-0.7.2.txt), [pruebas del responsable](PRUEBAS-PREPILOTO-0.7.2.md). Antes de actualizar: respaldo IONOS confirmado y archivo manual cifrado externo, cierre de pestañas antiguas y único equipo de captura.
+- **cafeteria-0.7.3-actualizacion.zip:** actualiza `demo-cafeteria` sin instalador, código nuevo ni configuración secreta del servidor. Preserva la cuenta y carpeta privada actual.
+- **cafeteria-0.7.3-instalacion-limpia.zip:** plantilla para una carpeta independiente en el futuro, con código de instalación privado generado localmente. No activar hasta terminar las pruebas. La cuenta se crea solo mediante el instalador; no existe aún una cuenta del tío.
+[Instalación](INSTALAR-0.7.3.txt), [pruebas del responsable](PRUEBAS-PREPILOTO-0.7.2.md). Antes de actualizar: respaldo IONOS confirmado y archivo manual cifrado externo, cierre de pestañas antiguas y único equipo de captura.
+
+## Presentación 0.7.3
+Retira Beta/Prueba de la interfaz, conserva número técnico en Ajustes y añade identidad visual con verde oscuro, crema y acentos cálidos. No cambia motor, esquema, cuentas ni plazos. [Evolución futura: inventario, OCR, voz y gastos](EVOLUCION-PRODUCTO.md). Instalación independiente y pendientes físicos siguen sin aprobarse por el cambio de nombre.
 
 ## Cambios
 - **Copia local cifrada:** `CafeVault` guarda un contenedor AES-256-GCM en IndexedDB. Clave derivada con PBKDF2-SHA256/600000 y sal aleatoria; IV aleatorio por escritura; AAD vincula el ciphertext a la base de esa instalación. La contraseña no se persiste ni se envía al servidor. Una CryptoKey no exportable se conserva temporalmente en una base de jornada durante nueve horas, sin renovar por reapertura; bloquear libera referencias, no garantiza borrado forense de RAM.
@@ -29,7 +32,7 @@ Comandos:
 PHP lint y JavaScript ensamblado comprobados; paquetes verificados sin credenciales reales. DOM/IndexedDB/cache son simulados en Node y crypto es Web Crypto real. Pruebas HTTP ejecutan PHP real; el router HTTPS de prueba no se distribuye. No equivalen a Safari físico, caché offline real, Apache/permisos IONOS ni jornada operativa.
 
 ## Pendiente antes de datos reales
-Pruebas físicas 0.7.2 por responsable, origen dedicado/aislamiento del WordPress, recuperación integral, confidencialidad y revisión de escenarios de operación/carga. Se mantienen pendientes ajustes parciales, reemplazo combinado, fechas efectivas retroactivas, tutor, PDF directo/compartir e inventario calculado; valorar qué bloquea piloto según uso acordado. No convertir 86 pruebas automatizadas en aprobación de todos los casos A01–A20.
+Pruebas físicas 0.7.3 por responsable, origen dedicado/aislamiento del WordPress, recuperación integral, confidencialidad y revisión de escenarios de operación/carga. Se mantienen pendientes ajustes parciales, reemplazo combinado, fechas efectivas retroactivas, tutor, PDF directo/compartir e inventario calculado; valorar qué bloquea piloto según uso acordado. No convertir 86 pruebas automatizadas en aprobación de todos los casos A01–A20.
 Si se pierde la clave local, recuperar último respaldo IONOS en navegador limpio con una nueva clave; cambios nunca respaldados no se recuperan sin archivo externo/contraseña. Cifrado local no protege una app desbloqueada de extensiones/scripts del mismo origen ni de compromiso de hosting. Clave y backups IONOS están en el mismo servidor: conservar también copia manual fuera del hosting.
 
 Referencias: [Web Crypto](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt), [CacheStorage](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage), [sesiones PHP](https://www.php.net/manual/en/session.security.ini.php).
