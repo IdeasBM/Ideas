@@ -42,6 +42,7 @@ class ServerTests(unittest.TestCase):
     def login(self):
         _,_,body=self.client.req('/index.php');csrf=self.csrf(body)
         code,h,_=self.client.req('/index.php','POST',{'csrf':csrf,'username':'operador','password':'test-password-123'});self.assertEqual(code,303)
+        self.login_headers=h
         code,_,body=self.client.req('/index.php');self.assertEqual(code,303);code,_,body=self.client.req('/context.php');self.assertEqual(code,200);return json.loads(body)['csrf']
     def save(self,csrf,base=0,device='1'*32,record=None): return self.client.api({'action':'save','base':base,'device':device,'record':record or self.record},csrf)
     def test_anonymous_denied_and_https_required(self):
@@ -111,6 +112,17 @@ class ServerTests(unittest.TestCase):
         self.assertNotEqual(context['id'],original['id']);self.assertNotEqual(context['database'],original['database'])
         code,data=other.api({'action':'download'},context['csrf']);self.assertEqual(code,200);self.assertIsNone(data['record']);self.assertEqual(data['head'],0)
         _,data=self.client.api({'action':'download'},main);self.assertEqual(data['record'],self.record)
+    def test_nine_hour_cookie_session_and_offline_grant(self):
+        csrf=self.login();code,h,_=self.client.req('/context.php')
+        self.assertIn('Max-Age=32400', '\n'.join(self.login_headers.get_all('Set-Cookie',[])))
+        code,data=self.client.api({'action':'authorize','device':'1'*32,'base':0},csrf);self.assertEqual(code,200)
+        self.assertLessEqual(abs(data['offlineUntil']/1000-time.time()-32400),2)
+        session=self.data/'sessions'/('sess_'+self.client.cookies['TASKFIXER_CAFE'])
+        original=session.read_text()
+        session.write_text(re.sub(r'authAt\|i:\d+;', 'authAt|i:'+str(int(time.time())-32340)+';',original))
+        self.assertEqual(self.client.req('/context.php')[0],200)
+        session.write_text(re.sub(r'authAt\|i:\d+;', 'authAt|i:'+str(int(time.time())-32400)+';',original))
+        self.assertEqual(self.client.req('/context.php')[0],401)
     def test_expired_session_cannot_read_or_backup(self):
         csrf=self.login();session=self.data/'sessions'/('sess_'+self.client.cookies['TASKFIXER_CAFE'])
         body=session.read_text();body=re.sub(r'authAt\|i:\d+;', 'authAt|i:1;',body);session.write_text(body)
