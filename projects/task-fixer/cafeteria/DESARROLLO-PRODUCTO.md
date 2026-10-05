@@ -11,8 +11,8 @@ La interfaz móvil de la versión anterior y el registro de contado MXN 65 fuero
 ## Arquitectura elegida
 - HTML/CSS/JavaScript propio; WordPress puede seguir para el sitio comercial.
 - IndexedDB mantiene la operación local. Confirmar guardado solo tras commit, con revisión e identificadores de operación.
-- Service worker/manifiesto conservarán recursos para abrir sin internet después de preparación.
-- API PHP autenticada + base MySQL/MariaDB dedicada conservarán una copia privada y versionada, con recuperación verificada.
+- Apertura offline protegida sigue como objetivo. 0.6.0 retira la caché pública; entrar/reabrir requiere conexión hasta implementar cifrado y desbloqueo local.
+- Beta 0.6.0: API PHP autenticada + archivos cifrados/versionados fuera de DOCUMENT_ROOT conservan el respaldo privado, sin usar tablas WordPress. MySQL/MariaDB queda como opción para una arquitectura comercial de varios negocios.
 - Un dispositivo escritor; ninguna mezcla de cambios de dos teléfonos. Cambiar equipo requiere detener y restaurar.
 - Un subdominio dedicado sigue siendo recomendable para la app final. La carpeta del sitio sirve para probar datos ficticios, sin acreditar aislamiento del servidor compartido.
 
@@ -25,9 +25,9 @@ Conectar solamente la pantalla a MySQL impediría capturar sin conexión. La cop
 4. **Apertura offline y documentos:** service worker seguro y cacheado de recursos propios, PDF local versionado por alumno y compartir manual con alternativa. Validar modo avión tras cierre y generación de documento.
 5. **Piloto operativo:** aplicación instalada en equipo real, respaldo/recuperación confirmados y escenarios de aceptación verificados. Solo entonces usar datos reales. Inventario y WhatsApp automático siguen fuera de primera etapa.
 
-## Preparación de base de datos en IONOS
-Crear una nueva base estándar dedicada a cafetería, sin reutilizar tablas de WordPress. Elegir el motor/versión disponibles tras revisar el panel y usar PDO en PHP soportado. El servidor no deberá publicar contraseña/host/usuario de base en JavaScript ni en el repositorio.
-El esquema/API se prepararán como una entrega posterior con sesiones, dispositivo, revisiones y restauración coherentes; no habilitar un endpoint público de respaldo por apresurar la conexión. No pedir contraseñas por chat. Conservar revisiones anteriores válidas hasta comprobar la nueva.
+## Preparación actual de IONOS — beta 0.6.0
+No requiere crear una base MySQL para el respaldo de esta beta de un negocio/un teléfono. PHP 8.1+ con OpenSSL/sesiones crea almacenamiento privado fuera de la carpeta pública. La cuenta y la clave de respaldo se generan durante una instalación con código aleatorio de un solo uso; nunca se publican en GitHub ni se piden por chat. Conservar respaldo manual antes de instalar; retirar archivos HTML públicos anteriores; comprobar ambos .htaccess en IONOS real. [Instalación](app/INSTALAR-0.6.0.txt).
+La preparación de base dedicada/PDO planteada en entregas anteriores sigue como alternativa de evolución, no como paso necesario de esta entrega. No reutilizar tablas de WordPress. Mantener copias versionadas hasta verificar recuperación.
 
 ## Estado real
 0.3.0 está guardada en el repositorio; no desplegada por el agente. El archivo publicado que pudo inspeccionarse sigue siendo 0.1. La aprobación visual del responsable se conserva; pruebas de guardado real, PWA, PDF y servidor no están aprobadas.
@@ -65,3 +65,9 @@ Formato 3 migra datos anteriores y conserva copia interna previa sin inventar ca
 No son 36 escenarios de piloto aprobados ni toda la matriz A01–A20. [Pruebas físicas pendientes](app/PRUEBAS-REALES-0.5.0.md), [instalación/estado/limitaciones](app/README.md).
 Acceso privado, cifrado/desbloqueo de base local, API/base privada, respaldo automático y autorización remota de dispositivo siguen pendientes. El archivo de respaldo cifrado no bloquea la app. La siguiente dependencia externa es instalar el paquete en la carpeta habitual para pruebas ficticias y preparar IONOS para una base dedicada/API privada; no enviar contraseñas por chat.
 Algunas reglas completas de v1.0 siguen abiertas: reversos parciales, reemplazo combinado atómico, fechas efectivas retroactivas, tutor opcional, PDF directo/compartir y revisión completa de rendimiento/validación. El inventario de movimientos y compras siguen fuera de esta entrega. No usar datos reales hasta completar protección y recuperación.
+
+## Aprobación y acceso privado — 2026-10-04, America/Chicago
+El responsable confirmó pruebas en teléfono y aprobó el diseño/recorrido de 0.5.1. Historial de tres ventas encima de Nueva venta, confirmación tras commit y seis apartados visibles con iconos. Autorizó continuar con acceso privado y respaldo IONOS.
+0.6.0 entrega sesiones PHP con cuenta única, instalación de un solo uso, CSRF y HTTPS; respaldo completo automático con avisos pendiente/confirmado, cifrado AES-GCM en almacenamiento fuera de la carpeta pública, bloqueo/rename de archivos y retención de 30 versiones recientes. Revisión/dispositivo deben coincidir; recuperación exige contraseña, revisión y transferencia explícita, sin mezclar datos. Marcador persistente evita subir la copia vieja si se interrumpe la recuperación.
+49 pruebas Node y 10 HTTP con PHP real pasan, más lint PHP/JS ensamblado y contenido del ZIP. No equivalen a despliegue IONOS, validación Apache/permisos/Safari ni aprobación de casos operativos completos. [Validación IONOS pendiente](app/PRUEBAS-IONOS-0.6.0.md).
+Cambio transitorio de apertura: entrar/reabrir requiere conexión; una app abierta puede seguir capturando sin red y respaldar después. Se retira el caché público para que no eluda la autenticación. Cifrado/bloqueo local y reapertura offline protegida permanecen como siguiente etapa antes de piloto con datos reales. Datos de teléfono no se borran al cerrar sesión ni se cifran aún. El agente no instaló 0.6.0 en IONOS. El responsable carga el paquete y crea su contraseña en el instalador, sin compartirla en chat.
