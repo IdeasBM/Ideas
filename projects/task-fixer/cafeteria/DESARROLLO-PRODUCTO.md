@@ -96,3 +96,13 @@ El responsable confirmó en iPhone que, después de volver a entrar con usuario 
 Al reactivar los datos no se solicitó otra contraseña. Esto por sí solo no confirma que el respaldo remoto haya concluido: falta comprobar el indicador «Respaldado en IONOS». El reporte no describe una venta nueva confirmada sin conexión y conservada tras reabrir; esa comprobación sigue pendiente.
 
 Queda pendiente para la tarde el cambio iPhone → Mac → iPhone y el aviso/bloqueo de captura en el equipo anterior conectado. Antes de transferir, detener la captura en el equipo anterior y confirmar su respaldo. En el nuevo equipo recuperar la copia; después comprobar que el anterior muestra «Captura detenida» y no registra un nuevo movimiento. Finalmente recuperar en el teléfono para dejarlo como equipo de trabajo. No se ha creado la cuenta del tío y no se considera aprobada toda la matriz de pruebas.
+
+## Corrección de jornada · beta 0.7.1 · 5 de octubre de 2026
+
+A las 08:18 (America/Chicago), el responsable informó que la app pedía otra clave al reabrir antes de una hora. La captura corresponde a desbloqueo local, no a login IONOS. Se identificaron bloqueo tras cinco minutos en segundo plano y pérdida de la llave en recargas/cierre de página en 0.7.0.
+
+0.7.1 conserva una jornada local de nueve horas desde el desbloqueo, sin renovar por recargas/actividad. Para reabrir sin otra contraseña, guarda temporalmente una CryptoKey no exportable en IndexedDB separado; la contraseña no se persiste. Esto cambia expresamente la política anterior de llave solo en memoria: durante la jornada este navegador puede abrir los datos sin clave. Usar PIN del dispositivo; bloqueo manual y cierre de sesión eliminan el ticket. La caducidad depende del reloj/código y no ofrece protección frente a manipulación del equipo u otros scripts del mismo origen.
+
+Sesión PHP, cookie y autorización de captura offline se limitan a nueve horas (desde login y confirmación del servidor respectivamente). El permiso offline no sustituye la sesión de respaldo; confirmar «Respaldado en IONOS». Se conservan cuenta, catálogos, saldos, formato cifrado y control exclusivo de equipo.
+
+68 pruebas Node y 14 HTTP PHP real pasan (82); también lint PHP, scripts ensamblados y ZIP. Incluyen reapertura automática offline, bloqueo manual, ticket vencido y separación de instalaciones; cookie/permiso nueve horas y autenticación válida antes del límite e inválida al cumplirlo. Pendiente instalación en IONOS y pruebas físicas de nueve horas y transferencia Mac–iPhone. El agente preparó paquete; no desplegó ni creó cuenta del tío. [Instalación 0.7.1](app/INSTALAR-0.7.1.txt), [pruebas 0.7.1](app/PRUEBAS-PREPILOTO-0.7.1.md).
