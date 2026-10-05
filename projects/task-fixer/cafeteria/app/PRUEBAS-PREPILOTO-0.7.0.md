@@ -24,7 +24,7 @@ Primero: respaldo IONOS confirmado + respaldo manual externo de 0.6.0, detener c
 | 17 | Respaldo y recuperación desde una copia cifrada | Restituye alumno/menú/saldos/cortes/documentos. No confunde clave local, contraseña IONOS y contraseña del archivo manual. |
 | 18 | Jornada ficticia con apertura/corte y PDF | Ventas, efectivo, transferencias, crédito, anticipos y abonos concuerdan con una libreta de referencia. |
 
-Ninguna marcada aprobada por anticipado: registrar resultados del responsable tras instalar. Las pruebas de 0.6.0 aprobadas anteriormente no sustituyen estas nuevas.
+Los resultados físicos se registran en el apartado de seguimiento al final de este documento. Solo se consideran comprobados los escenarios expresamente informados; las pruebas de 0.6.0 aprobadas anteriormente no sustituyen estas nuevas.
 
 ## Límite operativo del cambio de equipo
 Sin internet un dispositivo no puede conocer la transferencia hecha en otro. El permiso offline es temporal (24 horas), no una revocación remota instantánea. Detener siempre el anterior antes de cambiar; no capturar en dos equipos. Detección periódica conectada (30 segundos), al volver a primer plano/reconectar y antes de guardar. Un cambio simultáneo entre comprobación y escritura local puede dejar una operación solo local: el respaldo rechaza el conflicto. No hay consenso/distribución para dos cajeros.
@@ -32,3 +32,11 @@ Sin internet un dispositivo no puede conocer la transferencia hecha en otro. El 
 ## Próxima instalación del tío
 Usar carpeta distinta, por ejemplo `/cafeteria-tio/`, con cuenta y respaldos nuevos; jamás copiar config/clave del ambiente de pruebas. Base local distinta y vacía, aun en el mismo navegador. Esta entrega prepara el código y paquete limpio, **no crea el usuario**. Después de aprobar la jornada, el responsable activa esa instalación y guía al tío por teléfono sobre sus listas reales, una sola vez.
 Aislamiento lógico por carpeta, no aislamiento frente a scripts del mismo origen/WordPress ni compromiso total del hosting. Antes de piloto con datos reales verificar origen dedicado, privacidad/recuperación y escenarios completos de operación. La lógica contable de beta conserva sus limitaciones documentadas: ajustes parciales/fechas retroactivas/stock calculado no forman parte de esta entrega.
+
+## Resultado parcial informado por el responsable · 5 de octubre de 2026
+
+El responsable confirmó en iPhone que, después de volver a entrar con usuario y contraseña y desbloquear la copia local, los datos se abrieron correctamente. También activó modo avión, reabrió la aplicación, introdujo la clave local y pudo interactuar con ella. Se registra como comprobada la reapertura y el desbloqueo local sin red en ese teléfono.
+
+Al reactivar los datos no se solicitó otra contraseña. Esto por sí solo no confirma que el respaldo remoto haya concluido: falta comprobar el indicador «Respaldado en IONOS». El reporte no describe una venta nueva confirmada sin conexión y conservada tras reabrir; esa comprobación sigue pendiente.
+
+Queda pendiente para la tarde el cambio iPhone → Mac → iPhone y el aviso/bloqueo de captura en el equipo anterior conectado. Antes de transferir, detener la captura en el equipo anterior y confirmar su respaldo. En el nuevo equipo recuperar la copia; después comprobar que el anterior muestra «Captura detenida» y no registra un nuevo movimiento. Finalmente recuperar en el teléfono para dejarlo como equipo de trabajo. No se ha creado la cuenta del tío y no se considera aprobada toda la matriz de pruebas.
