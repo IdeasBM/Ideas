@@ -10,14 +10,14 @@ function boot(): string {
     if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') respond(['error'=>'Usa la dirección HTTPS de Task Fixer.'], 403);
     $dir = storage_dir();
     if (!is_dir($dir . '/sessions') && !mkdir($dir . '/sessions', 0700)) throw new RuntimeException('Sesiones no disponibles.');
-    ini_set('session.use_strict_mode', '1'); ini_set('session.use_only_cookies', '1'); ini_set('session.gc_maxlifetime', '43200');
+    ini_set('session.use_strict_mode', '1'); ini_set('session.use_only_cookies', '1'); ini_set('session.gc_maxlifetime', '32400');
     session_save_path($dir . '/sessions'); session_name('TASKFIXER_CAFE');
     $path = rtrim(str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME'])), '/') . '/';
-    session_set_cookie_params(['lifetime'=>0,'path'=>$path,'secure'=>true,'httponly'=>true,'samesite'=>'Strict']);
+    session_set_cookie_params(['lifetime'=>32400,'path'=>$path,'secure'=>true,'httponly'=>true,'samesite'=>'Strict']);
     session_start(); $_SESSION['csrf'] ??= bin2hex(random_bytes(32));
     return $dir;
 }
-function authenticated(): bool { return isset($_SESSION['authAt']) && time() - $_SESSION['authAt'] < 43200; }
+function authenticated(): bool { return isset($_SESSION['authAt']) && time() - $_SESSION['authAt'] < 32400; }
 function csrf(string $token): void { if (!hash_equals($_SESSION['csrf'] ?? '', $token)) respond(['error'=>'La sesión cambió. Vuelve a entrar.'],403); }
 function json_body(): array {
     if (!str_starts_with($_SERVER['CONTENT_TYPE'] ?? '', 'application/json')) respond(['error'=>'Tipo de solicitud inválido.'],415);
