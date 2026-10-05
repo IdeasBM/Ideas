@@ -1,0 +1,6 @@
+(function(root){'use strict';
+const path=new URL('.',root.location.href).pathname,key='task-fixer-context:'+path;
+async function fetchContext(){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),5000);try{return await fetch('./context.php',{credentials:'same-origin',cache:'no-store',signal:controller.signal});}finally{clearTimeout(timer);}}
+function cached(){const c=JSON.parse(localStorage.getItem(key)||'null');if(!c?.id||!c?.database)throw Error('Primero abre esta instalación con internet.');return {...c,csrf:null,offline:true};}
+root.CafeBoot={async context(){if(root.navigator?.onLine===false)return cached();try{const response=await fetchContext();if(response.status===401){const error=Error('Entra a IONOS para preparar o abrir este teléfono.');error.status=401;throw error;}if(!response.ok)throw Error('IONOS no pudo confirmar el acceso.');const c=await response.json();localStorage.setItem(key,JSON.stringify({id:c.id,api:'./api.php',database:c.database,guard:true}));return c;}catch(e){if(e.status===401)throw e;return cached();}},async refresh(){const r=await fetchContext();if(!r.ok){const e=Error('Vuelve a entrar a IONOS.');e.status=r.status;throw e;}const c=await r.json();if(root.CafeServer&&c.id!==root.CafeServer.id)throw Error('La instalación cambió.');root.CafeServer=c;return c;}};
+})(globalThis);
