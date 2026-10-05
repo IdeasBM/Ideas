@@ -1,5 +1,5 @@
 // Simulador de contrato IndexedDB para Node; no sustituye pruebas en navegador.
-const clone=x=>x===undefined?undefined:JSON.parse(JSON.stringify(x));
+const clone=x=>x===undefined?undefined:structuredClone(x);
 module.exports=function(){
  const databases=new Map();let fail=false,failWrite=false;
  return {failNextWrite(){failWrite=true;},write(name,key,value){databases.get(name).values.set(key,clone(value));},failNext(){fail=true;},corrupt(name,value){databases.get(name).values.set('current',value);},read(name,key='current'){return clone(databases.get(name)?.values.get(key));},open(name){
