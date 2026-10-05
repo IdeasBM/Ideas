@@ -1,0 +1,29 @@
+# Jornada de trabajo · pruebas 0.7.1
+
+El responsable hace las pruebas con datos ficticios. No crear todavía el usuario del tío. La reapertura offline de 0.7.0 fue confirmada en iPhone; esta actualización requiere nueva comprobación física.
+
+## Cambio y causa
+El reporte del 5 de octubre a las 08:18 (America/Chicago) muestra la pantalla de clave local, no la de usuario y contraseña IONOS. La versión previa intentaba bloquear a los cinco minutos oculta y perdía la llave al recargar. Ahora se conserva un acceso de jornada de nueve horas desde el desbloqueo local, sin renovación por recargas. El permiso offline y la sesión IONOS también se limitan a nueve horas desde su confirmación y login respectivamente. Conexión o sesión válida no equivalen a respaldo concluido.
+
+La contraseña no se guarda: se conserva una CryptoKey no exportable por ese periodo en IndexedDB. Durante la jornada, este navegador puede abrir los datos sin clave; usar PIN del equipo y bloqueo manual al terminar. No equivale a mantener la llave únicamente en memoria ni a una frontera frente a scripts del mismo origen. El reloj y el código local determinan caducidad.
+
+## Comprobaciones
+
+| Prueba | Resultado esperado |
+|---|---|
+| Actualizar conectado, desbloquear con la clave existente | Conserva alumnos, menú, saldos, caja y movimientos; beta 0.7.1 visible. |
+| Salir una hora y reabrir app.php | Sigue la jornada sin pedir clave local. |
+| Recargar y cerrar/reabrir el navegador dentro de nueve horas | Abre la copia automáticamente; no reinicia las nueve horas. |
+| Modo avión, reabrir app.php y registrar venta ficticia | Permite guardar con permiso vigente; venta aparece en historial. |
+| Reabrir offline después de esa venta | Venta y saldos permanecen. |
+| Reconectar | Ver «Respaldado en IONOS» antes de afirmar respaldo. |
+| Bloquear este teléfono manualmente | Pide clave inmediatamente, incluso recargando; conserva borrador sin contabilizarlo. |
+| Cerrar sesión IONOS y reabrir | No reutiliza ticket de jornada; requiere acceso al servidor conectado. |
+| Dejar pasar nueve horas desde el desbloqueo | Pide otra clave; no extiende acceso por actividad o recargas. Si falta red y venció permiso, pide conectar antes de guardar. |
+| Cambio teléfono → Mac con copia confirmada | Recuperación explícita transfiere control; teléfono anterior conectado avisa y no guarda nueva venta. |
+| Volver a recuperar en el teléfono | Queda como único equipo de captura. |
+
+Detener siempre el equipo anterior antes de transferir. Un equipo offline no conoce el cambio remoto de inmediato; no hay dos cajeros simultáneos. Favorito offline: app.php, no index.php.
+
+## Seguimiento
+Preparada y comprobada localmente. Ninguna prueba física de nueve horas se considera aprobada por anticipado. La sesión de trabajo no protege un teléfono desbloqueado compartido; el cierre manual termina el acceso guardado. Cuenta del tío sigue pendiente.
