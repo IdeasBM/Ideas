@@ -1,5 +1,5 @@
 # Validación de acceso y respaldo en IONOS · 0.6.0
-Todas pendientes en IONOS real. Usar datos ficticios y respaldo manual previo. El agente entregó código y ejecutó pruebas locales; no instaló ni inspeccionó esta versión en el hosting.
+Instalación y pruebas del instructivo confirmadas por el responsable el 2026-10-04 a las 20:34 America/Chicago; los recorridos explícitamente descritos figuran al final. La tabla conserva los criterios de comprobación, sin atribuir pruebas adicionales no descritas. El agente ejecutó pruebas locales y no inspeccionó directamente esta instalación.
 
 | Prueba | Resultado esperado |
 |---|---|
@@ -19,3 +19,13 @@ Todas pendientes en IONOS real. Usar datos ficticios y respaldo manual previo. E
 | Intentar reabrir en modo avión | En esta etapa requiere red; bloqueo local/apertura offline cifrada pendientes, sin prometer lo contrario. |
 
 Registrar versión PHP, teléfono/navegador, fecha y resultado real sin subir capturas con datos personales al repositorio. No avanzar a piloto con alumnos reales hasta completar bloqueo local y pruebas de recuperación/operación.
+
+## Validación comunicada por el responsable — 2026-10-04, 20:34 America/Chicago
+El responsable confirmó que instaló 0.6.0 y realizó todas las pruebas del instructivo de instalación con resultado satisfactorio. Describió explícitamente:
+- Respaldo en IONOS desde el teléfono habitual con tres alumnos y registros de menú.
+- Recuperación de esa información desde el navegador de la Mac.
+- Recuperación posterior de vuelta al teléfono habitual.
+- Cierre de sesión seguido de solicitud de contraseña al volver a abrir.
+- Solicitud de contraseña al entrar en incógnito o desde otra cuenta.
+Se acredita instalación y funcionamiento de los recorridos descritos según prueba del responsable; el agente no los inspeccionó directamente. No se presupone versión PHP/navegadores específicos, contraste contable detallado ni pruebas individualizadas de interrupción, caducidad o archivos privados que no se describieron. El reporte general del instructivo se conserva como tal.
+Siguiente bloque: cifrado/bloqueo de la copia local y reapertura sin internet protegida, manteniendo respaldo y recuperación ya probados. No se cambia todavía el código ni se autoriza con este reporte el piloto con datos reales.
