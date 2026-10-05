@@ -27,3 +27,11 @@ Detener siempre el equipo anterior antes de transferir. Un equipo offline no con
 
 ## Seguimiento
 Preparada y comprobada localmente. Ninguna prueba física de nueve horas se considera aprobada por anticipado. La sesión de trabajo no protege un teléfono desbloqueado compartido; el cierre manual termina el acceso guardado. Cuenta del tío sigue pendiente.
+
+## Prueba física informada · 5 de octubre de 2026, 18:18 · America/Chicago
+
+El responsable informó que instaló 0.7.1 y abrió correctamente en iPhone. Activó modo avión; la aplicación mostró aviso de falta de conexión con un pequeño retraso. Tras aproximadamente cinco minutos, reactivó la conexión y en no más de unos treinta segundos apareció la confirmación de respaldo. Se registra detección automática de desconexión y respaldo confirmado tras reconectar, según el reporte del responsable, sin cambio manual de modo.
+
+Este reporte no especifica una venta nueva registrada durante el modo avión, ni su conservación al cerrar/reabrir, ni su recuperación en la Mac. Esos escenarios, la transferencia de control con rechazo de captura en el equipo anterior, y la jornada física de nueve horas siguen pendientes. No se aprobó toda la matriz ni se creó cuenta del tío.
+
+Criterio de experiencia: operar sin gestionar conexión ni copias cotidianamente; verificar confirmación de respaldo antes de terminar. El envío automático requiere app abierta, conexión y sesión válida; un pendiente no es un respaldo remoto. Recuperación/cambio de equipo deben simplificarse mediante flujo guiado; los respaldos externos quedan como protección adicional administrada por el responsable, sin convertirlos en tarea diaria del operador.
