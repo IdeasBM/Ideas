@@ -106,3 +106,11 @@ A las 08:18 (America/Chicago), el responsable informó que la app pedía otra cl
 Sesión PHP, cookie y autorización de captura offline se limitan a nueve horas (desde login y confirmación del servidor respectivamente). El permiso offline no sustituye la sesión de respaldo; confirmar «Respaldado en IONOS». Se conservan cuenta, catálogos, saldos, formato cifrado y control exclusivo de equipo.
 
 68 pruebas Node y 14 HTTP PHP real pasan (82); también lint PHP, scripts ensamblados y ZIP. Incluyen reapertura automática offline, bloqueo manual, ticket vencido y separación de instalaciones; cookie/permiso nueve horas y autenticación válida antes del límite e inválida al cumplirlo. Pendiente instalación en IONOS y pruebas físicas de nueve horas y transferencia Mac–iPhone. El agente preparó paquete; no desplegó ni creó cuenta del tío. [Instalación 0.7.1](app/INSTALAR-0.7.1.txt), [pruebas 0.7.1](app/PRUEBAS-PREPILOTO-0.7.1.md).
+
+## Prueba física informada · 5 de octubre de 2026, 18:18 · America/Chicago
+
+El responsable informó que instaló 0.7.1 y abrió correctamente en iPhone. Activó modo avión; la aplicación mostró aviso de falta de conexión con un pequeño retraso. Tras aproximadamente cinco minutos, reactivó la conexión y en no más de unos treinta segundos apareció la confirmación de respaldo. Se registra detección automática de desconexión y respaldo confirmado tras reconectar, según el reporte del responsable, sin cambio manual de modo.
+
+Este reporte no especifica una venta nueva registrada durante el modo avión, ni su conservación al cerrar/reabrir, ni su recuperación en la Mac. Esos escenarios, la transferencia de control con rechazo de captura en el equipo anterior, y la jornada física de nueve horas siguen pendientes. No se aprobó toda la matriz ni se creó cuenta del tío.
+
+Criterio de experiencia: operar sin gestionar conexión ni copias cotidianamente; verificar confirmación de respaldo antes de terminar. El envío automático requiere app abierta, conexión y sesión válida; un pendiente no es un respaldo remoto. Recuperación/cambio de equipo deben simplificarse mediante flujo guiado; los respaldos externos quedan como protección adicional administrada por el responsable, sin convertirlos en tarea diaria del operador.
