@@ -42,7 +42,7 @@ class ServerTests(unittest.TestCase):
     def login(self):
         _,_,body=self.client.req('/index.php');csrf=self.csrf(body)
         code,h,_=self.client.req('/index.php','POST',{'csrf':csrf,'username':'operador','password':'test-password-123'});self.assertEqual(code,303)
-        code,_,body=self.client.req('/index.php');self.assertEqual(code,200);return re.search(r'"csrf":"([a-f0-9]+)"',body).group(1)
+        code,_,body=self.client.req('/index.php');self.assertEqual(code,303);code,_,body=self.client.req('/context.php');self.assertEqual(code,200);return json.loads(body)['csrf']
     def save(self,csrf,base=0,device='1'*32,record=None): return self.client.api({'action':'save','base':base,'device':device,'record':record or self.record},csrf)
     def test_anonymous_denied_and_https_required(self):
         code,data=self.client.api({'action':'download'},'');self.assertEqual(code,401);self.assertNotIn('record',data)
@@ -87,6 +87,30 @@ class ServerTests(unittest.TestCase):
         v=json.loads((self.data/'latest.enc').read_text());v['tag']='AAAAAAAAAAAAAAAAAAAAAA==';(self.data/'latest.enc').write_text(json.dumps(v))
         code,_=self.client.api({'action':'download'},csrf);self.assertEqual(code,503)
         code,_=self.save(csrf,base=1);self.assertEqual(code,503)
+    def test_writer_authorization_detects_transfer_and_reserves_empty_installation(self):
+        csrf=self.login();code,r=self.client.api({'action':'authorize','device':'1'*32,'base':0},csrf);self.assertEqual(code,200);self.assertGreater(r['offlineUntil'],time.time()*1000)
+        code,_=self.client.api({'action':'authorize','device':'2'*32,'base':0},csrf);self.assertEqual(code,409)
+        code,_=self.save(csrf,device='2'*32);self.assertEqual(code,409)
+        self.save(csrf);code,_=self.client.api({'action':'claim','device':'2'*32,'base':1,'password':'test-password-123'},csrf);self.assertEqual(code,200)
+        code,_=self.client.api({'action':'authorize','device':'1'*32,'base':1},csrf);self.assertEqual(code,409)
+        code,_=self.client.api({'action':'authorize','device':'2'*32,'base':2},csrf);self.assertEqual(code,200)
+    def test_generic_shell_has_no_session_and_context_needs_login(self):
+        anonymous=Client(self.url);code,_,body=anonymous.req('/app.php');self.assertEqual(code,200);self.assertIn('CafeBoot',body);self.assertNotIn('globalThis.CafeServer={',body)
+        code,_,_=anonymous.req('/context.php');self.assertEqual(code,401)
+        self.login();code,_,body=self.client.req('/context.php');self.assertTrue(json.loads(body)['database'].startswith('task-fixer-cafeteria-'))
+    def test_separate_folder_has_separate_account_context_and_backup(self):
+        main=self.login();self.save(main)
+        folder=self.web/'cafeteria-tio';shutil.copytree(BASE/'server',folder);(folder/'private/setup-token.php').write_text("<?php return '"+'b'*64+"';")
+        other=Client(self.url+'/cafeteria-tio');_,_,body=other.req('/instalar.php');token=self.csrf(body)
+        code,_,body=other.req('/instalar.php','POST',{'csrf':token,'code':'b'*64,'username':'otro-operador','password':'test-password-456','repeat':'test-password-456'});self.assertEqual(code,200)
+        _,_,body=other.req('/index.php');token=self.csrf(body)
+        code,_,_=other.req('/index.php','POST',{'csrf':token,'username':'operador','password':'test-password-123'});self.assertEqual(code,200)
+        code,_,_=other.req('/index.php','POST',{'csrf':token,'username':'otro-operador','password':'test-password-456'});self.assertEqual(code,303)
+        _,_,body=other.req('/context.php');context=json.loads(body)
+        _,_,body=self.client.req('/context.php');original=json.loads(body)
+        self.assertNotEqual(context['id'],original['id']);self.assertNotEqual(context['database'],original['database'])
+        code,data=other.api({'action':'download'},context['csrf']);self.assertEqual(code,200);self.assertIsNone(data['record']);self.assertEqual(data['head'],0)
+        _,data=self.client.api({'action':'download'},main);self.assertEqual(data['record'],self.record)
     def test_expired_session_cannot_read_or_backup(self):
         csrf=self.login();session=self.data/'sessions'/('sess_'+self.client.cookies['TASKFIXER_CAFE'])
         body=session.read_text();body=re.sub(r'authAt\|i:\d+;', 'authAt|i:1;',body);session.write_text(body)
