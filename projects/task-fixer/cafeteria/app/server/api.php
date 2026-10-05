@@ -8,6 +8,11 @@ try {
     if ($_SERVER['REQUEST_METHOD']!=='POST') respond(['error'=>'Método no permitido.'],405);
     csrf($_SERVER['HTTP_X_CSRF_TOKEN']??''); $b=json_body(); $action=$b['action']??'';
     if ($action==='logout') { $_SESSION=[]; session_destroy(); $params=session_get_cookie_params();unset($params['lifetime']);setcookie(session_name(),'',array_merge($params,['expires'=>time()-3600])); respond(['ok'=>true]); }
+    if ($action==='authorize') {
+        if(!is_string($b['device']??null)||!preg_match('/^[a-f0-9]{32}$/D',$b['device'])||!is_int($b['base']??null))respond(['error'=>'Dispositivo inválido.'],400);
+        with_lock($dir,function()use($dir,$key,$b){$r=latest($dir,$key);if($r){if($r['device']!==$b['device']||$r['head']!==$b['base'])throw new DomainException('Otro equipo tomó el control o hay una copia más reciente. Captura detenida; recupera desde IONOS.');}else{$f=$dir.'/writer.json';$owner=is_file($f)?read_json($f):null;if($owner&&$owner['device']!==$b['device'])throw new DomainException('Otro equipo está preparando esta instalación.');if(!$owner)atomic_write($f,json_encode(['device'=>$b['device']],JSON_THROW_ON_ERROR));}});
+        respond(['allowed'=>true,'offlineUntil'=>(time()+86400)*1000]);
+    }
     if ($action==='status' || $action==='download') { $r=latest($dir,$key); respond($r?['head'=>$r['head'],'savedAt'=>$r['savedAt'],'revision'=>$r['record']['revision'],'record'=>$action==='download'?$r['record']:null]:['head'=>0,'savedAt'=>null,'record'=>null]); }
     if ($action==='save') {
         if (!is_array($b['record']??null) || !is_string($b['device']??null) || !is_int($b['base']??null)) respond(['error'=>'Solicitud inválida.'],400);
