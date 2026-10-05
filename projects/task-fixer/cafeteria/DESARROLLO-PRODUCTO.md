@@ -29,7 +29,7 @@ Conectar solamente la pantalla a MySQL impediría capturar sin conexión. La cop
 No requiere crear una base MySQL para el respaldo de esta beta de un negocio/un teléfono. PHP 8.1+ con OpenSSL/sesiones crea almacenamiento privado fuera de la carpeta pública. La cuenta y la clave de respaldo se generan durante una instalación con código aleatorio de un solo uso; nunca se publican en GitHub ni se piden por chat. Conservar respaldo manual antes de instalar; retirar archivos HTML públicos anteriores; comprobar ambos .htaccess en IONOS real. [Instalación](app/INSTALAR-0.6.0.txt).
 La preparación de base dedicada/PDO planteada en entregas anteriores sigue como alternativa de evolución, no como paso necesario de esta entrega. No reutilizar tablas de WordPress. Mantener copias versionadas hasta verificar recuperación.
 
-## Estado real
+## Estado histórico de la entrega 0.3.0
 0.3.0 está guardada en el repositorio; no desplegada por el agente. El archivo publicado que pudo inspeccionarse sigue siendo 0.1. La aprobación visual del responsable se conserva; pruebas de guardado real, PWA, PDF y servidor no están aprobadas.
 
 ## Verificación directa en navegador — 2026-10-04, 16:32–16:34 America/Chicago
@@ -71,3 +71,13 @@ El responsable confirmó pruebas en teléfono y aprobó el diseño/recorrido de 
 0.6.0 entrega sesiones PHP con cuenta única, instalación de un solo uso, CSRF y HTTPS; respaldo completo automático con avisos pendiente/confirmado, cifrado AES-GCM en almacenamiento fuera de la carpeta pública, bloqueo/rename de archivos y retención de 30 versiones recientes. Revisión/dispositivo deben coincidir; recuperación exige contraseña, revisión y transferencia explícita, sin mezclar datos. Marcador persistente evita subir la copia vieja si se interrumpe la recuperación.
 49 pruebas Node y 10 HTTP con PHP real pasan, más lint PHP/JS ensamblado y contenido del ZIP. No equivalen a despliegue IONOS, validación Apache/permisos/Safari ni aprobación de casos operativos completos. [Validación IONOS pendiente](app/PRUEBAS-IONOS-0.6.0.md).
 Cambio transitorio de apertura: entrar/reabrir requiere conexión; una app abierta puede seguir capturando sin red y respaldar después. Se retira el caché público para que no eluda la autenticación. Cifrado/bloqueo local y reapertura offline protegida permanecen como siguiente etapa antes de piloto con datos reales. Datos de teléfono no se borran al cerrar sesión ni se cifran aún. El agente no instaló 0.6.0 en IONOS. El responsable carga el paquete y crea su contraseña en el instalador, sin compartirla en chat.
+
+## Validación comunicada por el responsable — 2026-10-04, 20:34 America/Chicago
+El responsable confirmó que instaló 0.6.0 y realizó todas las pruebas del instructivo de instalación con resultado satisfactorio. Describió explícitamente:
+- Respaldo en IONOS desde el teléfono habitual con tres alumnos y registros de menú.
+- Recuperación de esa información desde el navegador de la Mac.
+- Recuperación posterior de vuelta al teléfono habitual.
+- Cierre de sesión seguido de solicitud de contraseña al volver a abrir.
+- Solicitud de contraseña al entrar en incógnito o desde otra cuenta.
+Se acredita instalación y funcionamiento de los recorridos descritos según prueba del responsable; el agente no los inspeccionó directamente. No se presupone versión PHP/navegadores específicos, contraste contable detallado ni pruebas individualizadas de interrupción, caducidad o archivos privados que no se describieron. El reporte general del instructivo se conserva como tal.
+Siguiente bloque: cifrado/bloqueo de la copia local y reapertura sin internet protegida, manteniendo respaldo y recuperación ya probados. No se cambia todavía el código ni se autoriza con este reporte el piloto con datos reales.
