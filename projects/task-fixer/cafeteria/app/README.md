@@ -1,5 +1,5 @@
 # Cafetería · beta privada 0.6.0
-Task Fixer · 2026-10-04 (America/Chicago). El responsable aprobó diseño y recorrido de 0.5.1 en teléfono. Esta entrega agrega acceso PHP y respaldo IONOS; aún requiere instalación y validación física. No desplegada por el agente.
+Task Fixer · 2026-10-04 (America/Chicago). El responsable aprobó diseño y recorrido de 0.5.1 en teléfono. Esta entrega agrega acceso PHP y respaldo IONOS. Instalación y pruebas del instructivo confirmadas por el responsable el 2026-10-04 a las 20:34 America/Chicago; respaldo/recuperación teléfono–Mac–teléfono y solicitud de contraseña comprobados por él. No desplegada ni inspeccionada en IONOS por el agente.
 
 ## Instalación
 [Instructivo](INSTALAR-0.6.0.txt). Se conserva la carpeta `demo-cafeteria`, mismo origen/navegador y base IndexedDB `task-fixer-cafeteria-beta`, formato 3. WordPress sigue separado. **Primero exportar un respaldo manual cifrado desde 0.5.1.** No borrar datos del teléfono.
@@ -35,3 +35,13 @@ No borrar `taskfixer-private-*` ni `config.json`: contiene la clave necesaria pa
 - [Sesiones y cookies PHP](https://www.php.net/manual/en/session.security.ini.php).
 - [Hash de contraseñas PHP](https://www.php.net/manual/en/function.password-hash.php).
 - [Cifrado GCM de PHP/OpenSSL](https://www.php.net/manual/en/function.openssl-encrypt.php).
+
+## Validación comunicada por el responsable — 2026-10-04, 20:34 America/Chicago
+El responsable confirmó que instaló 0.6.0 y realizó todas las pruebas del instructivo de instalación con resultado satisfactorio. Describió explícitamente:
+- Respaldo en IONOS desde el teléfono habitual con tres alumnos y registros de menú.
+- Recuperación de esa información desde el navegador de la Mac.
+- Recuperación posterior de vuelta al teléfono habitual.
+- Cierre de sesión seguido de solicitud de contraseña al volver a abrir.
+- Solicitud de contraseña al entrar en incógnito o desde otra cuenta.
+Se acredita instalación y funcionamiento de los recorridos descritos según prueba del responsable; el agente no los inspeccionó directamente. No se presupone versión PHP/navegadores específicos, contraste contable detallado ni pruebas individualizadas de interrupción, caducidad o archivos privados que no se describieron. El reporte general del instructivo se conserva como tal.
+Siguiente bloque: cifrado/bloqueo de la copia local y reapertura sin internet protegida, manteniendo respaldo y recuperación ya probados. No se cambia todavía el código ni se autoriza con este reporte el piloto con datos reales.
