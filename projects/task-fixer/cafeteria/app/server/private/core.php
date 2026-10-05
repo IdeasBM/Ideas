@@ -88,7 +88,7 @@ function save_snapshot(string $dir, string $key, array $r, string $device, int $
     validate_record($r);
     if (!preg_match('/^[a-f0-9]{32}$/D', $device) || $base < 0) throw new InvalidArgumentException('Dispositivo inválido.');
     return with_lock($dir, function() use ($dir, $key, $r, $device, $base) {
-        $old = latest($dir, $key); $hash = hash('sha256', json_encode($r, JSON_THROW_ON_ERROR));
+        $old = latest($dir, $key);if(!$old&&is_file($dir.'/writer.json')&&read_json($dir.'/writer.json')['device']!==$device)throw new DomainException('Otro equipo está preparando esta instalación.'); $hash = hash('sha256', json_encode($r, JSON_THROW_ON_ERROR));
         if ($old && $old['device'] === $device && $old['hash'] === $hash) return $old; // retry after a lost response
         if (($old['head'] ?? 0) !== $base || ($old && $old['device'] !== $device)) throw new DomainException('Hay otro dispositivo o una copia más reciente en IONOS. Revisa y recupera el respaldo antes de continuar.');
         $new = ['head'=>($old['head'] ?? 0)+1,'device'=>$device,'hash'=>$hash,'savedAt'=>gmdate('c'),'record'=>$r];
