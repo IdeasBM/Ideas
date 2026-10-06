@@ -138,3 +138,11 @@ El responsable confirmó completamente el bloqueo del equipo anterior: alternó 
 Solicitó preparar usuario y contraseña para Edgar Flores y finalizar por hoy. Se generó un paquete limpio 0.7.3 para carpeta independiente cafeteria-edgar, con token de instalación exclusivo y credenciales aleatorias entregadas en archivo privado fuera de la carpeta pública. Ninguna contraseña/token se registra en este repositorio. La cuenta NO está creada ni activa en IONOS: se crea al subir el paquete y completar instalar.php. URL prevista tras activación: https://taskfixer.net/cafeteria-edgar/app.php. Sin alumnos, menú, movimientos ni copia importada de pruebas.
 
 No hay conexión de administración de IONOS disponible al agente para subir/activar la cuenta. El responsable ejecutará la instalación. Preparar origen dedicado antes de datos reales y validar los pendientes operativos. Monitoreo remoto continuo/rol supervisor todavía no implementado; no abrir otra captura simultánea para supervisar. [Preparación del piloto](app/PILOTO-EDGAR-FLORES.md).
+
+## Cuenta activada y roadmap en issues · 5 de octubre, 19:56 · America/Chicago
+
+El responsable confirmó el alta/activación de Edgar en IONOS y entregará su acceso el 6 de octubre. Se registra como reportado por el responsable, sin verificación remota del agente. Inactividad física de dos horas y jornada real siguen pendientes.
+
+Se crearon once tarjetas GitHub #14–#24, abiertas con prioridades, alcance, aceptación y dependencias: piloto, acceso, supervisión, inventario/compras, recetas/lista de compra, gastos, OCR, voz, asistente, validación de planes y suscripciones/cuotas. [Índice del roadmap](app/ROADMAP-TARJETAS.md). Ninguna función futura fue implementada en este paso.
+
+Propuesta del usuario: básico gratuito online, planes con offline/inventario e IA como adicional. Se mantiene como hipótesis sin precios/fechas aprobados, con validación de costos y disposición a pagar. No se restringió el offline actual; gratuito online necesita arquitectura/autorización de servidor, no solo ocultar controles. Conservación/exportación/recuperación e integridad de datos siguen como base de todos los planes.
