@@ -3,7 +3,7 @@
 Decisiones del 5 de octubre de 2026 · Task Fixer.
 
 ## Primera entrega
-El nombre visible es «Edición Edgar Flores», sin Beta/Prueba en cabecera, pie ni Ajustes. La versión técnica 0.7.3 queda en Ajustes para soporte. Es una identidad para el primer piloto, no prueba de madurez o validación completa. Cuenta del tío todavía no creada.
+El nombre visible es «Edición Edgar Flores», sin Beta/Prueba en cabecera, pie ni Ajustes. La versión técnica 0.7.3 queda en Ajustes para soporte. Es una identidad para el primer piloto, no prueba de madurez o validación completa. Cuenta de Edgar activada por el responsable el 5 de octubre a las 19:56 (America/Chicago), según su reporte; acceso se entregará el 6 de octubre.
 
 Mantener navegación, captura y contabilidad ya probadas. Mejorar presentación con verde oscuro, crema, acentos cálidos, tarjetas con profundidad y foco accesible. No aumentar pasos para registrar ventas. Cada actualización conserva datos y clave local; cierre de pestañas antiguas para actualizar caché.
 
@@ -32,10 +32,14 @@ Registrar gastos del negocio (por ejemplo luz/teléfono/renta), categoría, impo
 Mostrar por separado ventas, dinero cobrado, cuentas pendientes, gastos pagados/pendientes y caja. No llamar utilidad al efectivo disponible: cálculo de utilidad requiere costos e inventario definidos y suficiente información. Primer informe será operativo, con límites explícitos, sin venderlo como contabilidad fiscal completa.
 
 ## Orden acordado
-1. Cerrar pendientes físicos: rechazo de captura en teléfono anterior tras recuperación en Mac, bloqueo de dos horas, jornada/corte y casos de cobro/corrección/documento. Captura offline y recuperación de $25/$45 en Mac ya informadas como exitosas en 0.7.1.
-2. Preparar instalación independiente y vacía, con acceso/recuperación verificados y origen dedicado para datos reales; guiar al tío por teléfono al cargar sus listas una sola vez.
+1. Cerrar pendientes físicos: bloqueo de dos horas, jornada/corte y casos de cobro/corrección/documento. Cambio de equipo y bloqueo del anterior ya aprobados por el responsable. Captura offline y recuperación de $25/$45 en Mac ya informadas como exitosas en 0.7.1.
+2. Instalación independiente activada por el responsable; comprobar que está vacía, con acceso/recuperación verificados y origen dedicado para datos reales; guiar al tío por teléfono al cargar sus listas una sola vez.
 3. Observar una jornada real y registrar fricciones antes de aumentar funciones.
 4. Inventario/compras manuales y gastos, definiendo unidades/recetas y relación con caja.
 5. Foto de tickets y voz, como asistencia con revisión humana.
 
 No se implementaron inventario calculado, OCR, voz ni módulo de gastos en 0.7.3. La visión queda documentada para planificar después del piloto.
+
+## Tarjetas y propuesta comercial
+
+[Roadmap de once tarjetas](ROADMAP-TARJETAS.md), issues #14–#24. Gratis online, Operación e IA como extra son hipótesis comerciales. Costos, límites y precios se validarán con piloto/usuarios antes de suscripciones. Seguridad y acceso/exportación no se retirarán al cambiar de plan. La captura offline actual no se restringió ni modificó en esta tarea.
