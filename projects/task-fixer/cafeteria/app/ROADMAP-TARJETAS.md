@@ -16,7 +16,7 @@ El responsable confirmó a las 19:56 (America/Chicago) que creó y activó la cu
 | P1 | [#18 · Recetas, ingredientes y lista sugerida de compras](https://github.com/IdeasBM/Ideas/issues/18) | Después de inventario |
 | P1 | [#19 · Gastos, pagos pendientes y panorama del negocio](https://github.com/IdeasBM/Ideas/issues/19) | En paralelo con inventario |
 | P2 | [#20 · Foto de ticket como borrador revisable de compra](https://github.com/IdeasBM/Ideas/issues/20) | Después de compras manuales |
-| P2 | [#21 · Dictar ventas con confirmación de alumno y pago](https://github.com/IdeasBM/Ideas/issues/21) | Tras estabilizar piloto |
+| P1 | [#21 · Pedidos consecutivos por voz para el recreo](https://github.com/IdeasBM/Ideas/issues/21) | Diseño/prototipo adelantado; uso real tras validación |
 | P2 | [#22 · Asistente de operación con respuestas basadas en registros](https://github.com/IdeasBM/Ideas/issues/22) | Después de módulos base |
 | P1 | [#23 · Validar gratuito, operación e IA como planes](https://github.com/IdeasBM/Ideas/issues/23) | Diseño comercial, sin precios aprobados |
 | P2 | [#24 · Suscripciones, permisos de funciones y cuotas de IA](https://github.com/IdeasBM/Ideas/issues/24) | Solo tras validar planes |
@@ -37,3 +37,7 @@ No se fijan precios antes de medir hosting/soporte/IA por volumen y disposición
 
 ## Orden
 Primero piloto/acceso, después inventario y gastos, y luego IA con datos confiables y revisión humana. Supervisión debe ser de consulta para no quitarle control al teléfono que despacha. La documentación del producto sigue en [EVOLUCION-PRODUCTO.md](EVOLUCION-PRODUCTO.md) y [PILOTO-EDGAR-FLORES.md](PILOTO-EDGAR-FLORES.md).
+
+## Prioridad ajustada · 6 de octubre, 09:15 America/Chicago
+
+Por instrucción del responsable, #14 y #15 esperan la capacitación y el uso de Edgar. Se adelanta diseño/prototipo de #21 por acumulación de pedidos en recreo, sin esperar inventario. [Especificación de voz v0.1](VOZ-PEDIDOS-v0.1.md). La primera prueba separa interpretación/cola, micrófono real y confirmación; no modifica todavía la instalación activa.
