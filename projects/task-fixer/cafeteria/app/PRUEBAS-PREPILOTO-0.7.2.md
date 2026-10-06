@@ -27,3 +27,11 @@ La llave de apertura y fecha de actividad se conservan temporalmente en IndexedD
 Confirmar rechazo del equipo anterior, recuperación final en teléfono, bloqueo físico por inactividad y una jornada con caja/crédito/pago/corrección/documento. La matriz contable completa sigue siendo referencia. Preparar instalación independiente vacía para el tío, verificar aislamiento en origen dedicado y recuperación del acceso; después guiarlo para cargar sus listas una sola vez. No se creó todavía su cuenta.
 
 El operador no descarga copias cada día ni cambia modos de red. Al terminar debe confirmar respaldo con la app abierta y conectada; puede pulsar Respaldar ahora si sigue pendiente y después bloquear el teléfono. El archivo manual externo es protección adicional a cargo del responsable, no tarea de cada venta.
+
+## Cambio de equipo aprobado por el responsable; alta de Edgar preparada · 5 de octubre, 19:04 · America/Chicago
+
+El responsable confirmó completamente el bloqueo del equipo anterior: alternó entre Safari, Chrome y Mac, observó avisos de que otro equipo tomó el control y bloqueo en los demás. Se registra aprobado según su prueba física. El bloqueo de dos horas de inactividad sigue pendiente de observar; no se aprueba por expectativa.
+
+Solicitó preparar usuario y contraseña para Edgar Flores y finalizar por hoy. Se generó un paquete limpio 0.7.3 para carpeta independiente cafeteria-edgar, con token de instalación exclusivo y credenciales aleatorias entregadas en archivo privado fuera de la carpeta pública. Ninguna contraseña/token se registra en este repositorio. La cuenta NO está creada ni activa en IONOS: se crea al subir el paquete y completar instalar.php. URL prevista tras activación: https://taskfixer.net/cafeteria-edgar/app.php. Sin alumnos, menú, movimientos ni copia importada de pruebas.
+
+No hay conexión de administración de IONOS disponible al agente para subir/activar la cuenta. El responsable ejecutará la instalación. Preparar origen dedicado antes de datos reales y validar los pendientes operativos. Monitoreo remoto continuo/rol supervisor todavía no implementado; no abrir otra captura simultánea para supervisar. [Preparación del piloto](app/PILOTO-EDGAR-FLORES.md).
