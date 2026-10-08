@@ -50,3 +50,6 @@ Por instrucción del responsable, #14 y #15 esperan la capacitación y el uso de
 ## Prioridad vigente · 7 de octubre, America/Chicago
 
 Esta decisión reemplaza el adelanto de voz del 6 de octubre. Preparar [presupuestos de catering](CATERING-PRESUPUESTOS-v0.1.md), motor, pantallas y guardado/documentos; después integrar anticipos/cobros. #14/#15 esperan capacitación al fin de semana. [Trabajo desde terminal](TRABAJO-TERMINAL.md). No se modificó la instalación activa.
+
+### Alcance modular · 7 de octubre, 19:21 America/Chicago
+#25 incorpora Mis servicios: plantillas con productos, horas, personal, equipo y traslado; reglas de cantidades y tarifas para calcular al elegir servicio/personas/horas. Precios revisables sin alterar documentos históricos. Cobros/gastos por evento y separación de caja se integran después del presupuesto. Voz permanece pausada.
