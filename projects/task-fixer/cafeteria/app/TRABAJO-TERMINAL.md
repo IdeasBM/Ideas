@@ -65,6 +65,21 @@ Subir requiere autenticación de GitHub. No escribir tokens ni contraseñas dent
 
 ## Si también se usa un asistente desde terminal
 
+Para Codex CLI, la documentación oficial consultada indica este instalador para macOS/Linux. Ejecutarlo en la Mac solo si Codex todavía no está instalado:
+
+```bash
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
+```
+
+Después abrir la copia local del repositorio y arrancar:
+
+```bash
+cd ~/Proyectos/Ideas
+codex
+```
+
+En el primer arranque elegir Sign in with ChatGPT y completar el acceso. La autenticación de Codex es distinta de la de GitHub. Fuente consultada el 7 de octubre: https://learn.chatgpt.com/docs/codex/cli.
+
 Abrirlo en la raíz de esa misma copia del repositorio y darle contexto explícito:
 
 > Proyecto IdeasBM/Ideas, módulo projects/task-fixer/cafeteria/app. Trabaja en la rama catering-presupuestos. Lee ROADMAP-TARJETAS.md y CATERING-PRESUPUESTOS-v0.1.md. Voz #21 está pausada; preparar presupuestos sin modificar la instalación de Edgar. Conserva motor financiero y respaldos, ejecuta pruebas y describe cambios antes de crear una entrega.
