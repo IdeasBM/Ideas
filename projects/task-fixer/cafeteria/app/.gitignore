@@ -1,3 +1,4 @@
 CODIGO-INSTALACION-PRIVADO.txt
 server/private/setup-token.php
+server/private/runtime-location.php
 *.zip
