@@ -85,3 +85,7 @@ Abrirlo en la raíz de esa misma copia del repositorio y darle contexto explíci
 > Proyecto IdeasBM/Ideas, módulo projects/task-fixer/cafeteria/app. Trabaja en la rama catering-presupuestos. Lee ROADMAP-TARJETAS.md y CATERING-PRESUPUESTOS-v0.1.md. Voz #21 está pausada; preparar presupuestos sin modificar la instalación de Edgar. Conserva motor financiero y respaldos, ejecuta pruebas y describe cambios antes de crear una entrega.
 
 No asumir que un asistente de terminal recibió esta conversación. La instalación/autenticación de ese asistente se configura aparte; esta guía describe el flujo del repositorio, no da por instalada ninguna herramienta de IA en la Mac.
+
+## Método común con Lineworks · decisión posterior del 7 de octubre
+
+Además de Codex CLI en la Mac, el responsable quiere instalación y mantenimiento por SSH como Invoicing. [Base común y migración](BASE-COMUN-Y-MIGRACION.md) establece el destino: estructura app/public/scripts, entorno privado, comprobación, paquete con checksum y migraciones. La guía anterior describe los archivos vigentes; todavía no existen los nuevos scripts de entrega de Cafetería. No mover carpetas de la instalación actual: su identidad/almacenamiento dependen de rutas. Primero preparar la adaptación y probarla por separado (#26), después integrar catering (#25).
