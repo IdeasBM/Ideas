@@ -53,3 +53,7 @@ Esta decisión reemplaza el adelanto de voz del 6 de octubre. Preparar [presupue
 
 ### Alcance modular · 7 de octubre, 19:21 America/Chicago
 #25 incorpora Mis servicios: plantillas con productos, horas, personal, equipo y traslado; reglas de cantidades y tarifas para calcular al elegir servicio/personas/horas. Precios revisables sin alterar documentos históricos. Cobros/gastos por evento y separación de caja se integran después del presupuesto. Voz permanece pausada.
+
+## Base común · 7 de octubre, 19:28 America/Chicago
+
+Prioridad técnica [#26 · Unificar metodología y entrega por terminal](https://github.com/IdeasBM/Ideas/issues/26), basada en revisión del repositorio de Lineworks. [Comparación y plan](BASE-COMUN-Y-MIGRACION.md). #25 conserva su alcance modular; antes de integrarlo a la instalación activa se resuelven identidad/rutas, estructura, pruebas y entrega. Operación offline y datos existentes se mantienen. MariaDB requiere una migración específica posterior, no copiar el esquema de invoices. No se ha aplicado cambio en IONOS.
