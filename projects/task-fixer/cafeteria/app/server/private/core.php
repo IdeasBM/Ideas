@@ -1,7 +1,10 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/runtime.php';
 // Runtime secrets and snapshots live outside DOCUMENT_ROOT. Never publish that directory.
 function storage_dir(): string {
+    $stable = runtime_descriptor();
+    if ($stable !== null) return $stable['storagePath'];
     $root = realpath($_SERVER['DOCUMENT_ROOT'] ?? '');
     if (!$root || $root === DIRECTORY_SEPARATOR) throw new RuntimeException('No se pudo determinar el almacenamiento privado.');
     $dir = dirname($root) . '/taskfixer-private-' . substr(hash('sha256', __DIR__), 0, 16);
